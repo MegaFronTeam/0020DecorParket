@@ -1,0 +1,47 @@
+include include.pug
+include js-css.pug
+include ../blocks/modal/_modal.pug
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+
+		block title
+			title title
+		meta(name="description", content="о чем страница")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		//- meta(name="viewport", content="width=device-width, shrink-to-fit=no")
+		//- meta(name="viewport",  content="width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no")
+		//- script.
+		//- 	let viewport = document.querySelector("meta[name=viewport]");
+		//- 	var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+		//- 	if (is_safari) {
+		//- 		//- alert(navigator.userAgent);
+		//- 		function w() {
+		//- 			this.outerWidth > 575 
+		//- 				? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+		//- 				:  viewport.content = "width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+		//- 			//- alert(this.outerWidth + ', '+  viewport.content);
+		//- 		}
+		//- 		 w();
+		//- 		window.addEventListener('resize', () => { 
+		//- 		 w();
+		//- 		}, { passive: true });
+		//- 	}
+		meta(name="viewport", content="width=device-width,initial-scale=1.0,  shrink-to-fit=no")
+		link(type="image/ico", href='img/favicon.ico', rel='shortcut icon') 
+		<meta name="format-detection" content="telephone=no"> 
+		+allcss()
+	block variables
+	//- style.
+	//- 	.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
+	//- body.loaded_hiding(class= mainPage) 
+	body(class=mainPage data-bg=bg)
+		.main-wrapper
+			block pagecontent
+				h3 content
+		
+		+modal()
+
+		+allcjs()
+		block scripts

@@ -1,0 +1,264 @@
+// mixin for bg
+@mixin bg($src, $media:xy, $path:xy) {
+  @if $media==xy {
+    @if $path==xy {
+      background-image: url(#{$url}#{$path2}#{$src});
+    }
+
+    @else if $path==1 {
+      background-image: url(#{$url}#{$path1}#{$src});
+    }
+
+    @else {
+      background-image: url(#{$url}#{$path}/#{$src});
+    }
+  }
+
+  @else {
+    @include media-breakpoint-up($media) {
+
+      background-image: url(#{$url}#{$path2}#{$src});
+    }
+
+    background-image: url(#{$url}#{$path1}#{$src});
+
+  }
+}
+
+// обсалютное центрирование
+
+@mixin a-cent($xy:xy) {
+  position: absolute;
+
+  @if $xy==xy {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+
+  @else if $xy==x {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @else if $xy==y {
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@mixin a-cent1($xy:xy) {
+  @if $xy==xy {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  @else if $xy==x {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+
+  @else if $xy==y {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
+
+@mixin roww($a, $m:p) {
+  --bs-gutter-x: #{$a};
+
+  margin-left: calc(-1 * var(--bs-gutter-x)/ 2);
+  margin-right: calc(-1 * var(--bs-gutter-x)/ 2);
+
+  >* {
+    @if $m==m {
+      margin-left: calc(var(--bs-gutter-x)/2);
+      margin-right: calc(var(--bs-gutter-x)/2);
+    }
+
+    @else {
+
+      padding-left: calc(var(--bs-gutter-x)/2);
+      padding-right: calc(var(--bs-gutter-x)/2);
+    }
+  }
+}
+
+@mixin center($w) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $w;
+}
+
+
+@mixin bgs($w: center, $h: center) {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: $w $h;
+}
+
+@mixin img-bg($w: center, $h: center) {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: $w $h;
+
+  img {
+    position: absolute;
+    // opacity: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+
+
+@mixin bgsn($img, $w: center, $h: center) {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url($img);
+}
+
+@mixin mt($s: .36s) {
+  --s: #{$s};
+  transition: all var(--s) ease-in-out;
+}
+
+// михин многоточия
+@mixin ellips {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  // display: block;
+  // display: inline-block;
+}
+
+
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+}
+
+// масштвбирование блока пропорционально
+@mixin block($w: 1, $h: 1) {
+  display: block;
+  position: relative;
+  --ratio: #{$h}/#{$w};
+
+  &::before {
+    content: '';
+    position: relative;
+    height: 0;
+    display: block;
+    padding-bottom: calc(var(--ratio) * 100%);
+  }
+}
+
+@mixin round($w) {
+  --size: #{$w};
+  display: -webkit-inline-flex;
+  display: -ms-inline-flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+}
+
+// для анимации
+@mixin keyfr($name) {
+
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+
+//tear container
+@mixin tear($width) {
+  --w: #{$width};
+  position: relative;
+  width: var(--w);
+  left: calc(-1 * (var(--w) - 100%) / 2);
+}
+
+@mixin tear-drop() {
+  position: static;
+  width: 100%;
+  left: unset;
+}
+
+@mixin ell($n: 3) {
+  // line-clamp: $n;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $n;
+  position: relative;
+  overflow: hidden;
+}
+
+@mixin lh($a,$b) {
+  line-height: math.div($a,$b);
+}
+
+
+@mixin mh($m: var(--bs-gutter-x)) {
+  min-height: calc(100% - #{$m});
+  margin-bottom: $m;
+}
+
+@mixin col-sw(){ 
+  @include make-col;
+  @include make-col-ready;
+  // padding: 0 calc(var(--bs-gutter-x)/2) !important;
+  // margin-top: var(--bs-gutter-y);
+  margin-right: 0 !important;
+}
+
+
+@mixin row-sw($x: $grid-gutter-width, $media: lg, $y:$x) {
+  @include media-breakpoint-up($media) {
+
+    @include make-row;
+    --bs-gutter-x: #{$x};
+    --bs-gutter-y: #{$y};
+    margin-top: calc(-1 * var(--bs-gutter-y)); 
+    transform: none!important;
+    width: calc(100% + var(--bs-gutter-x, 0px)) !important;
+    max-width: calc(100% + var(--bs-gutter-x, 0px)) !important;
+    height: auto;
+    & > .swiper-slide-duplicate{
+      display: none!important;
+    }
+    & > .swiper-slide{
+      @include col-sw(); 
+    }
+  }
+  & > .swiper-slide{
+    height: auto;
+  }
+}
