@@ -3,8 +3,39 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
+				h1 Lorem ipsum dolor sit amet consectetur.
+				h2 Lorem ipsum dolor sit amet consectetur.
+				h3 Lorem ipsum dolor sit amet consectetur.
+				h4 Lorem ipsum dolor sit amet consectetur.
+				h5 Lorem ipsum dolor sit amet consectetur.
+				h6 Lorem ipsum dolor sit amet consectetur.
 			.row
-						
+				.col-auto
+					+e.btn.btn.btn-primary(href="#") В корзину
+				.col-auto
+					+e.btn.btn.btn-outline-primary.btn-lg(href="#") Обратная связь
+				.col-auto
+					+e.btn.btn.btn-secondary(href="#") Перейти к оформлению
+				.col-auto
+					+e.btn.btn.btn-outline-secondary.btn-lg(href="#") Вернуться на главную
+				.col-auto
+					+e.btn.btn.btn-outline-secondary.btn-sm(href="#") Вернуться на главную
+			+form-wrap
+				.row
+					.col-12
+						+input('placeholder', 'text', 'Label')
+					.col-12
+						+input('placeholder', 'select', 'Label')
+					.col-12
+						+input('placeholder', 'tel', 'Label')
+					.col-12
+						+input('placeholder', 'email', 'Label')
+					.col-12
+						+input('placeholder', 'textarea', 'Label')
+					.col-12
+						+in-c('checkbox', 'Я хочу получать рекламные сообщения и новости о товарах и услугах')
+					.col-12
+						+in-c('radio', 'Option 1')(checked)
+						+in-c('radio', 'Option 2')
+				
 	// end headerBlock
