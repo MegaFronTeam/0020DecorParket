@@ -2,40 +2,26 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h1 Lorem ipsum dolor sit amet consectetur.
-				h2 Lorem ipsum dolor sit amet consectetur.
-				h3 Lorem ipsum dolor sit amet consectetur.
-				h4 Lorem ipsum dolor sit amet consectetur.
-				h5 Lorem ipsum dolor sit amet consectetur.
-				h6 Lorem ipsum dolor sit amet consectetur.
-			.row
-				.col-auto
-					+e.btn.btn.btn-primary(href="#") В корзину
-				.col-auto
-					+e.btn.btn.btn-outline-primary.btn-lg(href="#") Обратная связь
-				.col-auto
-					+e.btn.btn.btn-secondary(href="#") Перейти к оформлению
-				.col-auto
-					+e.btn.btn.btn-outline-secondary.btn-lg(href="#") Вернуться на главную
-				.col-auto
-					+e.btn.btn.btn-outline-secondary.btn-sm(href="#") Вернуться на главную
-			+form-wrap
-				.row
-					.col-12
-						+input('placeholder', 'text')
-					.col-12
-						+input('placeholder', 'select')
-					.col-12
-						+input('placeholder', 'tel')
-					.col-12
-						+input('placeholder', 'email')
-					.col-12
-						+input('placeholder', 'textarea')
-					.col-12
-						+in-c('checkbox', 'Я хочу получать рекламные сообщения и новости о товарах и услугах')
-					.col-12
-						+in-c('radio', 'Option 1')(checked)
-						+in-c('radio', 'Option 2')
-				
+			//- +b.section-title.text-center
+			//- 	h1 ?????
+			.slider-wrapper
+				+e.slider--js.swiper
+					.swiper-wrapper
+						mixin slide(h, p, i)
+							+e.slide.swiper-slide
+								+e.item
+									h2!= h
+									p!= p
+									+e.btn.btn.btn-primary(href="#") Узнать подробнее
+									picture.picture-bg
+										source(type='image/jpg' srcset=`img/headerBlock-lg-${i}.jpg` media='(min-width:768px)')
+										source(type='image/jpg' srcset=`img/headerBlock-${i}.jpg`)
+										img.object-fit-js(src=`img/@2x/img-${i}.jpg` alt='' loading='lazy')
+						+slide(`Скидка 50% <br> на второй товар`, `Покупая любые наполные покрытия в кредит или наличными`, 1)
+						+slide(`Lorem ipsum dolor sit amet.`, `Lorem ipsum dolor sit, consectetur adipisicing elit.`, 1)
+						+slide(`Скидка 50% <br> на второй товар`, `Покупая любые наполные покрытия в кредит или наличными`, 1)
+						+slide(`Lorem ipsum dolor amet.`, `Lorem ipsum dolor sit, amet consectetur adipisicing elit.`, 1)
+				.swiper-pagination.swiper-pagination
+				+arrow
+
 	// end headerBlock

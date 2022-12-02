@@ -381,6 +381,34 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+	const headerBlockSlider = new Swiper('.headerBlock__slider--js', {
+		// slidesPerView: 5,
+		slidesPerView: 'auto',
+		// freeMode: true,
+		loopFillGroupWithBlank: true,
+		// touchRatio: 0.2,
+		slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 0,
+		loop: true,
+		navigation: {
+			nextEl: '.headerBlock .slider-wrapper .swiper-button-next',
+			prevEl: '.headerBlock .slider-wrapper .swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+
+	});
 
 	// modal window
 

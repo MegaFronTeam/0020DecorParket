@@ -1,7 +1,7 @@
 :root {
 	--animate-delay: 1.2s;
-	--bs-body-font-size: #{$em-base};
 
+	--bs-body-font-size: #{$em-base};
 	--sPT: #{rem(16)};
 	--sPB: #{rem(16)};
 	--sTPB: #{rem(16)};
@@ -10,7 +10,6 @@
 		--sPB: #{rem(28)};
 		--sTPB: #{rem(32)};
 	}
-
 
 	--fancybox-content-color: var(--bs-body-color);
 	--swiperArrowSize: #{rem(68)};
@@ -24,8 +23,6 @@
 	--swiperBgDefHover: #ffffff;
 
 	--fancybox-bg: rgba(24, 24, 27, 0.77);
-
-
 
 	//  --carousel-button-width: 48px;
 	//  --carousel-button-height: 48px;
