@@ -25,15 +25,28 @@
 		height: auto;
 	}
 	&__item {
+		@include mt(0.2s);
 		position: relative;
 		background-color: $light;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		border-radius: $border-radius-lg;
+		overflow: hidden;
 		// line-height: 1.45;
+		&:hover {
+			h3 {
+				color: $primary;
+			}
+			img {
+				transform: scale(1.05);
+			}
+		}
 		h3 {
+			@include mt(0.2s);
 			margin-bottom: rem(12);
+			color: $body-color;
 			@include media-breakpoint-up(lg) {
 				margin-bottom: rem(16);
 			}
@@ -58,9 +71,12 @@
 			}
 		}
 		img {
+			@include mt(0.2s);
 			align-self: flex-end;
 			max-width: 87%;
 			max-height: 68%;
+			transform-origin: bottom right;
+			pointer-events: none;
 			@include media-breakpoint-up(md) {
 				max-width: 71%;
 				max-height: 53%;

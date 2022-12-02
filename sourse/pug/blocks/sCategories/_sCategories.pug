@@ -7,7 +7,7 @@ mixin sCategories(data)
 					.swiper-wrapper
 						mixin slide(h, i, ...items)
 							+e.slide.swiper-slide
-								+e.item
+								+e.item(href="#")
 									+e.content
 										h3!= h
 										ul
