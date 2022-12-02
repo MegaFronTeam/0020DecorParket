@@ -3,7 +3,7 @@ mixin form-head()
 		input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
 		block
 
-mixin input(placeholder,  t='text', label, name= t)
+mixin input(placeholder,  t='text', label= placeholder, name= t)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(name=name placeholder=placeholder)
@@ -17,19 +17,17 @@ mixin input(placeholder,  t='text', label, name= t)
 			
 		else if t=='number'
 			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder step='any')&attributes(attributes)
-		else if t=='date'
-			+e.INPUT.input.form-control(name=name type=t )&attributes(attributes)
 		else
 			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder)&attributes(attributes)
 	+e.input-wrap.form-group
 		if label
 			label
-				+e.SPAN.input-title= label
 				+t(t,placeholder, name)&attributes(attributes)
-				block
+				+e.SPAN.input-title= label
 		else
 			+t(t,placeholder, name)&attributes(attributes)
-			block
+			+e.SPAN.input-title= label
+		block
 	// +e.input-wrap
 mixin select(label,pl,...items)
 	+e.input-wrap.form-group
@@ -75,5 +73,6 @@ mixin add-file(n)
 
 mixin policy()
 	+e.policy
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+		+in-c()(required)
+			+e.SMALL.text Я&nbsp;ознакомился с&nbsp;условиями обработки
+				a(href="#")  персональных данных
