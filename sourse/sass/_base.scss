@@ -303,8 +303,8 @@ ul {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
-	@include mt;
+	box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+	@include mt(0.2s);
 	user-select: none;
 
 	&:hover {
@@ -314,7 +314,11 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(24);
+		fill:none;
+		stroke: currentColor;
+		stroke-width: 2px;
+		stroke-linecap: round;
 	}
 
 	&::after {
@@ -326,6 +330,9 @@ ul {
 
 	&-prev {
 		left: var(--swiperArrowPosition);
+	}
+	&.swiper-button-disabled {
+		opacity: 0;
 	}
 }
 .swiper-slide {

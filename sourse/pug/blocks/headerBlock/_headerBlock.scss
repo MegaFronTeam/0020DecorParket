@@ -60,6 +60,9 @@
 		@include media-breakpoint-up(sm) {
 			padding: 4.4% 8.6%;
 		}
+		// @include media-breakpoint-up(md) {
+		// 	border-radius: $border-radius-xl;
+		// }
 		h2 {
 			@extend .h1;
 			color: $white;

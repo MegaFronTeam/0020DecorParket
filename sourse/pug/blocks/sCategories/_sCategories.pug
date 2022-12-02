@@ -1,0 +1,26 @@
+mixin sCategories(data)
+	// start sCategories
+	+b.sCategories.section#sCategories&attributes(attributes)
+		.container
+			.slider-wrapper
+				+e.slider--js.swiper
+					.swiper-wrapper
+						mixin slide(h, i, ...items)
+							+e.slide.swiper-slide
+								+e.item
+									+e.content
+										h3!= h
+										ul
+											each item in items
+												li!= item
+									+img(`img/sCategories-${i}.png`)
+						+slide(`Напольные покрытия`, `1`, `Ламинат`, `Виниловый ламинат`, `Паркетная доска`, `Еще&nbsp;+6`)
+						+slide(`Отделка стен`, `2`, `Обои`, `Плинтус потолочный`, `Стеновые панели`)
+						+slide(`Профиль и&nbsp;крепеж`, `3`, `Дюбели и&nbsp;саморезы`, `Спейсеры`, `Скрытый крепеж`, `Еще&nbsp;+6`)
+						+slide(`Услуги`, `4`, `Укладка ламината`, `Выездной шоурум`, `Дизайн-проект`)
+						+slide(`Напольные покрытия`, `1`, `Ламинат`, `Виниловый ламинат`, `Паркетная доска`, `Еще&nbsp;+6`)
+						+slide(`Отделка стен`, `2`, `Обои`, `Плинтус потолочный`, `Стеновые панели`)
+						+slide(`Профиль и&nbsp;крепеж`, `3`, `Дюбели и&nbsp;саморезы`, `Спейсеры`, `Скрытый крепеж`, `Еще&nbsp;+6`)
+						+slide(`Услуги`, `4`, `Укладка ламината`, `Выездной шоурум`, `Дизайн-проект`)
+				+arrow
+	// end sCategories

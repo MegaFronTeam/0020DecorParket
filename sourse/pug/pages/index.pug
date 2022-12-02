@@ -9,7 +9,7 @@ include ../blocks/sContent/_sContent.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
-include ../blocks/sForm/_sForm.pug
+include ../blocks/sCategories/_sCategories.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/footer/_footer.pug
 
@@ -28,7 +28,8 @@ block pagecontent
 		+top-nav()
 		+topLine
 	main
-		+headerBlock 
+		+headerBlock
+		+sCategories
 		+sCatalog
 		+sForm()
 		+sContact()

@@ -382,18 +382,13 @@ function eventHandler() {
 
 	});
 	const headerBlockSlider = new Swiper('.headerBlock__slider--js', {
-		// slidesPerView: 5,
 		slidesPerView: 'auto',
-		// freeMode: true,
 		loopFillGroupWithBlank: true,
-		// touchRatio: 0.2,
-		slideToClickedSlide: true,
-		// freeModeMomentum: true,
 		lazy: {
 			loadPrevNext: true,
 		},
 		watchOverflow: true,
-		spaceBetween: 0,
+		spaceBetween: 4,
 		loop: true,
 		navigation: {
 			nextEl: '.headerBlock .slider-wrapper .swiper-button-next',
@@ -407,7 +402,49 @@ function eventHandler() {
 			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
 			// }
 		},
-
+	});
+	
+	const sCategoriesSlider = new Swiper('.sCategories__slider--js', {
+		slidesPerView: 2.063,
+		loopFillGroupWithBlank: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 16,
+		navigation: {
+			nextEl: '.sCategories .swiper-button-next',
+			prevEl: '.sCategories .swiper-button-prev',
+		},
+		breakpoints: {
+			// when window width is >= 320px
+			499.98: {
+				slidesPerView: 2.4,
+				spaceBetween: 16
+			},
+			575.98: {
+				slidesPerView: 2.5,
+				spaceBetween: 16
+			},
+			// when window width is >= 480px
+			767.98: {
+				slidesPerView: 3,
+				spaceBetween: 24
+			},
+			// when window width is >= 640px
+			991.98: {
+				slidesPerView: 4,
+				spaceBetween: 24
+			},
+			1199.98: {
+				slidesPerView: 4,
+				spaceBetween: 32
+			},
+			1399.98: {
+				slidesPerView: 4,
+				spaceBetween: 40
+			},
+		}
 	});
 
 	// modal window

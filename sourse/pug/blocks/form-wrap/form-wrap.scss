@@ -53,6 +53,8 @@
 	&__input-title {
 		@include a-cent1(y);
 		position: absolute;
+		top: calc(var(--sp-y) - 1px);
+		transform: none;
 		// padding-left: $input-padding-x;
 		left: #{$input-padding-x};
 
