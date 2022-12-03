@@ -1,9 +1,38 @@
 mixin footer()
 	+b.FOOTER.footer.section
-		.container
-			.row
+		+e.container.container
+			+e.BUTTON.btn-up
+				+icon('arrow-up')
+			+e.row-top.row
+				.col-3
+					+e.logo(href="/")
+						+img('img/svg/logo.svg')
+					+soc()
+				.col-6
+					ul
+						li: a(href="#") Каталог товаров
+						li: a(href="#") О&nbsp;магазине
+						li: a(href="#") Новости и&nbsp;акции
+						li: a(href="#") Оплата и&nbsp;доставка
+						li: a(href="#") Вакансии
+						li: a(href="#") Контактная информация
+						li: a(href="#") Гарантия на&nbsp;товар
+				.col-3.d-flex.flex-column
+					+e.contacts
+						+e.tel(href="tel:+78003330600") +7 800 333-0-600
+						+e.schedule Ежедневно с&nbsp;10:00 до&nbsp;22:00
+					+e.btn.btn.btn-outline-primary(href="#") Обратная связь
+			hr
+			+e.copyright © 2021 Decor Parket. Материалы, представленные на сайте dekorparket.ru, защищены законом РФ об авторском праве. Копирование и распространение материалов сайта в интернете, а также несанкционированное использование материалов сайта в СМИ и прочих изданиях запрещено без предварительного письменного разрешения владельцев сайта dekorparket.ru.
+			+e.row-bottom.row
+				.col-md-auto.col-xxl-2
+					a(href="#") Правовая информация
+				.col-sm-auto
+					a(href="#") Сообщить об&nbsp;ошибке на&nbsp;сайте
 				.col
-					
-				.col Footer
-				.col
-				.col-auto
+					+e.developer
+						a(href="#")
+							span Разработано&nbsp;в
+							+img('img/svg/red-pomidor.svg')
+
+				

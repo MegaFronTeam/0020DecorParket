@@ -11,7 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -66,7 +66,7 @@
 										<div class="headerBlock__slide swiper-slide">
 											<div class="headerBlock__item">
 												<h2>Скидка 50% <br> на второй товар</h2>
-												<p>Покупая любые наполные покрытия в кредит или наличными</p>
+												<p>Покупая любые наполные покрытия в&nbsp;кредит или наличными</p>
 												<a class="headerBlock__btn btn btn-primary" href="#">Узнать подробнее
 												</a>
 												<picture class="picture-bg">
@@ -90,7 +90,7 @@
 										<div class="headerBlock__slide swiper-slide">
 											<div class="headerBlock__item">
 												<h2>Скидка 50% <br> на второй товар</h2>
-												<p>Покупая любые наполные покрытия в кредит или наличными</p>
+												<p>Покупая любые наполные покрытия в&nbsp;кредит или наличными</p>
 												<a class="headerBlock__btn btn btn-primary" href="#">Узнать подробнее
 												</a>
 												<picture class="picture-bg">
@@ -420,17 +420,76 @@
 				<!-- end sArticles-->
 			</main>
 			<footer class="footer section">
-				<div class="container">
-					<div class="row">
-						<div class="col"></div>
-						<div class="col">Footer</div>
-						<div class="col"></div>
-						<div class="col-auto"></div>
+				<div class="footer__container container">
+					<button class="footer__btn-up">
+						<svg class="icon icon-arrow-up ">
+							<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+						</svg>
+					</button>
+					<div class="footer__row-top row">
+						<div class="col-3">
+							<a class="footer__logo" href="/"><img src="img/svg/logo.svg" alt="" loading="lazy"/>
+							</a>
+							<div class="soc">
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-ok ">
+										<use xlink:href="img/svg/sprite.svg#ok"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-youtube ">
+										<use xlink:href="img/svg/sprite.svg#youtube"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-vk ">
+										<use xlink:href="img/svg/sprite.svg#vk"></use>
+									</svg>
+								</a>
+								<a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-telegram ">
+										<use xlink:href="img/svg/sprite.svg#telegram"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+						<div class="col-6">
+							<ul>
+								<li><a href="#">Каталог товаров</a></li>
+								<li><a href="#">О&nbsp;магазине</a></li>
+								<li><a href="#">Новости и&nbsp;акции</a></li>
+								<li><a href="#">Оплата и&nbsp;доставка</a></li>
+								<li><a href="#">Вакансии</a></li>
+								<li><a href="#">Контактная информация</a></li>
+								<li><a href="#">Гарантия на&nbsp;товар</a></li>
+							</ul>
+						</div>
+						<div class="col-3 d-flex flex-column">
+							<div class="footer__contacts">
+								<a class="footer__tel" href="tel:+78003330600">+7 800 333-0-600
+								</a>
+								<div class="footer__schedule">Ежедневно с&nbsp;10:00 до&nbsp;22:00
+								</div>
+							</div>
+							<a class="footer__btn btn btn-outline-primary" href="#">Обратная связь
+							</a>
+						</div>
+					</div>
+					<hr/>
+					<div class="footer__copyright">© 2021 Decor Parket. Материалы, представленные на сайте dekorparket.ru, защищены законом РФ об авторском праве. Копирование и распространение материалов сайта в интернете, а также несанкционированное использование материалов сайта в СМИ и прочих изданиях запрещено без предварительного письменного разрешения владельцев сайта dekorparket.ru.
+					</div>
+					<div class="footer__row-bottom row">
+						<div class="col-md-auto col-xxl-2"><a href="#">Правовая информация</a></div>
+						<div class="col-sm-auto"><a href="#">Сообщить об&nbsp;ошибке на&nbsp;сайте</a></div>
+						<div class="col">
+							<div class="footer__developer"><a href="#"><span>Разработано&nbsp;в</span><img src="img/svg/red-pomidor.svg" alt="" loading="lazy"/></a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">

@@ -1,19 +1,39 @@
 .soc {
-	@include roww(10px, m);
+	@include roww(12px, m);
 	display: flex;
 	&__item {
 		text-decoration: none !important;
 		vertical-align: middle;
-		@include mt;
+		@include mt(0.2s);
 		display: grid;
 		place-items: center;
+		width: rem(48);
+		height: rem(48);
+		min-width: rem(48);
+		border: 2px solid $primary;
+		border-radius: 50%;
+		color: $white;
 		&:hover {
+			color: $white;
+			background-color: $primary;
 			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
 	}
 	.icon {
-		font-size: rem(30);
+		font-size: rem(20);
+		// &.icon-ok {
+		// 	font-size: rem();
+		// }
+		&.icon-youtube {
+			font-size: rem(15);
+		}
+		&.icon-vk {
+			font-size: rem(14);
+		}
+		// &.icon-telegram {
+		// 	font-size: rem(19);
+		// }
 	}
 }
 

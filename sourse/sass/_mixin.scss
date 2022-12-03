@@ -140,7 +140,7 @@
   background-image: url($img);
 }
 
-@mixin mt($s: .36s) {
+@mixin mt($s: .2s) {
   --s: #{$s};
   transition: all var(--s) ease-in-out;
 }
