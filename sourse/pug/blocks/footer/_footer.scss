@@ -2,6 +2,7 @@
 	color: $white;
 	margin-top: auto;
 	background-color: $body-color;
+	position: relative;
 	// background-color: $secondary;
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
@@ -20,10 +21,11 @@
 	&__container {
 		position: relative;
 	}
+
 	&__btn-up {
 		position: absolute;
-		right: calc(var(--bs-gutter-x) / 2);
 		top: calc(-1 * var(--sPT) + 6px);
+		right: calc(var(--bs-gutter-x) / 2);
 		border: none;
 		@extend .btn, .btn-primary;
 		padding: rem(12);
@@ -45,16 +47,33 @@
 	&__logo {
 		display: inline-block;
 		margin-bottom: rem(32);
+		img {
+			@include media-breakpoint-down(sm) {
+				width: rem(194);
+			}
+		}
 	}
 
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: var(--bs-gutter-x);
+		&-top {
+			--bs-gutter-y: #{rem(40)};
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-y: var(--bs-gutter-x);
+				--bs-gutter-x: #{rem(40)};
+			}
+			@include media-breakpoint-up(xl) {
+				--bs-gutter-x: #{rem(40)};
+			}
+		}
 		&-bottom {
 			--bs-gutter-y: calc(var(--bs-gutter-x) / 2);
 			font-size: rem(14);
 			@include media-breakpoint-up(md) {
 				font-size: rem(16);
+			}
+			@include media-breakpoint-up(lg) {
 				--bs-gutter-x: #{rem(40)};
 			}
 			@include media-breakpoint-up(xl) {
@@ -81,19 +100,27 @@
 	// }
 	ul {
 		list-style: none;
-		columns: 2;
-		column-gap: rem(40);
 		margin-bottom: 0;
+		@include media-breakpoint-up(sm) {
+			columns: 2;
+		}
+		@include media-breakpoint-up(xxl) {
+			column-gap: var(--bs-gutter-x);
+		}
 		li {
 			a {
 				display: inline-block;
 			}
 			margin-bottom: rem(16);
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 	&__contacts {
 		display: flex;
 		flex-direction: column;
+		align-items: flex-start;
 		// height: 100%;
 		flex-grow: 1;
 	}
@@ -103,14 +130,20 @@
 		line-height: calc(32 / 22);
 		margin-bottom: rem(4);
 	}
+	&__schedule {
+		color: $secondary;
+	}
 	&__btn {
 		--bs-btn-color: #{$white};
 		border-width: 2px;
 		padding-top: rem(14);
 		padding-bottom: rem(14);
-		width: rem(238);
+		width: 100%;
 		max-width: 100%;
 		margin-top: rem(32);
+		@include media-breakpoint-up(md) {
+			width: rem(238);
+		}
 	}
 	&__copyright {
 		color: $secondary;
@@ -140,6 +173,9 @@
 	hr {
 		margin: rem(40) 0 rem(30);
 		@include media-breakpoint-up(md) {
+			margin: rem(40) 0;
+		}
+		@include media-breakpoint-up(lg) {
 			margin: rem(55) 0;
 		}
 	}

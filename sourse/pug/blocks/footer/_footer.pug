@@ -3,12 +3,13 @@ mixin footer()
 		+e.container.container
 			+e.BUTTON.btn-up
 				+icon('arrow-up')
+		.container
 			+e.row-top.row
-				.col-3
+				.col.col-md-6.col-lg-auto.col-xl-3
 					+e.logo(href="/")
 						+img('img/svg/logo.svg')
 					+soc()
-				.col-6
+				.col-12.col-lg.col-xl-6.order-md-last
 					ul
 						li: a(href="#") Каталог товаров
 						li: a(href="#") О&nbsp;магазине
@@ -17,7 +18,7 @@ mixin footer()
 						li: a(href="#") Вакансии
 						li: a(href="#") Контактная информация
 						li: a(href="#") Гарантия на&nbsp;товар
-				.col-3.d-flex.flex-column
+				.col-md-6.col-lg-auto.col-xxl-3.d-flex.flex-column.order-lg-last
 					+e.contacts
 						+e.tel(href="tel:+78003330600") +7 800 333-0-600
 						+e.schedule Ежедневно с&nbsp;10:00 до&nbsp;22:00
