@@ -206,6 +206,28 @@ const JSCCommon = {
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		}, { passive: true });
 	},
+	heightSlide() {
+		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+		function getSlideH() {
+			let slideI = document.querySelectorAll('.article-item__img-wrap');
+			if (slideI.length == 0) return;
+			let slideH, index = 0;
+			for (const iterator of slideI) {
+				if (index < 1) {
+					slideH = iterator.offsetHeight;
+					index++;
+				} else break;
+			};
+			// console.log(slideH);
+			document.documentElement.style.setProperty('--slideH', `${slideH}px`);
+		};
+		getSlideH();
+		// We listen to the resize event
+		window.addEventListener('resize', () => {
+			// We execute the same script as before
+			getSlideH();
+		}, { passive: true });
+	},
 	animateScroll() {
 		$(document).on('click', " .menu li a, .scroll-link", function () {
 			const elementClick = $(this).attr("href");
@@ -388,8 +410,8 @@ function eventHandler() {
 			loadPrevNext: true,
 		},
 		watchOverflow: true,
-		spaceBetween: 4,
-		loop: true,
+		spaceBetween: 16,
+		// loop: true,
 		navigation: {
 			nextEl: '.headerBlock .slider-wrapper .swiper-button-next',
 			prevEl: '.headerBlock .slider-wrapper .swiper-button-prev',
@@ -417,7 +439,6 @@ function eventHandler() {
 			prevEl: '.sCategories .swiper-button-prev',
 		},
 		breakpoints: {
-			// when window width is >= 320px
 			499.98: {
 				slidesPerView: 2.4,
 				spaceBetween: 16
@@ -426,12 +447,10 @@ function eventHandler() {
 				slidesPerView: 2.5,
 				spaceBetween: 16
 			},
-			// when window width is >= 480px
 			767.98: {
 				slidesPerView: 3,
 				spaceBetween: 24
 			},
-			// when window width is >= 640px
 			991.98: {
 				slidesPerView: 4,
 				spaceBetween: 24
@@ -446,6 +465,75 @@ function eventHandler() {
 			},
 		}
 	});
+	const sPopularSlider = new Swiper('.sPopular__slider--js', {
+		slidesPerView: 2.5,
+		loopFillGroupWithBlank: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 16,
+		navigation: {
+			nextEl: '.sPopular .swiper-button-next',
+			prevEl: '.sPopular .swiper-button-prev',
+		},
+		breakpoints: {
+
+			767.98: {
+				slidesPerView: 3,
+				spaceBetween: 24
+			},
+			991.98: {
+				slidesPerView: 4,
+				spaceBetween: 24
+			},
+			1199.98: {
+				slidesPerView: 5,
+				spaceBetween: 32
+			},
+			1399.98: {
+				slidesPerView: 6,
+				spaceBetween: 40
+			},
+		}
+	});
+	const sArticlesSlider = new Swiper('.sArticles__slider--js', {
+		slidesPerView: 'auto',
+		loopFillGroupWithBlank: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 16,
+		navigation: {
+			nextEl: '.sArticles .swiper-button-next',
+			prevEl: '.sArticles .swiper-button-prev',
+		},
+		breakpoints: {
+			// 575.98: {
+			// 	slidesPerView: 1.5,
+			// 	spaceBetween: 16
+			// },
+			767.98: {
+				slidesPerView: 2,
+				spaceBetween: 24
+			},
+			991.98: {
+				slidesPerView: 3,
+				spaceBetween: 24
+			},
+			1199.98: {
+				slidesPerView: 3,
+				spaceBetween: 32
+			},
+			1399.98: {
+				slidesPerView: 3,
+				spaceBetween: 40
+			},
+		}
+	});
+
+	JSCCommon.heightSlide();
 
 	// modal window
 

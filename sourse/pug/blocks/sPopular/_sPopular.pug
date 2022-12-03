@@ -1,0 +1,23 @@
+mixin sPopular(data)
+	// start sPopular
+	+b.SECTION.sPopular.section#sPopular&attributes(attributes)
+		.container
+			+section-title(`Популярные бренды`, `Все категории`)
+			.slider-wrapper
+				+e.slider--js.swiper
+					.swiper-wrapper
+						mixin slide(i)
+							+e.slide.swiper-slide
+								+e.item
+									+img(`img/sPopular-${i}.png`)
+						+slide(1)
+						+slide(2)
+						+slide(3)
+						+slide(4)
+						+slide(5)
+						+slide(6)
+						+slide(1)
+						+slide(2)
+						+slide(3)
+				+arrow
+	// end sPopular

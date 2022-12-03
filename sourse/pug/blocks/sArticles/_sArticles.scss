@@ -1,0 +1,49 @@
+// start .sArticles
+.sArticles {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__item {
+	}
+
+	&__slider {
+		border-radius: $border-radius-lg;
+		@include media-breakpoint-down(md) {
+			overflow: visible;
+		}
+	}
+
+	.swiper-button-hand {
+		top: calc(var(--slideH) / 2);
+		margin: 0;
+		transform: translateY(-50%);
+	}
+	.swiper-button-hand {
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sArticles

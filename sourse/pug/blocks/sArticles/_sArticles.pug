@@ -1,0 +1,22 @@
+mixin sArticles(data)
+	// start sArticles
+	+b.SECTION.sArticles.section#sArticles&attributes(attributes)
+		.container
+			+section-title(`Советы эксперта`, `Смотреть все`)
+			.slider-wrapper
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+e.slide.swiper-slide
+							+article-item(`sArticles-1.jpg`, `Напольные покрытия`, `Как выбрать хороший ламинат&nbsp;&mdash; советы покупателям`)
+						+e.slide.swiper-slide
+							+article-item(`sArticles-2.jpg`, `Напольные покрытия`, `Подложка под ламинат: сравнительный обзор различных видов`)
+						+e.slide.swiper-slide
+							+article-item(`sArticles-3.jpg`, `Напольные покрытия`, `Подготовка деревянного пола к&nbsp;укладке ламината`)
+						+e.slide.swiper-slide
+							+article-item(`sArticles-4.jpg`, `Напольные покрытия`, `Как выбрать хороший ламинат&nbsp;&mdash; советы покупателям`)
+						+e.slide.swiper-slide
+							+article-item(`sArticles-5.jpg`, `Напольные покрытия`, `Подготовка деревянного пола к&nbsp;укладке ламината`)
+						+e.slide.swiper-slide
+							+article-item(`sArticles-6.jpg`, `Напольные покрытия`, `Подложка под ламинат: сравнительный обзор различных видов`)
+				+arrow
+	// end sArticles

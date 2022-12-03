@@ -1,0 +1,51 @@
+// start .sPopular
+.sPopular {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__col {
+	}
+	&__slider {
+		border-radius: $border-radius;
+		@include media-breakpoint-down(md) {
+			overflow: visible;
+		}
+	}
+	&__item {
+		@include block(180, 82);
+		border-radius: $border-radius;
+		background-color: $light;
+		img {
+			@include a-cent;
+			max-height: 100%;
+			max-width: 72%;
+		}
+	}
+
+	.swiper-button-hand {
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sPopular

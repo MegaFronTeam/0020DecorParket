@@ -127,6 +127,27 @@ main {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	&--link {
+		h2 {
+			margin-bottom: 0;
+		}
+		.section-title__link {
+			@extend .link-primary;
+			font-weight: 700;
+			font-size: rem(16);
+			line-height: calc(28 / 18);
+			@include media-breakpoint-up(md) {
+				font-size: rem(18);
+			}
+			// &:hover {
+			// 	text-decoration: underline;
+			// }
+		}
+		& > .row {
+			--bs-gutter-y: calc(var(--bs-gutter-x) / 2);
+			align-items: center;
+		}
+	}
 }
 
 .mono {
@@ -315,7 +336,7 @@ ul {
 
 	.icon {
 		font-size: rem(24);
-		fill:none;
+		fill: none;
 		stroke: currentColor;
 		stroke-width: 2px;
 		stroke-linecap: round;
@@ -337,6 +358,7 @@ ul {
 }
 .swiper-slide {
 	cursor: grab;
+	height: auto;
 }
 .slider-wrapper {
 	position: relative;

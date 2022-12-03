@@ -25,9 +25,17 @@
 		@include media-breakpoint-up(md) {
 			border-radius: $border-radius-xl;
 		}
+		@include media-breakpoint-down(md) {
+			overflow: visible;
+		}
 	}
 	&__slide {
 		height: auto;
+		border-radius: $border-radius-lg;
+		overflow: hidden;
+		@include media-breakpoint-up(md) {
+			border-radius: $border-radius-xl;
+		}
 	}
 
 	.swiper-button-hand {
@@ -51,7 +59,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: flex-start;
 		padding: rem(34) rem(24) rem(24);
 		height: 100%;

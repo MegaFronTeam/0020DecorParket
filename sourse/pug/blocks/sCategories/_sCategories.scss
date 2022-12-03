@@ -17,6 +17,7 @@
 	// 	}
 	// }
 	&__slider {
+		border-radius: $border-radius-lg;
 		@include media-breakpoint-down(md) {
 			overflow: visible;
 		}

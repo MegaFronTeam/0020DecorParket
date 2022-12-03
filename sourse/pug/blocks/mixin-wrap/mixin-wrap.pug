@@ -45,3 +45,28 @@ mixin page-head(t,...items)
 			+breadcrumb('Главная',...items)
 
 			h1= t
+
+mixin section-title(h, l)
+	if l
+		+b.section-title--link
+			.row
+				.col
+					h2!= h
+				.col-auto
+					+e.link(href="#")
+						span.d-sm-none Все
+						span.d-none.d-sm-block!= l
+	else
+		+b.section-title
+			h2!= h
+
+mixin article-item(img, s, h, p)
+	// start article-item
+	+b.article-item(href="#")
+		+e.img-wrap
+			+img(`img/${img}`, 'bg')
+		+e.subtitle!= s
+		h3!= h
+		if p
+			p!= p
+	// end article-item

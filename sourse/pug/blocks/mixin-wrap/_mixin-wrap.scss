@@ -1,32 +1,26 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(10px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(30);
 	}
-
-
 }
 
-
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -34,23 +28,20 @@
 	}
 }
 
-
-
-
-.addBlock{
+.addBlock {
 	color: var(--color, #{$primary});
 	border: 1px solid;
 	border-radius: 23px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	input{
+	input {
 		color: inherit;
 		text-align: center;
 		border: none;
 		height: rem(45);
 	}
-	&__btn{
+	&__btn {
 		color: inherit;
 		height: rem(45);
 		position: relative;
@@ -64,24 +55,23 @@
 		// padding-right: rem(8);
 		width: rem(26);
 		&::before,
-		&::after{
-			content: '';
+		&::after {
+			content: "";
 			width: 10px;
-			height: 2px; 
+			height: 2px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
 		}
-		&--plus::after{
+		&--plus::after {
 			transform: rotate(90deg);
 		}
 	}
 }
 
-
-.search-block{
+.search-block {
 	position: relative;
-	input{
+	input {
 		font-size: 14px;
 		width: 100%;
 		border: none !important;
@@ -90,11 +80,11 @@
 		padding-top: rem(14);
 		padding-bottom: rem(14);
 	}
-	.icon{
+	.icon {
 		font-size: rem(20);
 		border: none !important;
 	}
-	button{
+	button {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -107,7 +97,66 @@
 	}
 }
 
-.breadcrumb-item{
+.breadcrumb-item {
 	width: auto;
 	margin-right: rem(32);
+}
+
+.article-item {
+	@include mt(0.2s);
+	height: 100%;
+	&:hover {
+		h3 {
+			color: $primary;
+		}
+		img {
+			transform: scale(1.05);
+		}
+	}
+	&__img-wrap {
+		@include block(400, 240);
+		border-radius: $border-radius-lg;
+		overflow: hidden;
+		margin-bottom: rem(8);
+		img {
+			@include mt(0.2s);
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	&__subtitle {
+		line-height: calc(26 / 16);
+		color: $secondary;
+		font-size: calc(#{rem(8)} + 1.6vw);
+		@include media-breakpoint-up(sm) {
+			font-size: rem(16);
+		}
+	}
+	h3 {
+		@include mt(0.2s);
+		margin-bottom: 0;
+		line-height: calc(32 / 22);
+		font-size: calc(#{rem(12)} + 1.6vw);
+		color: $body-color;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(22);
+		}
+		@include media-breakpoint-up(md) {
+			font-size: rem(18);
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: rem(17);
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: rem(20);
+		}
+		@include media-breakpoint-up(xxl) {
+			font-size: $h3-font-size;
+		}
+	}
+	p {
+		margin-bottom: 0;
+		color: $body-color;
+	}
 }
