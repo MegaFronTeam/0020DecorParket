@@ -54,15 +54,20 @@ mixin page-head(t,...items)
 
 			h1= t
 
-mixin section-title(h, l)
+mixin section-title(h, l, mnu)
 	+b.section-title--link
 		.row
 			.col
 				h2!= h
-			.col-auto
+			.col-auto.order-md-last
 				+e.link(href="#")
 					span.d-sm-none Все
 					span.d-none.d-sm-block!= l
+			if mnu
+				.col-12.my-0
+				.col
+					+e.menu-wrap
+						block
 
 mixin article-item(img, s, h, p)
 	// start article-item

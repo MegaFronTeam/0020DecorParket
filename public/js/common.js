@@ -391,6 +391,11 @@ function eventHandler() {
 		freeMode: true,
 		watchOverflow: true
 	});
+	const menuSlider = new Swiper('.menu-slider--js', {  
+		slidesPerView: 'auto',
+		watchOverflow: true,
+		spaceBetween: 16
+	});
 	
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
