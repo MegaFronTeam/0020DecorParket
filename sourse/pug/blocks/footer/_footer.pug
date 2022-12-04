@@ -10,14 +10,14 @@ mixin footer()
 						+img('img/svg/logo.svg')
 					+soc()
 				.col-12.col-lg.col-xl-6.order-md-last
-					ul
-						li: a(href="#") Каталог товаров
-						li: a(href="#") О&nbsp;магазине
-						li: a(href="#") Новости и&nbsp;акции
-						li: a(href="#") Оплата и&nbsp;доставка
-						li: a(href="#") Вакансии
-						li: a(href="#") Контактная информация
-						li: a(href="#") Гарантия на&nbsp;товар
+					ul(itemscope itemtype="http://schema.org/SiteNavigationElement")
+						li(itemprop="item" ): a(href="#" itemprop="url"  ) Каталог товаров
+						li(itemprop="item" ): a(href="#" itemprop="url"  ) О&nbsp;магазине
+						li(itemprop="item" ): a(href="#" itemprop="url"  ) Новости и&nbsp;акции
+						li(itemprop="item" ): a(href="#" itemprop="url"  ) Оплата и&nbsp;доставка
+						li(itemprop="item" ): a(href="#" itemprop="url"  ) Вакансии
+						li(itemprop="item" ): a(href="#" itemprop="url"  ) Контактная информация
+						li(itemprop="item" ): a(href="#" itemprop="url"  ) Гарантия на&nbsp;товар
 				.col-md-6.col-lg-auto.col-xxl-3.d-flex.flex-column.order-lg-last
 					+e.contacts
 						+e.tel(href="tel:+78003330600") +7 800 333-0-600

@@ -20,14 +20,79 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
+		.menu-mobile.menu-mobile--js.d-lg-none
+			.menu-mobile__inner
+				.container 
+					//- +mnumobile
+		
+		+e.container.container
+			+e.row.row
 				.col-auto.d-lg-none
 					+menu-toggle()
+				.col-top-js.text-center.h4.mb-0.fw-600.d-lg-none  Каталог
+
+
+				.col-lg-auto.col
+					+logo()
+				.col-auto.d-none.d-lg-block
+					+b.catalog-toggle.catalog-toggle-js
+						+icon("catalog")
+						+e.title Каталог товаров 
+
+				.col-lg.order-lg-0.order-last
+					+b.searchBlock-wrap--js
+						+searchBlock()
+					//- +mnu()
+				.col-lg-auto.order-lg-0.order-last
+					+top-btns()
+				.col-auto.d-lg-none 
+					+e.tel(href="tel:+7(495)120-06-43")
+						+icon("tel") 
+				.col-auto.d-lg-none 
+					+b.search-toggle--mobile.--js
+						+icon("search")
+		+b.catalog-menu--js
+			.container 
+				.h3.fw-600 Каталог товаров
+				ul
+					mixin li(i,t, ...items)
+						li.menu-item-has-children
+							a(href="#")
+								img(src=`img/cat-${i}.svg`, alt="") 
+								= t
+							ul.sub-menu
+								each item in items
+									li: a(href="#")= item
+					+li(`1`,`Обои`,`Текстильные обои`,`Обои для спальни`,`Виниловые обои`,`Обои для кухни`,`Обои для детской`,`Флизелиновые обои`,`Бумажные обои`)
+					+li(`2`,`Краски`,`Интерьерные`,`Фасадные`,`Для влажных помещений`,`Для деревянных фасадов`,`Для обоев`,`Универсальные`)
+					+li(`3`,`Лепнина`,`Потолочный плинтус`,`Розетки потолочные`,`Молдинги`,`Архитектурный лепной декор`,`Стеновые панели`,`Дверной декор`)
+					+li(`4`,`Освещение`,`Люстры`,`Настенные, бра`,`Светильники`,`Споты`,`Настольные лампы`,`Торшеры`)
+					+li(`5`,`Клей`,`Клей для бумажных обоев`,`Клей для всех видов обоев`,`Клей монтажный`,`Стыковочный клей`,`Клей для легких обоев`)
+					+li(`6`,`Напольные покрытия`,`Ламинат`,`Паркетная доска`,`Ковролин`,`Каменно-полимерная плитка`,`Керамическая плитка`)
 	// end top-nav
+
+//- mixin top-nav-textile()
+//- 	+b.top-nav--textile
+//- 		+e.container.container
+//- 			.row
+//- 				.col-auto.d-md-none
+//- 					.textile-menu__btn.textile-menu__btn--js
+//- 				.col
+//- 					+logo()
+//- 				.col-auto
+//- 					.topLine__wrap 
+//- 						.topLine__tel(href="tel:+7(495)120-06-43")
+//- 							a.topLine__tel-dt.d-none.d-md-flex
+//- 								.fw-600 +7 (495) 120-06-43
+//- 								+icon('chevron-down')
+//- 							.topLine__tel-dt.d-md-none
+//- 								+icon('tel')
+//- 						.topLine__content
+//- 							a(href="tel:+74951228945")
+//- 								.topLine__numHeadline.SPAN Оптовый отдел
+//- 								.topLine__num.SPAN +7 (495) 122-89-45
+//- 							a(href="tel:+74951275647")
+//- 								.topLine__numHeadline.SPAN Отдел по качеству
+//- 								.topLine__num.SPAN +7 (495) 127-56-47
+//- 				.col-auto.d-none.d-sm-block
+//- 					+btn('Заказать звонок')(href="#modal-call").btn.btn-outline.link-modal-custom-js

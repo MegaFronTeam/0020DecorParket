@@ -31,12 +31,20 @@ mixin addblock()
 
 
 
-mixin search()
-	+b.search-block
+mixin searchBlock()
+	+b.search-block 
+		// вешать класс .show-result
 		form
-			input(type="text" placeholder="Поиск по номеру или названию запчасти")
-			button 
+			input(type="text" placeholder="Поиск товаров")
+			button
 				+icon("search")
+			+e.close
+				+icon("close")
+		+e.result
+			each item in search
+				+e.result-item(href="#")
+					//- +icon("search")
+					= item
 
 mixin page-head(t,...items)
 	+b.page-head
@@ -70,3 +78,33 @@ mixin article-item(img, s, h, p)
 		if p
 			p!= p
 	// end article-item
+
+mixin logo()
+	+b.logo-wrap
+		a(href="/")
+			+img('img/svg/logo-header.svg')
+
+mixin top-btns()
+	+b.top-btns-wrap
+		.container
+			+b.top-btns
+				+e.btn(href="#").d-lg-none
+					+icon("home") 
+					+e.SPAN.title Главная
+				+e.btn(href="#" class="catalog-toggle-js").d-lg-none
+					+icon("menu-small") 
+					+e.SPAN.title Каталог
+				//- +e.btn(type="button" class="search-toggle--js").d-none.d-lg-flex
+				//- 	+icon("search") 
+				//- 	+e.SPAN.title Поиск
+				+e.btn(href="#modal-cabinet").link-modal-custom-js 
+					+icon("user") 
+					+e.SPAN.title Профиль
+				+e.btn(href="#").current 
+					+icon("like") 
+					+e.SPAN.title Избр
+				+e.btn(type="button") 
+					+e.SPAN.inner
+						+icon("basket") 
+						+e.SPAN.counter 4
+					+e.SPAN.title Корзина

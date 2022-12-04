@@ -15,45 +15,232 @@
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
-				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
+				<!-- start topLine-->
+				<div class="topLine d-none d-lg-block section" id="topLine">
 					<div class="container">
 						<div class="row">
-							<div class="col order-lg-0 order-last">
-								<div class="menu-mobile menu-mobile--js">
-									<div class="menu-mobile__inner">
-										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-										</div>
-										<nav>
-											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-											</ul>
-										</nav>
+							<div class="col d-none d-lg-block">
+								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О магазине</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка и оплата</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Гарантия</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+								</ul>
+							</div>
+							<div class="col-auto">
+								<div class="topLine__wrap"> 
+									<a class="topLine__tel fw-600" href="tel:+7(495)120-06-43">+7 (495) 120-06-43
+									</a>
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg>
+									<div class="topLine__content"><a href="tel:+74951228945"><span class="topLine__numHeadline">Оптовый отдел</span><span class="topLine__num">+7 (495) 122-89-45</span></a><a href="tel:+74951275647"><span class="topLine__numHeadline">Отдел по качеству</span><span class="topLine__num">+7 (495) 127-56-47</span></a>
 									</div>
 								</div>
 							</div>
+							<div class="col-auto"><a class="link-secondary small link-modal-custom-js" href="#modal-call">Обратный звонок </a></div>
+							<div class="col-auto">
+								<div class="soc">
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-ok ">
+											<use xlink:href="img/svg/sprite.svg#ok"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-youtube ">
+											<use xlink:href="img/svg/sprite.svg#youtube"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-vk ">
+											<use xlink:href="img/svg/sprite.svg#vk"></use>
+										</svg>
+									</a>
+									<a class="soc__item" href="#" target="_blank">
+										<svg class="icon icon-telegram ">
+											<use xlink:href="img/svg/sprite.svg#telegram"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end topLine-->
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="menu-mobile menu-mobile--js d-lg-none">
+						<div class="menu-mobile__inner">
+							<div class="container"> </div>
+						</div>
+					</div>
+					<div class="top-nav__container container">
+						<div class="top-nav__row row">
 							<div class="col-auto d-lg-none">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 								</div>
 							</div>
+							<div class="col-top-js text-center h4 mb-0 fw-600 d-lg-none"> Каталог</div>
+							<div class="col-lg-auto col">
+								<div class="logo-wrap"><a href="/"><img src="img/svg/logo-header.svg" alt="" loading="lazy"/></a>
+								</div>
+							</div>
+							<div class="col-auto d-none d-lg-block">
+								<div class="catalog-toggle catalog-toggle-js">
+									<svg class="icon icon-catalog ">
+										<use xlink:href="img/svg/sprite.svg#catalog"></use>
+									</svg>
+									<div class="catalog-toggle__title">Каталог товаров 
+									</div>
+								</div>
+							</div>
+							<div class="col-lg order-lg-0 order-last">
+								<div class="searchBlock-wrap searchBlock-wrap--js">
+									<div class="search-block"> 
+										<!-- вешать класс .show-result-->
+										<form>
+											<input type="text" placeholder="Поиск товаров"/>
+											<button>
+												<svg class="icon icon-search ">
+													<use xlink:href="img/svg/sprite.svg#search"></use>
+												</svg>
+											</button>
+											<div class="search-block__close">
+												<svg class="icon icon-close ">
+													<use xlink:href="img/svg/sprite.svg#close"></use>
+												</svg>
+											</div>
+										</form>
+										<div class="search-block__result">
+											<a class="search-block__result-item" href="#">Обои дизайнерские
+											</a>
+											<a class="search-block__result-item" href="#">Обои виноловые
+											</a>
+											<a class="search-block__result-item" href="#">Обои виноловые
+											</a>
+											<a class="search-block__result-item" href="#">Обои виноловые
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-auto order-lg-0 order-last">
+								<div class="top-btns-wrap">
+									<div class="container">
+										<div class="top-btns">
+											<a class="top-btns__btn d-lg-none" href="#">
+												<svg class="icon icon-home ">
+													<use xlink:href="img/svg/sprite.svg#home"></use>
+												</svg><span class="top-btns__title">Главная</span>
+											</a>
+											<a class="top-btns__btn catalog-toggle-js d-lg-none" href="#">
+												<svg class="icon icon-menu-small ">
+													<use xlink:href="img/svg/sprite.svg#menu-small"></use>
+												</svg><span class="top-btns__title">Каталог</span>
+											</a>
+											<a class="top-btns__btn link-modal-custom-js" href="#modal-cabinet"> 
+												<svg class="icon icon-user ">
+													<use xlink:href="img/svg/sprite.svg#user"></use>
+												</svg><span class="top-btns__title">Профиль</span>
+											</a>
+											<a class="top-btns__btn current" href="#"> 
+												<svg class="icon icon-like ">
+													<use xlink:href="img/svg/sprite.svg#like"></use>
+												</svg><span class="top-btns__title">Избр</span>
+											</a>
+											<button class="top-btns__btn" type="button"> <span class="top-btns__inner">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg><span class="top-btns__counter">4</span></span><span class="top-btns__title">Корзина</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-auto d-lg-none"> 
+								<a class="top-nav__tel" href="tel:+7(495)120-06-43">
+									<svg class="icon icon-tel ">
+										<use xlink:href="img/svg/sprite.svg#tel"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="col-auto d-lg-none"> 
+								<div class="search-toggle search-toggle--mobile search-toggle--js">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog-menu catalog-menu--js">
+						<div class="container"> 
+							<div class="h3 fw-600">Каталог товаров</div>
+							<ul>
+										<li class="menu-item-has-children"><a href="#"><img src="img/cat-1.svg" alt=""/>Обои</a>
+											<ul class="sub-menu">
+												<li><a href="#">Текстильные обои</a></li>
+												<li><a href="#">Обои для спальни</a></li>
+												<li><a href="#">Виниловые обои</a></li>
+												<li><a href="#">Обои для кухни</a></li>
+												<li><a href="#">Обои для детской</a></li>
+												<li><a href="#">Флизелиновые обои</a></li>
+												<li><a href="#">Бумажные обои</a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children"><a href="#"><img src="img/cat-2.svg" alt=""/>Краски</a>
+											<ul class="sub-menu">
+												<li><a href="#">Интерьерные</a></li>
+												<li><a href="#">Фасадные</a></li>
+												<li><a href="#">Для влажных помещений</a></li>
+												<li><a href="#">Для деревянных фасадов</a></li>
+												<li><a href="#">Для обоев</a></li>
+												<li><a href="#">Универсальные</a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children"><a href="#"><img src="img/cat-3.svg" alt=""/>Лепнина</a>
+											<ul class="sub-menu">
+												<li><a href="#">Потолочный плинтус</a></li>
+												<li><a href="#">Розетки потолочные</a></li>
+												<li><a href="#">Молдинги</a></li>
+												<li><a href="#">Архитектурный лепной декор</a></li>
+												<li><a href="#">Стеновые панели</a></li>
+												<li><a href="#">Дверной декор</a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children"><a href="#"><img src="img/cat-4.svg" alt=""/>Освещение</a>
+											<ul class="sub-menu">
+												<li><a href="#">Люстры</a></li>
+												<li><a href="#">Настенные, бра</a></li>
+												<li><a href="#">Светильники</a></li>
+												<li><a href="#">Споты</a></li>
+												<li><a href="#">Настольные лампы</a></li>
+												<li><a href="#">Торшеры</a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children"><a href="#"><img src="img/cat-5.svg" alt=""/>Клей</a>
+											<ul class="sub-menu">
+												<li><a href="#">Клей для бумажных обоев</a></li>
+												<li><a href="#">Клей для всех видов обоев</a></li>
+												<li><a href="#">Клей монтажный</a></li>
+												<li><a href="#">Стыковочный клей</a></li>
+												<li><a href="#">Клей для легких обоев</a></li>
+											</ul>
+										</li>
+										<li class="menu-item-has-children"><a href="#"><img src="img/cat-6.svg" alt=""/>Напольные покрытия</a>
+											<ul class="sub-menu">
+												<li><a href="#">Ламинат</a></li>
+												<li><a href="#">Паркетная доска</a></li>
+												<li><a href="#">Ковролин</a></li>
+												<li><a href="#">Каменно-полимерная плитка</a></li>
+												<li><a href="#">Керамическая плитка</a></li>
+											</ul>
+										</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 				<!-- end top-nav-->
-				<!-- start topLine-->
-				<div class="topLine section" id="topLine">
-					<div class="container">
-						<div class="section-title text-center">
-							<h2>topLine</h2>
-						</div>
-						<div class="row"></div>
-					</div>
-				</div>
-				<!-- end topLine-->
 			</header>
 			<!-- end header-->
 			<main>
@@ -456,14 +643,14 @@
 							</div>
 						</div>
 						<div class="col-12 col-lg col-xl-6 order-md-last">
-							<ul>
-								<li><a href="#">Каталог товаров</a></li>
-								<li><a href="#">О&nbsp;магазине</a></li>
-								<li><a href="#">Новости и&nbsp;акции</a></li>
-								<li><a href="#">Оплата и&nbsp;доставка</a></li>
-								<li><a href="#">Вакансии</a></li>
-								<li><a href="#">Контактная информация</a></li>
-								<li><a href="#">Гарантия на&nbsp;товар</a></li>
+							<ul itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li itemprop="item"><a href="#" itemprop="url">Каталог товаров</a></li>
+								<li itemprop="item"><a href="#" itemprop="url">О&nbsp;магазине</a></li>
+								<li itemprop="item"><a href="#" itemprop="url">Новости и&nbsp;акции</a></li>
+								<li itemprop="item"><a href="#" itemprop="url">Оплата и&nbsp;доставка</a></li>
+								<li itemprop="item"><a href="#" itemprop="url">Вакансии</a></li>
+								<li itemprop="item"><a href="#" itemprop="url">Контактная информация</a></li>
+								<li itemprop="item"><a href="#" itemprop="url">Гарантия на&nbsp;товар</a></li>
 							</ul>
 						</div>
 						<div class="col-md-6 col-lg-auto col-xxl-3 d-flex flex-column order-lg-last">

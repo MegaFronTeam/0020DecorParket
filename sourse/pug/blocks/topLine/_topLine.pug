@@ -1,9 +1,23 @@
 mixin topLine()
 	// start topLine
-	+b.topLine.section#topLine&attributes(attributes)
+	+b.topLine.d-none.d-lg-block#topLine.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
 			.row
+				.col.d-none.d-lg-block
+					+mnu2()
+				.col-auto
+					+e.wrap 
+						+e.tel(href="tel:+7(495)120-06-43").fw-600 +7 (495) 120-06-43
+						+icon('chevron-down')
+						+e.content
+							a(href="tel:+74951228945")
+								+e.SPAN.numHeadline Оптовый отдел
+								+e.SPAN.num +7 (495) 122-89-45
+							a(href="tel:+74951275647")
+								+e.SPAN.numHeadline Отдел по качеству
+								+e.SPAN.num +7 (495) 127-56-47
+				.col-auto
+					a.link-secondary.small(href="#modal-call").link-modal-custom-js Обратный звонок 
+				.col-auto
+					+soc()
 	// end topLine

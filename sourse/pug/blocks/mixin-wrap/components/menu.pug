@@ -1,14 +1,68 @@
 
-mixin mnu()
-	nav
-		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-			each link in nav
-				li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
-				if link.subnav
-					li.menu-item.menu-item-has-children
-						a(href="#" itemprop="url") О нас
-						ul.sub-menu
-							each sublink in link.subnav
-								li.menu-item(itemprop="item" ): a(href= sublink.url itemprop="url")= sublink.name
 
+mixin mnuBody(json)
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each link in json
+			li.menu-item(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+			
+mixin mnu()
+	+mnuBody(categories)
+//- menu
+mixin mnu2()
+	+mnuBody(nav)
+
+//- menu
+
+mixin mnu3()
+	+b.menu-slider--js.swiper
+		ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			each link in categories
+				li.menu-item.swiper-slide(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+//- menu
+
+mixin mnu4()
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each link in categories2
+			li.menu-item(itemprop="item" ): a(href="#" itemprop="url" )= link 
+			
+mixin mnumobile()
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each link in menumobile
+			li.menu-item.menu-item-has-children(itemprop="item" ): a(href="#" itemprop="url"  )= link.name
+		each link in nav
+			li.menu-item(itemprop="item" ): a(href="#" itemprop="url"  )= link.name
+
+mixin mnu5()
+	+b.menu-slider--js.swiper
+		ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			each link in categories3
+				li.menu-item.swiper-slide(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+//- menu
+
+mixin mnu6()
+	+b.menu-slider--js.swiper
+		ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			each link in categories4
+				li.menu-item.swiper-slide(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+//- menu
+
+mixin mnu7()
+	+b.menu-slider--js.swiper
+		ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			each link in categories5
+				li.menu-item.swiper-slide(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+//- menu
+
+mixin mnu8()
+	+b.menu-slider--js.swiper
+		ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			each link in categories6
+				li.menu-item.swiper-slide(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+//- menu
+
+mixin mnu9()
+	+b.menu-slider--js.swiper
+		ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			each link in categories7
+				li.menu-item.swiper-slide(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
 //- menu
