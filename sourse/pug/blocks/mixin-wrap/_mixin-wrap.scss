@@ -119,7 +119,37 @@
 
 .breadcrumb-item {
 	width: auto;
-	margin-right: rem(32);
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+	& * {
+		display: inline-block;
+		line-height: rem(20);
+	}
+}
+.breadcrumbs {
+	padding-top: rem(16);
+	@include media-breakpoint-up(md) {
+		padding-top: rem(20);
+	}
+	&__btn {
+		font-size: var(--bs-breadcrumb-font-size);
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(sm) {
+			display: none;
+		}
+		& * {
+			display: inline-block;
+			line-height: rem(20);
+		}
+		.icon {
+			font-size: rem(20);
+			fill: none;
+			stroke: $primary;
+			stroke-width: 2px;
+		}
+	}
 }
 
 .article-item {

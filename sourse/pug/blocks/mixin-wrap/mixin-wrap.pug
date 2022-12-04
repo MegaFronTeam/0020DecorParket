@@ -55,18 +55,14 @@ mixin page-head(t,...items)
 			h1= t
 
 mixin section-title(h, l)
-	if l
-		+b.section-title--link
-			.row
-				.col
-					h2!= h
-				.col-auto
-					+e.link(href="#")
-						span.d-sm-none Все
-						span.d-none.d-sm-block!= l
-	else
-		+b.section-title
-			h2!= h
+	+b.section-title--link
+		.row
+			.col
+				h2!= h
+			.col-auto
+				+e.link(href="#")
+					span.d-sm-none Все
+					span.d-none.d-sm-block!= l
 
 mixin article-item(img, s, h, p)
 	// start article-item
