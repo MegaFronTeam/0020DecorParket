@@ -7,20 +7,14 @@ mixin headerBlock()
 			.slider-wrapper
 				+e.slider--js.swiper
 					.swiper-wrapper
-						mixin slide(h, p, i)
-							+e.slide.swiper-slide
-								+e.item
-									h2!= h
-									p!= p
-									+e.btn.btn.btn-primary(href="#") Узнать подробнее
-									picture.picture-bg
-										source(type='image/jpg' srcset=`img/headerBlock-lg-${i}.jpg` media='(min-width:768px)')
-										source(type='image/jpg' srcset=`img/headerBlock-${i}.jpg`)
-										img.object-fit-js(src=`img/@2x/img-${i}.jpg` alt='' loading='lazy')
-						+slide(`Скидка 50% <br> на второй товар`, `Покупая любые наполные покрытия в&nbsp;кредит или наличными`, 1)
-						+slide(`Lorem ipsum dolor sit amet.`, `Lorem ipsum dolor sit, consectetur adipisicing elit.`, 1)
-						+slide(`Скидка 50% <br> на второй товар`, `Покупая любые наполные покрытия в&nbsp;кредит или наличными`, 1)
-						+slide(`Lorem ipsum dolor amet.`, `Lorem ipsum dolor sit, amet consectetur adipisicing elit.`, 1)
+						+e.slide.swiper-slide
+							+headerBlock-item(`Скидка 50% <br> на второй товар`, `Покупая любые наполные покрытия в&nbsp;кредит или наличными`, 1)
+						+e.slide.swiper-slide
+							+headerBlock-item(`Lorem ipsum dolor sit amet.`, `Lorem ipsum dolor sit, consectetur adipisicing elit.`, 1)
+						+e.slide.swiper-slide
+							+headerBlock-item(`Скидка 50% <br> на второй товар`, `Покупая любые наполные покрытия в&nbsp;кредит или наличными`, 1)
+						+e.slide.swiper-slide
+							+headerBlock-item(`Lorem ipsum dolor amet.`, `Lorem ipsum dolor sit, amet consectetur adipisicing elit.`, 1)
 				.swiper-pagination.swiper-pagination
 				+arrow
 

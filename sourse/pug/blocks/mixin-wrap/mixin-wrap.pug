@@ -80,6 +80,18 @@ mixin article-item(img, s, h, p)
 			p!= p
 	// end article-item
 
+mixin headerBlock-item(h, p, i)
+	// start headerBlock-item
+	+b.headerBlock-item
+		h2!= h
+		p!= p
+		+e.btn.btn.btn-primary(href="#") Узнать подробнее
+		picture.picture-bg
+			source(type='image/jpg' srcset=`img/headerBlock-lg-${i}.jpg` media='(min-width:768px)')
+			source(type='image/jpg' srcset=`img/headerBlock-${i}.jpg`)
+			img.object-fit-js(src=`img/@2x/img-${i}.jpg` alt='' loading='lazy')
+	// end headerBlock-item
+
 mixin logo()
 	+b.logo-wrap
 		a(href="/")

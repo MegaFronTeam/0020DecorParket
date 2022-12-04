@@ -11,6 +11,9 @@
 	}
 	&__col {
 	}
+	.slider-wrapper {
+		margin-bottom: 0;
+	}
 	&__slider {
 		border-radius: $border-radius;
 		@include media-breakpoint-down(md) {
@@ -28,11 +31,7 @@
 		}
 	}
 
-	.swiper-button-hand {
-		@include media-breakpoint-down(md) {
-			display: none;
-		}
-	}
+	
 
 	@include media-breakpoint-up(xl) {
 	}
