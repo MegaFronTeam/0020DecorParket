@@ -32,22 +32,22 @@
 
 
 
-.product-item{
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
-	background: #FFFFFF; 
-	border: 1px solid #E2E2E2;
-	border-radius: 15px;
-	overflow: hidden;
-	position: relative;
-	&__img-wrap{
-		@include block(298, 190);
-	}
-	&__caption{
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
-		padding: rem(20);
-	}
-}
+// .product-item{
+// 	display: flex;
+// 	flex-direction: column;
+// 	min-height: 100%;
+// 	background: #FFFFFF; 
+// 	border: 1px solid #E2E2E2;
+// 	border-radius: 15px;
+// 	overflow: hidden;
+// 	position: relative;
+// 	&__img-wrap{
+// 		@include block(298, 190);
+// 	}
+// 	&__caption{
+// 		flex-grow: 1;
+// 		display: flex;
+// 		flex-direction: column;
+// 		padding: rem(20);
+// 	}
+// }

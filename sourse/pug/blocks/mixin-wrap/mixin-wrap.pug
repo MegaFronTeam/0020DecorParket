@@ -98,6 +98,7 @@ mixin logo()
 			+img('img/svg/logo-header.svg')
 
 mixin top-btns()
+	// start top-btns
 	+b.top-btns-wrap
 		.container
 			+b.top-btns
@@ -123,3 +124,14 @@ mixin top-btns()
 						+icon("basket") 
 						+e.SPAN.counter 6
 					+e.SPAN.title Корзина
+	// end top-btns
+
+mixin star-block()
+	// start star-block
+	+b.star-block
+		+icon('star').active
+		+icon('star').active
+		+icon('star').active
+		+icon('star').active
+		+icon('star')
+	// end star-block

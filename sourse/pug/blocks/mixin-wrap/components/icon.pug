@@ -1,6 +1,6 @@
 //- svg-sprite
 mixin icon(name,mod)
 	- mod = mod || ''
-	svg(class="icon icon-" + name + ' ' + mod)
+	svg(class="icon icon-" + name + ' ' + mod)&attributes(attributes)
 		use(xlink:href="img/svg/sprite.svg#" + name)
 //-/ svg-sprite

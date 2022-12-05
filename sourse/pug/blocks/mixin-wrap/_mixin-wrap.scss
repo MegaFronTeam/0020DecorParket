@@ -288,3 +288,59 @@
 		}
 	}
 }
+
+.star-block {
+	@include roww(2px, m);
+	display: inline-flex;
+	.icon {
+		font-size: rem(16);
+		color: $gray-300;
+		&.active {
+			color: $primary;
+		}
+	}
+	&:not(:last-child) {
+		margin-right: rem(8);
+	}
+}
+
+.product-card {
+	&__slider {
+		border-radius: $border-radius-lg;
+		overflow: hidden;
+	}
+	&__img-wrap {
+		@include block(290, 250);
+		border-radius: $border-radius-lg;
+		overflow: hidden;
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	&__caption {
+		display: flex;
+		flex-direction: column;
+	}
+	&__vendorCode {
+		font-size: rem(13);
+		line-height: calc(16 / 13);
+		color: $secondary;
+	}
+	&__rating {
+		display: flex;
+		align-items: center;
+		font-size: rem(14);
+		line-height: calc(20 / 14);
+		span {
+			color: $secondary;
+		}
+	}
+	&__price {
+		&--discount {
+		}
+		&--meter {
+		}
+	}
+}

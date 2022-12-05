@@ -422,7 +422,25 @@ function eventHandler() {
 			prevEl: '.headerBlock .slider-wrapper .swiper-button-prev',
 		},
 		pagination: {
-			el: ' .swiper-pagination',
+			el: '.headerBlock .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			// renderBullet: function (index, className) {
+			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+			// }
+		},
+	});
+	const productCardSlider = new Swiper('.product-card__slider--js', {
+		slidesPerView: 'auto',
+		loopFillGroupWithBlank: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 4,
+		loop: true,
+		pagination: {
+			el: '.product-card .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
 			// renderBullet: function (index, className) {
