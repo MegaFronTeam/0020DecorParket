@@ -128,9 +128,9 @@
 	}
 }
 .breadcrumbs {
-	padding-top: rem(16);
-	@include media-breakpoint-up(md) {
-		padding-top: rem(20);
+	padding-top: rem(4);
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(8);
 	}
 	&__btn {
 		font-size: var(--bs-breadcrumb-font-size);

@@ -11,6 +11,12 @@
 		--sTPB: #{rem(32)};
 	}
 
+	--logo-size: 194px;
+	@include media-breakpoint-up(xl) {
+		--logo-size: 233px;
+		--logo-x: #{rem(40)};
+	}
+
 	--fancybox-content-color: var(--bs-body-color);
 
 	--swiperArrowSize: #{rem(56)};

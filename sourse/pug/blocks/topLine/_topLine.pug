@@ -1,23 +1,31 @@
 mixin topLine()
 	// start topLine
-	+b.topLine.d-none.d-lg-block#topLine.section&attributes(attributes)
+	+b.topLine#topLine.section&attributes(attributes)
 		.container
 			.row
-				.col.d-none.d-lg-block
+				.col.col-lg-auto
+					+e.location(href="#")
+						+icon('map-pin')
+						| Москва и&nbsp;Подмосковье
+				.col.d-none.d-lg-flex.justify-content-end
 					+mnu2()
 				.col-auto
-					+e.wrap 
-						+e.tel(href="tel:+7(495)120-06-43").fw-600 +7 (495) 120-06-43
-						+icon('chevron-down')
-						+e.content
-							a(href="tel:+74951228945")
-								+e.SPAN.numHeadline Оптовый отдел
-								+e.SPAN.num +7 (495) 122-89-45
-							a(href="tel:+74951275647")
-								+e.SPAN.numHeadline Отдел по качеству
-								+e.SPAN.num +7 (495) 127-56-47
-				.col-auto
-					a.link-secondary.small(href="#modal-call").link-modal-custom-js Обратный звонок 
-				.col-auto
-					+soc()
+					+e.row.row
+						.col-auto
+							+e.wrap 
+								+e.tel(href="tel:+7(495)120-06-43")
+									span +7 (495) 120-06-43
+									+icon('phone-call')
+								//- +icon('chevron-down')
+								//- +e.content
+								//- 	a(href="tel:+74951228945")
+								//- 		+e.SPAN.numHeadline Оптовый отдел
+								//- 		+e.SPAN.num +7 (495) 122-89-45
+								//- 	a(href="tel:+74951275647")
+								//- 		+e.SPAN.numHeadline Отдел по качеству
+								//- 		+e.SPAN.num +7 (495) 127-56-47
+						.col-auto.d-none.d-sm-block
+							+e.callBack(href="#modal-call").link-modal-custom-js Обратный звонок 
+				//- .col-auto
+				//- 	+soc()
 	// end topLine

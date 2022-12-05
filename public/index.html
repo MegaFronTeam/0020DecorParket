@@ -16,10 +16,17 @@
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start topLine-->
-				<div class="topLine d-none d-lg-block section" id="topLine">
+				<div class="topLine section" id="topLine">
 					<div class="container">
 						<div class="row">
-							<div class="col d-none d-lg-block">
+							<div class="col col-lg-auto">
+								<a class="topLine__location" href="#">
+									<svg class="icon icon-map-pin ">
+										<use xlink:href="img/svg/sprite.svg#map-pin"></use>
+									</svg>Москва и&nbsp;Подмосковье
+								</a>
+							</div>
+							<div class="col d-none d-lg-flex justify-content-end">
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О магазине</a></li>
 									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка и оплата</a></li>
@@ -28,39 +35,20 @@
 								</ul>
 							</div>
 							<div class="col-auto">
-								<div class="topLine__wrap"> 
-									<a class="topLine__tel fw-600" href="tel:+7(495)120-06-43">+7 (495) 120-06-43
-									</a>
-									<svg class="icon icon-chevron-down ">
-										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-									</svg>
-									<div class="topLine__content"><a href="tel:+74951228945"><span class="topLine__numHeadline">Оптовый отдел</span><span class="topLine__num">+7 (495) 122-89-45</span></a><a href="tel:+74951275647"><span class="topLine__numHeadline">Отдел по качеству</span><span class="topLine__num">+7 (495) 127-56-47</span></a>
+								<div class="topLine__row row">
+									<div class="col-auto">
+										<div class="topLine__wrap"> 
+											<a class="topLine__tel" href="tel:+7(495)120-06-43"><span>+7 (495) 120-06-43</span>
+												<svg class="icon icon-phone-call ">
+													<use xlink:href="img/svg/sprite.svg#phone-call"></use>
+												</svg>
+											</a>
+										</div>
 									</div>
-								</div>
-							</div>
-							<div class="col-auto"><a class="link-secondary small link-modal-custom-js" href="#modal-call">Обратный звонок </a></div>
-							<div class="col-auto">
-								<div class="soc">
-									<a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-ok ">
-											<use xlink:href="img/svg/sprite.svg#ok"></use>
-										</svg>
-									</a>
-									<a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-youtube ">
-											<use xlink:href="img/svg/sprite.svg#youtube"></use>
-										</svg>
-									</a>
-									<a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-vk ">
-											<use xlink:href="img/svg/sprite.svg#vk"></use>
-										</svg>
-									</a>
-									<a class="soc__item" href="#" target="_blank">
-										<svg class="icon icon-telegram ">
-											<use xlink:href="img/svg/sprite.svg#telegram"></use>
-										</svg>
-									</a>
+									<div class="col-auto d-none d-sm-block">
+										<a class="topLine__callBack link-modal-custom-js" href="#modal-call">Обратный звонок 
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -71,7 +59,20 @@
 				<div class="top-nav block-with-lazy">
 					<div class="menu-mobile menu-mobile--js d-lg-none">
 						<div class="menu-mobile__inner">
-							<div class="container"> </div>
+							<div class="container"> 
+								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Обои</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Краски</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Лепнина</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Клей</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Свет</a></li>
+									<li class="menu-item menu-item-has-children" itemprop="item"><a href="#" itemprop="url">Текстиль</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О магазине</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка и оплата</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Гарантия</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 					<div class="top-nav__container container">
@@ -81,16 +82,16 @@
 								</div>
 							</div>
 							<div class="col-top-js text-center h4 mb-0 fw-600 d-lg-none"> Каталог</div>
-							<div class="col-lg-auto col">
+							<div class="col col-lg-auto">
 								<div class="logo-wrap"><a href="/"><img src="img/svg/logo-header.svg" alt="" loading="lazy"/></a>
 								</div>
 							</div>
 							<div class="col-auto d-none d-lg-block">
 								<div class="catalog-toggle catalog-toggle-js">
-									<svg class="icon icon-catalog ">
-										<use xlink:href="img/svg/sprite.svg#catalog"></use>
+									<svg class="icon icon-menu-toggle ">
+										<use xlink:href="img/svg/sprite.svg#menu-toggle"></use>
 									</svg>
-									<div class="catalog-toggle__title">Каталог товаров 
+									<div class="catalog-toggle__title">Каталог
 									</div>
 								</div>
 							</div>
@@ -128,41 +129,34 @@
 								<div class="top-btns-wrap">
 									<div class="container">
 										<div class="top-btns">
-											<a class="top-btns__btn d-lg-none" href="#">
-												<svg class="icon icon-home ">
-													<use xlink:href="img/svg/sprite.svg#home"></use>
-												</svg><span class="top-btns__title">Главная</span>
-											</a>
-											<a class="top-btns__btn catalog-toggle-js d-lg-none" href="#">
+											<a class="top-btns__btn catalog-toggle-js d-lg-none" href="#"><span class="top-btns__inner">
 												<svg class="icon icon-menu-small ">
 													<use xlink:href="img/svg/sprite.svg#menu-small"></use>
-												</svg><span class="top-btns__title">Каталог</span>
+												</svg></span><span class="top-btns__title">Каталог</span>
 											</a>
-											<a class="top-btns__btn link-modal-custom-js" href="#modal-cabinet"> 
+											<a class="top-btns__btn d-none d-lg-flex" href="#"><span class="top-btns__inner">
 												<svg class="icon icon-user ">
 													<use xlink:href="img/svg/sprite.svg#user"></use>
-												</svg><span class="top-btns__title">Профиль</span>
+												</svg></span><span class="top-btns__title">Войти</span>
 											</a>
-											<a class="top-btns__btn current" href="#"> 
-												<svg class="icon icon-like ">
-													<use xlink:href="img/svg/sprite.svg#like"></use>
-												</svg><span class="top-btns__title">Избр</span>
+											<a class="top-btns__btn" href="#"><span class="top-btns__inner">
+												<svg class="icon icon-compare ">
+													<use xlink:href="img/svg/sprite.svg#compare"></use>
+												</svg></span><span class="top-btns__title">Сравнение</span>
+											</a>
+											<a class="top-btns__btn current" href="#"><span class="top-btns__inner">
+												<svg class="icon icon-heart ">
+													<use xlink:href="img/svg/sprite.svg#heart"></use>
+												</svg><span class="top-btns__counter">2</span></span><span class="top-btns__title">Избранное</span>
 											</a>
 											<button class="top-btns__btn" type="button"> <span class="top-btns__inner">
 												<svg class="icon icon-basket ">
 													<use xlink:href="img/svg/sprite.svg#basket"></use>
-												</svg><span class="top-btns__counter">4</span></span><span class="top-btns__title">Корзина</span>
+												</svg><span class="top-btns__counter">6</span></span><span class="top-btns__title">Корзина</span>
 											</button>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-auto d-lg-none"> 
-								<a class="top-nav__tel" href="tel:+7(495)120-06-43">
-									<svg class="icon icon-tel ">
-										<use xlink:href="img/svg/sprite.svg#tel"></use>
-									</svg>
-								</a>
 							</div>
 							<div class="col-auto d-lg-none"> 
 								<div class="search-toggle search-toggle--mobile search-toggle--js">

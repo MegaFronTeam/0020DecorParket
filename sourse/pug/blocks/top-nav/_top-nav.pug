@@ -23,21 +23,19 @@ mixin top-nav()
 		.menu-mobile.menu-mobile--js.d-lg-none
 			.menu-mobile__inner
 				.container 
-					//- +mnumobile
+					+mnumobile
 		
 		+e.container.container
 			+e.row.row
 				.col-auto.d-lg-none
 					+menu-toggle()
 				.col-top-js.text-center.h4.mb-0.fw-600.d-lg-none  Каталог
-
-
-				.col-lg-auto.col
+				.col.col-lg-auto
 					+logo()
 				.col-auto.d-none.d-lg-block
 					+b.catalog-toggle.catalog-toggle-js
-						+icon("catalog")
-						+e.title Каталог товаров 
+						+icon("menu-toggle")
+						+e.title Каталог
 
 				.col-lg.order-lg-0.order-last
 					+b.searchBlock-wrap--js
@@ -45,9 +43,9 @@ mixin top-nav()
 					//- +mnu()
 				.col-lg-auto.order-lg-0.order-last
 					+top-btns()
-				.col-auto.d-lg-none 
-					+e.tel(href="tel:+7(495)120-06-43")
-						+icon("tel") 
+				//- .col-auto.d-lg-none 
+				//- 	+e.tel(href="tel:+7(495)120-06-43")
+				//- 		+icon("tel") 
 				.col-auto.d-lg-none 
 					+b.search-toggle--mobile.--js
 						+icon("search")

@@ -101,23 +101,25 @@ mixin top-btns()
 	+b.top-btns-wrap
 		.container
 			+b.top-btns
-				+e.btn(href="#").d-lg-none
-					+icon("home") 
-					+e.SPAN.title Главная
 				+e.btn(href="#" class="catalog-toggle-js").d-lg-none
-					+icon("menu-small") 
+					+e.SPAN.inner
+						+icon("menu-small") 
 					+e.SPAN.title Каталог
-				//- +e.btn(type="button" class="search-toggle--js").d-none.d-lg-flex
-				//- 	+icon("search") 
-				//- 	+e.SPAN.title Поиск
-				+e.btn(href="#modal-cabinet").link-modal-custom-js 
-					+icon("user") 
-					+e.SPAN.title Профиль
-				+e.btn(href="#").current 
-					+icon("like") 
-					+e.SPAN.title Избр
+				+e.btn(href="#").d-none.d-lg-flex
+					+e.SPAN.inner
+						+icon("user") 
+					+e.SPAN.title Войти
+				+e.btn(href="#")
+					+e.SPAN.inner
+						+icon("compare") 
+					+e.SPAN.title Сравнение
+				+e.btn(href="#").current
+					+e.SPAN.inner
+						+icon("heart")
+						+e.SPAN.counter 2
+					+e.SPAN.title Избранное
 				+e.btn(type="button") 
 					+e.SPAN.inner
 						+icon("basket") 
-						+e.SPAN.counter 4
+						+e.SPAN.counter 6
 					+e.SPAN.title Корзина

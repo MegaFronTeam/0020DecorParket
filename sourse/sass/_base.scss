@@ -626,9 +626,9 @@ iframe {
 	position: relative;
 	z-index: 2;
 	--sp: 11px 66px 11px 24px;
-	@include media-breakpoint-up(lg) {
-		margin-right: calc(-1 * var(--bs-gutter-x) / 2);
-	}
+	// @include media-breakpoint-up(lg) {
+	// 	margin-right: calc(-1 * var(--bs-gutter-x) / 2);
+	// }
 	@include media-breakpoint-down(lg) {
 		margin-left: -20px;
 	}
@@ -661,10 +661,10 @@ iframe {
 		font-size: 16px;
 		z-index: 4;
 		position: relative;
-		border-radius: 48px;
+		border-radius: $border-radius-sm;
 		@include mt;
 		@include media-breakpoint-up(lg) {
-			border: 1px solid #dfdfdf;
+			border: 1px solid $border-color;
 			// border: none;
 			padding: var(--sp);
 		}
