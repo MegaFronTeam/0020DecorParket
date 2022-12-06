@@ -408,28 +408,31 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
-	const headerBlockSlider = new Swiper('.headerBlock__slider--js', {
-		slidesPerView: 'auto',
-		loopFillGroupWithBlank: true,
-		lazy: {
-			loadPrevNext: true,
-		},
-		watchOverflow: true,
-		spaceBetween: 16,
-		// loop: true,
-		navigation: {
-			nextEl: '.headerBlock .slider-wrapper .swiper-button-next',
-			prevEl: '.headerBlock .slider-wrapper .swiper-button-prev',
-		},
-		pagination: {
-			el: '.headerBlock .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
-	});
+	const headerBlocks = document.querySelectorAll('.headerBlock');
+	for (const headerBlock of headerBlocks) {
+		const headerBlockSlider = new Swiper(headerBlock.querySelector('.headerBlock__slider--js'), {
+			slidesPerView: 'auto',
+			loopFillGroupWithBlank: true,
+			lazy: {
+				loadPrevNext: true,
+			},
+			watchOverflow: true,
+			spaceBetween: 16,
+			// loop: true,
+			navigation: {
+				nextEl: headerBlock.querySelector('.swiper-button-next'),
+				prevEl: headerBlock.querySelector('.swiper-button-prev'),
+			},
+			pagination: {
+				el: headerBlock.querySelector('.swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+				// renderBullet: function (index, className) {
+				// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
+				// }
+			},
+		});
+	};
 	const productCards = document.querySelectorAll('.product-card');
 	for (const productCard of productCards) {
 		const productCardSlider = new Swiper(productCard.querySelector('.product-card__slider--js'), {
