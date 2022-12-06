@@ -322,6 +322,13 @@
 	&__caption {
 		display: flex;
 		flex-direction: column;
+		& > p {
+			margin-bottom: 0;
+		}
+		.row {
+			--bs-gutter-x: #{rem(8)};
+			align-items: center;
+		}
 	}
 	&__vendorCode {
 		font-size: rem(13);
@@ -338,9 +345,20 @@
 		}
 	}
 	&__price {
+		font-weight: 700;
+		font-size: rem(22);
+		line-height: rem(28);
 		&--discount {
+			font-weight: 400;
+			font-size: rem(14);
+			color: $secondary;
+			text-decoration-line: line-through;
 		}
 		&--meter {
+			font-size: rem(16);
+			text-align: right;
 		}
+	}
+	&__btn-wrap {
 	}
 }
