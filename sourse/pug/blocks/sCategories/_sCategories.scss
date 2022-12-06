@@ -27,6 +27,9 @@
 	}
 	&__slide {
 		height: auto;
+		@include media-breakpoint-down(sm) {
+			width: rem(150);
+		}
 	}
 	&__item {
 		@include mt(0.2s);

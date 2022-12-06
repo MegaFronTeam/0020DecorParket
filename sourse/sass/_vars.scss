@@ -55,7 +55,7 @@ $grays: (
 // scss-docs-start color-variables
 $blue:    #0d6efd !default;
 $indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
+$purple:  #834CC9 !default;
 $pink:    #d63384 !default;
 $red:     #E93656;
 $orange:  #fd7e14 !default;
@@ -330,7 +330,7 @@ $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
-  "info":       $info,
+  "info":       $purple,
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
@@ -340,7 +340,6 @@ $theme-colors: (
 
 
 $theme-colors: map-remove($theme-colors, 
-"info", 
 "dark", 
 "success",
 'warning', 

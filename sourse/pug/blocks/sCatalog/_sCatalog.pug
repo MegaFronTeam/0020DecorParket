@@ -4,19 +4,21 @@ mixin sCatalog(data)
 		.container
 			+section-title('Рекомендуем вам', 'Смотреть все', 'mnu')
 				+weRecommend
-			.row
+			.slider-wrapper
+				+e.slider--js.swiper
+					.swiper-wrapper
+						+e.slide.swiper-slide
+							+product-card({"class": "btn-danger", "name": "Скидка&nbsp;-30%"})
+						+e.slide.swiper-slide
+							+product-card({"class": "btn-primary", "name": "Бестселлер"})
+						+e.slide.swiper-slide
+							+product-card()
+						+e.slide.swiper-slide
+							+product-card({"class": "btn-info", "name": "Рассрочка 0-0-24"})
+						+e.slide.swiper-slide
+							+product-card({"class": "btn-primary", "name": "Бестселлер"},{"class": "btn-info", "name": "Рассрочка 0-0-24"})
+						+e.slide.swiper-slide
+							+product-card({"class": "btn-primary", "name": "Бестселлер"},{"class": "btn-danger", "name": "Скидка&nbsp;-30%"})
+				+arrow
 
-				- for (var x = 1; x < 5; x++)
-					.col-3
-						+product-card()
-
-			//- .slider-wrapper
-			//- 	+e.slider--js.swiper
-			//- 		.swiper-wrapper
-			//- 			+e.slide.swiper-slide
-			//- 				mixin product-card()
-			//- 					+b.product-card
-
-			//- 	.swiper-pagination
-			//- 	+arrow
 			// end sCatalog

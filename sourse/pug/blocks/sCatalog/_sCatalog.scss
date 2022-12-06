@@ -3,40 +3,49 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
-	&__row{
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
-
 	}
-	.section-title{
-		
+	// .section-title {
+	// }
+	// &__col {
+	// }
+	// &__item {
+	// }
+	&__slider {
+		@include media-breakpoint-down(md) {
+			overflow: visible;
+		}
 	}
-	&__col{
-
-	}
-	&__item{
-
-	}
-	&__slide{
+	&__slide {
 		height: auto;
+		@include media-breakpoint-down(md) {
+			width: rem(290);
+		}
 	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sCatalog
-
-
 
 // .product-item{
 // 	display: flex;
 // 	flex-direction: column;
 // 	min-height: 100%;
-// 	background: #FFFFFF; 
+// 	background: #FFFFFF;
 // 	border: 1px solid #E2E2E2;
 // 	border-radius: 15px;
 // 	overflow: hidden;

@@ -24,7 +24,12 @@
 			overflow: visible;
 		}
 	}
-
+	&__slide {
+		height: auto;
+		@include media-breakpoint-down(md) {
+			width: rem(327);
+		}
+	}
 	.swiper-button-hand {
 		top: calc(var(--slideH) / 2);
 		margin: 0;

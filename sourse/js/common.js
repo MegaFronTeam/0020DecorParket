@@ -453,7 +453,7 @@ function eventHandler() {
   };
 	
 	const sCategoriesSlider = new Swiper('.sCategories__slider--js', {
-		slidesPerView: 2.063,
+		slidesPerView: 'auto',
 		loopFillGroupWithBlank: true,
 		lazy: {
 			loadPrevNext: true,
@@ -465,10 +465,10 @@ function eventHandler() {
 			prevEl: '.sCategories .swiper-button-prev',
 		},
 		breakpoints: {
-			499.98: {
-				slidesPerView: 2.4,
-				spaceBetween: 16
-			},
+			// 499.98: {
+			// 	slidesPerView: 2.4,
+			// 	spaceBetween: 16
+			// },
 			575.98: {
 				slidesPerView: 2.5,
 				spaceBetween: 16
@@ -554,6 +554,41 @@ function eventHandler() {
 			},
 			1399.98: {
 				slidesPerView: 3,
+				spaceBetween: 40
+			},
+		}
+	});
+	const sCatalogSlider = new Swiper('.sCatalog__slider--js', {
+		slidesPerView: 'auto',
+		loopFillGroupWithBlank: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 16,
+		navigation: {
+			nextEl: '.sCatalog .swiper-button-next',
+			prevEl: '.sCatalog .swiper-button-prev',
+		},
+		breakpoints: {
+			// 575.98: {
+			// 	slidesPerView: 1.5,
+			// 	spaceBetween: 16
+			// },
+			767.98: {
+				slidesPerView: 2,
+				spaceBetween: 24
+			},
+			991.98: {
+				slidesPerView: 3,
+				spaceBetween: 24
+			},
+			1199.98: {
+				slidesPerView: 4,
+				spaceBetween: 32
+			},
+			1399.98: {
+				slidesPerView: 4,
 				spaceBetween: 40
 			},
 		}

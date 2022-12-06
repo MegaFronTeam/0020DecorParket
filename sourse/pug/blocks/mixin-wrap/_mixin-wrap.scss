@@ -187,14 +187,15 @@
 		@include mt(0.2s);
 		margin-bottom: 0;
 		line-height: calc(32 / 22);
-		font-size: calc(#{rem(12)} + 1.6vw);
+		// font-size: calc(#{rem(12)} + 1.6vw);
+		font-size: rem(18);
 		color: $body-color;
-		@include media-breakpoint-up(sm) {
-			font-size: rem(22);
-		}
-		@include media-breakpoint-up(md) {
-			font-size: rem(18);
-		}
+		// @include media-breakpoint-up(sm) {
+		// 	font-size: rem(22);
+		// }
+		// @include media-breakpoint-up(md) {
+		// 	font-size: rem(18);
+		// }
 		@include media-breakpoint-up(lg) {
 			font-size: rem(17);
 		}
@@ -331,14 +332,19 @@
 		flex-direction: column;
 		flex-grow: 1;
 		margin-top: rem(8);
-		p {
-			margin-bottom: rem(12);
-			flex-grow: 1;
-		}
+		
 		.row {
 			--bs-gutter-x: #{rem(8)};
 			--bs-gutter-y: calc(var(--bs-gutter-x) * 1.5);
 			align-items: center;
+		}
+	}
+	&__title {
+		display: block;
+		margin-bottom: rem(12);
+		flex-grow: 1;
+		&:not(:hover) {
+			color: $body-color;
 		}
 	}
 	&__vendorCode {
@@ -394,6 +400,10 @@
 		&:hover,
 		&.active {
 			@extend .btn-primary;
+			--bs-btn-hover-bg: #{$primary};
+			--bs-btn-hover-border-color: #{$primary};
+			--bs-btn-active-bg: #{$primary};
+			--bs-btn-active-border-color: #{$primary};
 		}
 		.icon {
 			font-size: rem(24);
@@ -406,8 +416,9 @@
 			left: rem(12);
 			margin-top: 0;
 			z-index: 1;
-			pointer-events: none;
-			// max-width: calc(100% - var(--bs-gutter-x) * 2);
+			// pointer-events: none;
+			width: 100%;
+			max-width: calc(100% - 24px);
 			.row {
 				--bs-gutter-y: var(--bs-gutter-x);
 			}
