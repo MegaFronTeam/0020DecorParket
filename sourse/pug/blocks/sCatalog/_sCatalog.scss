@@ -1,8 +1,13 @@
 // start .sCatalog
 .sCatalog {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	// --sPT: #{rem(20)};
+	// --sPB: #{rem(20)};
+	// --sTPB: #{rem(16)};
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(28)};
+		--sPB: #{rem(28)};
+		--sTPB: #{rem(32)};
+	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);

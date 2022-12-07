@@ -7,6 +7,10 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	margin-top: rem(56);
+	@include media-breakpoint-up(md) {
+		margin-top: rem(68);
+	}
 	a {
 		&:not(:hover) {
 			color: $white;

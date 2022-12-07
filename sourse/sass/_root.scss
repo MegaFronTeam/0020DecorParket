@@ -2,13 +2,13 @@
 	--animate-delay: 1.2s;
 
 	--bs-body-font-size: #{$em-base};
-	--sPT: #{rem(16)};
-	--sPB: #{rem(16)};
+	--sPT: #{rem(20)};
+	--sPB: #{rem(20)};
 	--sTPB: #{rem(16)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(28)};
 		--sPB: #{rem(28)};
-		--sTPB: #{rem(32)};
+		--sTPB: #{rem(24)};
 	}
 
 	--logo-size: 194px;

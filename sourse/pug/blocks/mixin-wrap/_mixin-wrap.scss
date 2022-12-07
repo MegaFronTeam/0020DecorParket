@@ -228,7 +228,7 @@
 	// border-radius: $border-radius-xl;
 	// overflow: hidden;
 	@include media-breakpoint-up(sm) {
-		padding: 4.4% 8.6%;
+		padding: 4.6% 8.6%;
 	}
 	// @include media-breakpoint-up(md) {
 	// 	border-radius: $border-radius-xl;
@@ -304,7 +304,7 @@
 			padding: 4% 6.3%;
 		}
 		@include media-breakpoint-up(xl) {
-			padding: 3% 6.3%;
+			padding: 2.8% 6.3%;
 		}
 		h2 {
 			color: $body-color;
@@ -433,7 +433,7 @@
 		}
 	}
 	&__btn-wrap {
-		@include roww(8px, m);
+		@include roww(4px, m);
 		display: flex;
 		justify-content: flex-end;
 	}
