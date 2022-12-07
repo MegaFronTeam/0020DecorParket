@@ -233,6 +233,13 @@
 	// @include media-breakpoint-up(md) {
 	// 	border-radius: $border-radius-xl;
 	// }
+	&__link {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
 	h2 {
 		@extend .h1;
 		color: $white;

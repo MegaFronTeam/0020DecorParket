@@ -80,9 +80,11 @@ mixin article-item(img, s, h, p)
 			p!= p
 	// end article-item
 
-mixin headerBlock-item(h, p, i, btn)
+mixin headerBlock-item(h, p, i, btn, a)
 	// start headerBlock-item
 	+b.headerBlock-item&attributes(attributes)
+		if a
+			+e.link(href="#")
 		picture.picture-bg
 			source(type='image/jpg' srcset=`img/headerBlock-lg-${i}.jpg` media='(min-width:768px)')
 			source(type='image/jpg' srcset=`img/headerBlock-${i}.jpg`)
