@@ -19,7 +19,7 @@ block variables
 	- let  bg= 'main.jpg'
 
 block title
-	- let  title= 'Блог'
+	- let  title= 'Все акции'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -29,21 +29,20 @@ block pagecontent
 		+topLine
 		+top-nav()
 	main
-		+breadcrumb('Вернуться назад', 'Главная', 'Блог', 'Хлебные крошки')
-		+sBlog(`Блог`, 'footer')
+		+breadcrumb('Вернуться назад', 'Главная', 'Акции', 'Хлебные крошки')
+		+sBlog(`Все акции`).pb-0
 			.row.rows-underlined
 				.col-md-6.col-lg-4
-					+article-item(`sArticles-1.jpg`, `Напольные покрытия`, `Как выбрать хороший ламинат&nbsp;&mdash; советы покупателям`)
+					+article-item(`sArticles-1.jpg`, `Постоянная акция`, `Скидка&nbsp;15% на&nbsp;обои`, `при покупке напольных покрытий`)
 				.col-md-6.col-lg-4
-					+article-item(`sArticles-2.jpg`, `Напольные покрытия`, `Подложка под ламинат: сравнительный обзор различных видов`)
+					+article-item(`sArticles-2.jpg`, `Постоянная акция`, `Новинки уже в&nbsp;продаже`, `при покупке напольных покрытий`)
 				.col-md-6.col-lg-4
-					+article-item(`sArticles-3.jpg`, `Напольные покрытия`, `Подготовка деревянного пола к&nbsp;укладке ламината`)
+					+article-item(`sArticles-3.jpg`, `Постоянная акция`, `Скидка&nbsp;20% на&nbsp;второй заказ`, `при покупке напольных покрытий`)
 				.col-md-6.col-lg-4
-					+article-item(`sArticles-4.jpg`, `Напольные покрытия`, `Как выбрать хороший ламинат&nbsp;&mdash; советы покупателям`)
+					+article-item(`sArticles-4.jpg`, `Постоянная акция`, `Скидка&nbsp;15% на&nbsp;обои`, `при покупке напольных покрытий`)
 				.col-md-6.col-lg-4
-					+article-item(`sArticles-5.jpg`, `Напольные покрытия`, `Подготовка деревянного пола к&nbsp;укладке ламината`)
-				.col-md-6.col-lg-4
-					+article-item(`sArticles-6.jpg`, `Напольные покрытия`, `Подложка под ламинат: сравнительный обзор различных видов`)
+					+article-item(`sArticles-5.jpg`, `Постоянная акция`, `Новинки уже в&nbsp;продаже`, `при покупке напольных покрытий`)
+				
 				// .rows-underlined__col - подчеркивание последнего ряда
 				// .rows-underlined__col.rows-underlined__col--blank - без подчеркивания последнего ряда
 				.rows-underlined__col.rows-underlined__col--blank

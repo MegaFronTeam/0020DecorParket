@@ -35,6 +35,14 @@
 		margin: 0;
 		transform: translateY(-50%);
 	}
+
+	.article-item {
+		h3 {
+			@include media-breakpoint-down(md) {
+				font-size: rem(18);
+			}
+		}
+	}
 	
 
 	@include media-breakpoint-up(xl) {
