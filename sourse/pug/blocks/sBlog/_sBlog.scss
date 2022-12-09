@@ -63,6 +63,22 @@
 			}
 		}
 	}
+	&__footer {
+		max-width: rem(950);
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: rem(32);
+		@include media-breakpoint-up(md) {
+			margin-top: rem(56);
+		}
+	}
+	&__btn {
+		width: 100%;
+		
+		&:hover, &:active {
+			@extend .btn-primary;
+		}
+	}
 	// &__item {
 	// }
 

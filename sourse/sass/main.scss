@@ -46,7 +46,7 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/card";
 // @import "./node_modules/bootstrap/scss/accordion";
 @import "./node_modules/bootstrap/scss/breadcrumb";
-// @import "./node_modules/bootstrap/scss/pagination";
+@import "./node_modules/bootstrap/scss/pagination";
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/alert";
 // @import "./node_modules/bootstrap/scss/progress";
@@ -79,23 +79,57 @@ $output-bourbon-deprecation-warnings: false;
 }
 // @import "./node_modules/bootstrap/scss/pagination";
 
-// .pagination-wrapper ul {
-// 	@extend .pagination;
-// }
-
-// .pagination-wrapper li .page-numbers {
-// 	@extend .page-link;
-// }
+.pagination-wrapper {
+  margin-top: rem(16);
+  .pagination {
+    justify-content: center;
+    margin-bottom: 0;
+    // .page-item {
+    //   &.active {
+    //   }
+    //   &.disabled {
+    //   }
+    // }
+    .page-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(44);
+      height: rem(44);
+      border-radius: $pagination-border-radius;
+      font-weight: 700;
+      padding-top: 4%;
+      font-size: rem(14);
+      line-height: rem(24);
+      @include media-breakpoint-up(md) {
+        font-size: rem(16);
+        width: rem(48);
+        height: rem(48);
+      }
+      &.next,
+      &.prev {
+        padding: 0;
+      }
+      .icon {
+        font-size: rem(24);
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2px;
+        stroke-linecap: round;
+      }
+    }
+  }
+}
 
 // .pagination-wrapper li {
-// 	@extend .page-item;
+//   @extend .page-item;
 
-// 	.current {
-// 		z-index: 1;
-// 		// color: $pagination-active-color;
-// 		// background-color: $pagination-active-bg;
-// 		// border-color: $pagination-active-border-color;
-// 	}
+//   .current {
+//     z-index: 1;
+//     color: $pagination-active-color;
+//     background-color: $pagination-active-bg;
+//     border-color: $pagination-active-border-color;
+//   }
 // }
 @import "root";
 @import "base";

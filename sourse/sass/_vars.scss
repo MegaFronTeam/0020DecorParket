@@ -1208,8 +1208,8 @@ $dropdown-dark-header-color:        $gray-500 !default;
 // Pagination
 
 // scss-docs-start pagination-variables
-$pagination-padding-y:              .375rem !default;
-$pagination-padding-x:              .75rem !default;
+$pagination-padding-y:              0 !default;
+$pagination-padding-x:              0 !default;
 $pagination-padding-y-sm:           .25rem !default;
 $pagination-padding-x-sm:           .5rem !default;
 $pagination-padding-y-lg:           .75rem !default;
@@ -1217,29 +1217,35 @@ $pagination-padding-x-lg:           1.5rem !default;
 
 $pagination-font-size:              $font-size-base !default;
 
-$pagination-color:                  var(--#{$prefix}link-color) !default;
+$pagination-color:                  $body-color !default;
+// $pagination-color:                  var(--#{$prefix}link-color) !default;
 $pagination-bg:                     $white !default;
-$pagination-border-radius:          $border-radius !default;
+$pagination-border-radius:          $border-radius-sm !default;
 $pagination-border-width:           $border-width !default;
-$pagination-margin-start:           calc($pagination-border-width * -1) !default; // stylelint-disable-line function-disallowed-list
-$pagination-border-color:           $gray-300 !default;
+$pagination-margin-start:           rem(16) !default; // stylelint-disable-line function-disallowed-list
+// $pagination-margin-start:           calc($pagination-border-width * -1) !default; // stylelint-disable-line function-disallowed-list
+$pagination-border-color:           transparent !default;
 
-$pagination-focus-color:            var(--#{$prefix}link-hover-color) !default;
-$pagination-focus-bg:               $gray-200 !default;
-$pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
+$pagination-focus-color:            $body-color;
+$pagination-focus-bg:               #EEF5E3 !default;
+$pagination-focus-box-shadow:       none !default;
 $pagination-focus-outline:          0 !default;
 
-$pagination-hover-color:            var(--#{$prefix}link-hover-color) !default;
-$pagination-hover-bg:               $gray-200 !default;
+$pagination-hover-color:            $body-color;
+// $pagination-hover-color:            var(--#{$prefix}link-hover-color) !default\08-blog.html;
+$pagination-hover-bg:               #EEF5E3 !default;
 $pagination-hover-border-color:     $gray-300 !default;
 
-$pagination-active-color:           $component-active-color !default;
-$pagination-active-bg:              $component-active-bg !default;
-$pagination-active-border-color:    $pagination-active-bg !default;
+$pagination-active-color:           $body-color !default;
+$pagination-active-bg:              #EEF5E3 !default;
+$pagination-active-border-color:    $primary !default;
+// $pagination-active-color:           $component-active-color !default;
+// $pagination-active-bg:              $component-active-bg !default;
+// $pagination-active-border-color:    $pagination-active-bg !default;
 
-$pagination-disabled-color:         $gray-600 !default;
+$pagination-disabled-color:         $gray-300 !default;
 $pagination-disabled-bg:            $white !default;
-$pagination-disabled-border-color:  $gray-300 !default;
+$pagination-disabled-border-color:  transparent !default;
 
 $pagination-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
