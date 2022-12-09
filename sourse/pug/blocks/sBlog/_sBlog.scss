@@ -2,7 +2,13 @@
 .sBlog {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sTPB: #{rem(24)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(32)};
+	}
+	@include media-breakpoint-down(sm) {
+		--sPT: #{rem(8)};
+	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: calc(var(--bs-gutter-x) * 3);
@@ -45,13 +51,13 @@
 					left: calc(-1 * var(--bs-gutter-x) / 2);
 				}
 			}
-
 		}
 		@include media-breakpoint-up(lg) {
 			&::before {
 				width: 100%;
 			}
-			&:nth-child(2), &:nth-child(3) {
+			&:nth-child(2),
+			&:nth-child(3) {
 				&::before {
 					display: none;
 				}
@@ -74,8 +80,14 @@
 	}
 	&__btn {
 		width: 100%;
-		
-		&:hover, &:active {
+		font-size: rem(14);
+		padding-top: rem(11);
+		padding-bottom: rem(11);
+		@include media-breakpoint-up(md) {
+			font-size: rem(16);
+		}
+		&:hover,
+		&:active {
 			@extend .btn-primary;
 		}
 	}
