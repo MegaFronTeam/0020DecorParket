@@ -1,8 +1,13 @@
-mixin sArticles(data)
+mixin sArticles(h, more)
 	// start sArticles
 	+b.SECTION.sArticles.section#sArticles&attributes(attributes)
 		.container
-			+section-title(`Советы эксперта`, `Смотреть все`)
+			if more
+				+section-title(`${h}`, `${more}`)
+			else
+				+b.section-title
+					h2!= h
+
 			.slider-wrapper
 				+e.slider--js.swiper
 					.swiper-wrapper

@@ -6,7 +6,7 @@ include ../blocks/top-nav/_top-nav.pug
 //- include ../blocks/headerBlock/_headerBlock.pug
 //- include ../blocks/sPopular/_sPopular.pug
 include ../blocks/sContent/_sContent.pug
-//- include ../blocks/sArticles/_sArticles.pug
+include ../blocks/sArticles/_sArticles.pug
 //- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sCategories/_sCategories.pug
@@ -15,7 +15,7 @@ include ../blocks/sBlog/_sBlog.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'main-page' 
+	- let  mainPage= 'blog-article-page' 
 	- let  bg= 'main.jpg'
 
 block title
@@ -31,6 +31,7 @@ block pagecontent
 	main
 		+breadcrumb('Вернуться назад', 'Главная', 'Блог', 'Хлебные крошки')
 		+sContent()
+		+sArticles(`Похожие статьи`)
 		//- +headerBlock().pt-2
 		//- +sCategories()
 		//- +sPopular()

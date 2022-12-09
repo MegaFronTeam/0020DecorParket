@@ -858,3 +858,12 @@ iframe {
 		margin-bottom: 0;
 	}
 }
+
+.blog-article-page {
+	.sArticles {
+		// --sPT: #{rem(52)};
+		@include media-breakpoint-up(md) {
+			--sPT: #{rem(68)};
+		}
+	}
+}
