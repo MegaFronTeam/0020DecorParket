@@ -9,66 +9,60 @@
 	@include media-breakpoint-down(sm) {
 		--sPT: #{rem(8)};
 	}
-	&__row {
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: calc(var(--bs-gutter-x) * 3);
-		@include media-breakpoint-up(md) {
-			--bs-gutter-y: calc(var(--bs-gutter-x) * 2);
-		}
-	}
+
 	.section-title {
 		h1 {
 			@extend .h2;
 		}
 	}
-	&__col {
-		position: relative;
-		&::before {
-			content: "";
-			position: absolute;
-			left: calc(var(--bs-gutter-x) / 2);
-			top: calc(-1 * var(--bs-gutter-y) / 2);
-			width: calc(100% - var(--bs-gutter-x));
-			height: 1px;
-			background-color: #e5e6e4;
-		}
-		&:first-child {
-			&::before {
-				display: none;
-			}
-		}
-		@include media-breakpoint-only(md) {
-			&::before {
-				width: 100%;
-			}
-			&:nth-child(2) {
-				&::before {
-					display: none;
-				}
-			}
-			&:nth-child(even) {
-				&::before {
-					left: calc(-1 * var(--bs-gutter-x) / 2);
-				}
-			}
-		}
-		@include media-breakpoint-up(lg) {
-			&::before {
-				width: 100%;
-			}
-			&:nth-child(2),
-			&:nth-child(3) {
-				&::before {
-					display: none;
-				}
-			}
-			&:nth-child(3n) {
-				&::before {
-					left: calc(-1 * var(--bs-gutter-x) / 2);
-				}
-			}
-		}
-	}
+	// &__col {
+	// 	position: relative;
+	// 	&::before {
+	// 		content: "";
+	// 		position: absolute;
+	// 		left: calc(var(--bs-gutter-x) / 2);
+	// 		top: calc(-1 * var(--bs-gutter-y) / 2);
+	// 		width: calc(100% - var(--bs-gutter-x));
+	// 		height: 1px;
+	// 		background-color: #e5e6e4;
+	// 	}
+	// 	&:first-child {
+	// 		&::before {
+	// 			display: none;
+	// 		}
+	// 	}
+	// 	@include media-breakpoint-only(md) {
+	// 		&::before {
+	// 			width: 100%;
+	// 		}
+	// 		&:nth-child(2) {
+	// 			&::before {
+	// 				display: none;
+	// 			}
+	// 		}
+	// 		&:nth-child(even) {
+	// 			&::before {
+	// 				left: calc(-1 * var(--bs-gutter-x) / 2);
+	// 			}
+	// 		}
+	// 	}
+	// 	@include media-breakpoint-up(lg) {
+	// 		&::before {
+	// 			width: 100%;
+	// 		}
+	// 		&:nth-child(2),
+	// 		&:nth-child(3) {
+	// 			&::before {
+	// 				display: none;
+	// 			}
+	// 		}
+	// 		&:nth-child(3n) {
+	// 			&::before {
+	// 				left: calc(-1 * var(--bs-gutter-x) / 2);
+	// 			}
+	// 		}
+	// 	}
+	// }
 	&__footer {
 		max-width: rem(950);
 		margin-left: auto;
@@ -109,3 +103,5 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sBlog
+
+

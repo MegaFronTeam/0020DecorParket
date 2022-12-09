@@ -859,6 +859,42 @@ iframe {
 	}
 }
 
+.rows-underlined {
+	// подчеркивание строк в .row
+	// К .row добавляем класс .rows-underlined -->
+	// --> В .row последним элементом добавляем -->
+	// --> .rows-underlined__col - c подчеркиванием последнего ряда
+	// --> .rows-underlined__col.rows-underlined__col--blank - без подчеркивания последнего ряда
+	--bs-gutter-y: calc(var(--bs-gutter-x) * 1.5);
+	@include media-breakpoint-up(md) {
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	& > * {
+		padding-bottom: var(--bs-gutter-y);
+		border-bottom: 1px solid #e5e6e4;
+	}
+
+	&__col {
+		@extend .col-12;
+		margin: 0;
+		margin-top: calc(-1 * var(--bs-gutter-y) - 1px);
+		pointer-events: none;
+		background-color: $body-bg;
+		opacity: 1;
+		&--blank {
+			@include media-breakpoint-up(md) {
+				border: none;
+			}
+		}
+		&::after {
+			content: "";
+		}
+		&::before {
+			content: "";
+		}
+	}
+}
+
 .blog-article-page {
 	.sArticles {
 		// --sPT: #{rem(52)};
