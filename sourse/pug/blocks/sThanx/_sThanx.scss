@@ -1,0 +1,182 @@
+// start .sThanx
+.sThanx {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	// &__row{
+	// --bs-gutter-x: #{rem()};
+	// --bs-gutter-y: #{rem()};
+	@include media-breakpoint-up(sm) {
+		margin-top: rem(52);
+	}
+	@include media-breakpoint-up(md) {
+		margin-top: rem(68);
+	}
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		width: rem(674);
+		max-width: 100%;
+		background-color: $light;
+		border-radius: $border-radius-lg;
+		margin: 0 auto;
+		padding: rem(40) rem(24);
+		@include media-breakpoint-up(sm) {
+			padding: rem(40);
+		}
+
+		h2 {
+			letter-spacing: -0.5px;
+			margin-bottom: rem(16);
+		}
+		p {
+			@include media-breakpoint-up(lg) {
+				font-size: rem(18);
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__check {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(72);
+		height: rem(72);
+		background-color: $primary;
+		border-radius: 50%;
+		margin-bottom: rem(32);
+		.icon {
+			font-size: rem(24);
+			color: $white;
+		}
+	}
+
+	&__btn {
+		@extend .btn, .btn-primary;
+		width: rem(320);
+		max-width: 100%;
+		margin-top: rem(40);
+		padding: rem(15) rem(32);
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sThanx
+// .sThanx {
+// 	// --sPT: #{rem()};
+// 	// --sPB: #{rem()};
+// 	// --sTPB: #{rem()};
+// 	// &__row{
+// 	// --bs-gutter-x: #{rem()};
+// 	// --bs-gutter-y: #{rem()};
+// 	@include media-breakpoint-up(sm) {
+// 		margin-top: rem(52);
+// 	}
+// 	@include media-breakpoint-up(md) {
+// 		margin-top: rem(68);
+// 	}
+// 	&__wrap {
+// 		display: flex;
+// 		flex-direction: column;
+// 		align-items: center;
+// 		justify-content: center;
+// 		text-align: center;
+// 		padding: rem(40) rem(24);
+// 		margin-left: auto;
+// 		margin-right: auto;
+// 		width: rem(674);
+// 		max-width: 100%;
+// 		background-color: $light;
+// 		border-radius: $border-radius-lg;
+// 		@include media-breakpoint-up(sm) {
+// 			padding: rem(32);
+// 		}
+// 		@include media-breakpoint-up(md) {
+// 			padding: rem(40);
+// 		}
+// 		h2 {
+// 			letter-spacing: -0.5px;
+// 			margin-bottom: rem(16);
+// 		}
+// 		p {
+// 			font-size: rem(16);
+// 			@include media-breakpoint-up(md) {
+// 				font-size: $h5-font-size;
+// 			}
+// 			&:last-of-type {
+// 				margin-bottom: 0;
+// 			}
+// 		}
+// 	}
+// 	&__check {
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 		width: rem(65);
+// 		height: rem(65);
+// 		margin-bottom: rem(32);
+// 		background-color: $primary;
+// 		border-radius: 50%;
+// 		margin-bottom: rem(24);
+// 		@include media-breakpoint-up(md) {
+// 			margin-bottom: rem(32);
+// 			width: rem(72);
+// 			height: rem(72);
+// 		}
+// 		.icon {
+// 			color: $white;
+// 			font-size: rem(22);
+// 			@include media-breakpoint-up(md) {
+// 				font-size: rem(24);
+// 			}
+// 		}
+// 	}
+// 	&__btn {
+// 		@extend .btn, .btn-primary;
+// 		margin-top: rem(40);
+// 		@include media-breakpoint-up(md) {
+// 			padding: rem(15) rem(32);
+// 		}
+// 	}
+
+// 	@include media-breakpoint-up(xl) {
+// 	}
+// 	@include media-breakpoint-up(lg) {
+// 	}
+// 	@include media-breakpoint-up(md) {
+// 	}
+// 	@include media-breakpoint-up(sm) {
+// 	}
+// 	@include media-breakpoint-between(md, xl) {
+// 	}
+// 	@include media-breakpoint-only(xl) {
+// 	}
+// 	@include media-breakpoint-down(xl) {
+// 	}
+// } // end.sThanx
+
+// +e.wrap
+// 	+e.check
+// 		+icon('check-lg')
+// 	h2 Спасибо, ваш заказ &#8470;3982500&nbsp;оформлен!
+// 	p В&nbsp;ближайшее время оператор свяжется с&nbsp;вами и&nbsp;уточнит детали доставки!
+// 	+e.btn(href="#") Вернуться на&nbsp;главную
