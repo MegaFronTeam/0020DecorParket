@@ -19,6 +19,12 @@ mixin weRecommend()
 			each link in weRecommend
 				li.menu-item.swiper-slide(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
 //- menu
+mixin promotion()
+	+b.menu-slider--js.swiper
+		ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			each link in promotion
+				li.menu-item.swiper-slide(itemprop="item" ): a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+//- menu
 
 mixin mnu4()
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")

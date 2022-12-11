@@ -129,6 +129,9 @@ main {
 
 .section-title {
 	margin-bottom: var(--sTPB);
+	h1 {
+		@extend .h2;
+	}
 	.section-title__link {
 		@extend .link-primary;
 		font-weight: 700;
@@ -610,8 +613,8 @@ iframe {
 	--bs-btn-line-height: calc(24 / 14);
 	--bs-btn-color: #{$body-color};
 	--bs-btn-border-width: 2px;
-	--bs-btn-hover-bg: #{rgba($light, 0.7)};
-	--bs-btn-hover-border-color: #{rgba($border-color, 0.7)};
+	--bs-btn-hover-bg: #{rgba($light, 0.8)};
+	--bs-btn-hover-border-color: #{$primary};
 	border-style: dashed;
 	&:active,
 	&.active {
@@ -912,3 +915,5 @@ iframe {
 		}
 	}
 }
+
+

@@ -1,0 +1,25 @@
+mixin sPromotion(data)
+	// start sPromotion
+	+b.SECTION.sPromotion.section#sPromotion&attributes(attributes)
+		.container 
+			+headerBlock-item(`Скидка 50% <br> на второй товар`, `Покупая любые напольные покрытия в&nbsp;кредит или наличными`, 1)
+
+			+b.section-title.text-center
+				+e.wrapper
+					h1 Всё для самых выгодных покупок. И&nbsp;скидка, и&nbsp;рассрочка на&nbsp;2&nbsp;года. Приобретайте сегодня, платите завтра.
+					+e.subtitle
+						p В&nbsp;акции участвуют все дизайны из&nbsp;коллекций: Natural, Wild, Crack, Mineral, Vulcano, Rock.
+						p Натуральная древесина гарантирует приятные тактильные ощущения, а&nbsp;пробковая подложка сохранит тепло в&nbsp;вашем доме и&nbsp;создает идеальную шумоизоляцию.
+					small.text-secondary Рассрочка доступна на&nbsp;все товары при условии покупки в&nbsp;комплекте с&nbsp;аксессуарами и&nbsp;сервисами на&nbsp;сумму&nbsp;10% от&nbsp;общей стоимости.
+				+e.menu-wrap
+					+promotion()
+			+e.row.row.rows-underlined
+				- for (var i = 0; i < 8; i++)
+					.col-sm-6.col-lg-4.col-xl-3
+						+product-card({"class": "btn-danger", "name": "Скидка&nbsp;-30%"},{"class": "btn-info", "name": "Рассрочка 0-0-24"})
+				// .rows-underlined__col - подчеркивание последнего ряда
+				// .rows-underlined__col.rows-underlined__col--blank - без подчеркивания последнего ряда
+				.rows-underlined__col.rows-underlined__col--blank
+				
+
+	// end sPromotion

@@ -66,6 +66,30 @@
 			"name": "Новинки"
 		}
 	],
+	"promotion": [
+		{
+			"name": "Все",
+			"active": "true"
+		},
+		{
+			"name": "Natural"
+		},
+		{
+			"name": "Wild"
+		},
+		{
+			"name": "Crack"
+		},
+		{
+			"name": "Mineral"
+		},
+		{
+			"name": "Vulcano"
+		},
+		{
+			"name": "Rock"
+		}
+	],
 	"menumobile": [
 		{
 			"name": "Обои",

@@ -4,3 +4,4 @@
 3. <https://megafronteam.github.io/0020DecorParket/public/08-blog.html>
 4. <https://megafronteam.github.io/0020DecorParket/public/09-blog-article.html>
 5. <https://megafronteam.github.io/0020DecorParket/public/10-all-promotions.html>
+6. <https://megafronteam.github.io/0020DecorParket/public/11-promotion.html>
