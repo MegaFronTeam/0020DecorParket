@@ -24,7 +24,7 @@
 		background-color: $light;
 		border-radius: $border-radius-lg;
 		margin: 0 auto;
-		padding: rem(40) rem(24);
+		padding: rem(16);
 		@include media-breakpoint-up(sm) {
 			padding: rem(40);
 		}
@@ -32,6 +32,9 @@
 		h2 {
 			letter-spacing: -0.5px;
 			margin-bottom: rem(16);
+			@include media-breakpoint-down(md) {
+				font-size: rem(28);
+			}
 		}
 		p {
 			@include media-breakpoint-up(lg) {
@@ -51,7 +54,10 @@
 		height: rem(72);
 		background-color: $primary;
 		border-radius: 50%;
-		margin-bottom: rem(32);
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(32);
+		}
 		.icon {
 			font-size: rem(24);
 			color: $white;
@@ -62,8 +68,11 @@
 		@extend .btn, .btn-primary;
 		width: rem(320);
 		max-width: 100%;
-		margin-top: rem(40);
+		margin-top: rem(24);
 		padding: rem(15) rem(32);
+		@include media-breakpoint-up(sm) {
+			margin-top: rem(40);
+		}
 	}
 
 	@include media-breakpoint-up(xl) {
