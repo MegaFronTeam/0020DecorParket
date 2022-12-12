@@ -54,15 +54,19 @@ mixin page-head(t,...items)
 
 			h1= t
 
-mixin section-title(h, l, mnu)
+mixin section-title(h, l, mnu, amount)
 	+b.section-title--link
 		.row
 			.col
 				h2!= h
-			.col-auto.order-md-last
-				+e.link(href="#")
-					span.d-sm-none Все
-					span.d-none.d-sm-block!= l
+			if amount
+				.col-auto.d-none.d-md-block.text-secondary
+					span!= amount
+			if l
+				.col-auto.order-md-last
+					+e.link(href="#")
+						span.d-sm-none Все
+						span.d-none.d-sm-block!= l
 			if mnu
 				.col-12.my-0
 				.col

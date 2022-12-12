@@ -1,0 +1,34 @@
+mixin sGoods(data)
+	// start sGoods
+	+b.sGoods.section#sGoods&attributes(attributes)
+		.container
+			+section-title('Паркетная доска', '', 'mnu', `Товары 1-13 из 56`)
+				+weRecommend
+			+b.sorting
+				+e.row.row
+					.col.col-md-auto.col-lg-4
+						+e.filtered-amount
+							span 56
+							| товаров
+					.col-auto.col-md
+						+e.row--sm.row
+							.col.d-none.d-md-block
+								+e.menu
+									ul
+										li.active
+											a(href='#') По&nbsp;популярности
+										li
+											a(href='#') По&nbsp;цене
+										li
+											a(href='#') По&nbsp;размеру скидки
+										li
+											a(href='#') По&nbsp;рейтингу
+							.col-auto
+								+e.view
+									+e.btn(href="#")
+										+icon('row')
+									+e.btn.active(href="#")
+										+icon('grid')
+
+			+e.row.row
+	// end sGoods
