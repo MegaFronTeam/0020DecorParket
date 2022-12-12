@@ -9,6 +9,7 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page" data-bg="main.jpg">
@@ -323,6 +324,142 @@
 							</div>
 						</div>
 						<div class="sGoods__row row">
+							<div class="col-4"> 
+								<!-- start sFilter-->
+								<div class="sFilter"> 
+									<div class="sFilter__btn d-lg-none">
+										<svg class="icon icon-filter ">
+											<use xlink:href="img/svg/sprite.svg#filter"></use>
+										</svg>Фильтры
+									</div>
+									<div class="sFilter__wrap">
+										<div class="sFilter__body">
+											<div class="sFilter__filterHead">
+												<button class="sFilter__filterCloseBtn">
+												</button>
+												<h5>Фильтры</h5><a href="#">Сбросить</a>
+											</div>
+											<div class="dd-group dd-group-js">
+												<div class="dd-group__wraper">
+													<div class="dd-group__item">
+														<div class="dd-group__head dd-head-js">
+															<h5>Цена, ₽</h5>
+															<svg class="icon icon-chevron-down-dd ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down-dd"></use>
+															</svg>
+														</div>
+														<div class="dd-group__content dd-content-js">
+															<div class="extra-controls">
+																<label><span>от</span>
+																	<input class="js-input-from" type="text" value="0"/>
+																</label>
+																<label><span>до</span>
+																	<input class="js-input-to" type="text" value="0"/>
+																</label>
+															</div>
+															<div class="range-slider">
+																<input class="js-range-slider" type="text" value=""/>
+															</div>
+														</div>
+													</div>
+													<div class="dd-group__item">
+														<div class="dd-group__head form-switch">
+															<label>
+																<h5>Товары со&nbsp;скидкой</h5>
+																<input class="form-check-input" type="checkbox" role="switch" checked=""/>
+															</label>
+														</div>
+													</div>
+													<div class="dd-group__item">
+														<div class="dd-group__head form-switch">
+															<label>
+																<h5>Только в&nbsp;наличии</h5>
+																<input class="form-check-input" type="checkbox" role="switch" checked=""/>
+															</label>
+														</div>
+													</div>
+													<div class="dd-group__item">
+														<div class="dd-group__head dd-head-js">
+															<h5>Бренд</h5>
+															<svg class="icon icon-chevron-down-dd ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down-dd"></use>
+															</svg>
+														</div>
+														<div class="dd-group__content dd-content-js"> 
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+														</div>
+													</div>
+													<div class="dd-group__item">
+														<div class="dd-group__head dd-head-js">
+															<h5>Класс износостойкости</h5>
+															<svg class="icon icon-chevron-down-dd ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down-dd"></use>
+															</svg>
+														</div>
+														<div class="dd-group__content dd-content-js">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">31 класс</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">32 класс</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">33 класс</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">34 класс</span>
+															</label>
+														</div>
+													</div>
+													<div class="dd-group__item">
+														<div class="dd-group__head dd-head-js">
+															<h5>Заголовок фильтра</h5>
+															<svg class="icon icon-chevron-down-dd ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down-dd"></use>
+															</svg>
+														</div>
+														<div class="dd-group__content dd-content-js">
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+														</div>
+													</div>
+													<div class="dd-group__item">
+														<div class="dd-group__head dd-head-js">
+															<h5>Заголовок фильтра</h5>
+															<svg class="icon icon-chevron-down-dd ">
+																<use xlink:href="img/svg/sprite.svg#chevron-down-dd"></use>
+															</svg>
+														</div>
+														<div class="dd-group__content dd-content-js"> 
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Название фильтра</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<button class="sFilter__btn-showMore btn btn-primary">Показать 325
+											</button>
+										</div>
+									</div>
+								</div>
+								<!-- end sFilter-->
+							</div>
+							<div class="col"></div>
 						</div>
 					</div>
 				</div>
@@ -429,7 +566,8 @@
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
-		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
 		<script src="js/common.js"></script>
 	</body>

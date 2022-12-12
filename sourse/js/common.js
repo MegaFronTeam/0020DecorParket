@@ -1,5 +1,5 @@
 "use strict";
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 
@@ -23,8 +23,8 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -33,7 +33,7 @@ const JSCCommon = {
 		});
 		document.addEventListener('click', (event) => {
 			let element = event.target.closest(link)
-			if(!element) return;
+			if (!element) return;
 			let modal = document.querySelector("#" + element.dataset.src);
 			const data = element.dataset;
 
@@ -75,7 +75,7 @@ const JSCCommon = {
 		}
 
 	},
-	mobileMenu() { 
+	mobileMenu() {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
@@ -149,7 +149,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
 	sendForm() {
@@ -296,42 +296,103 @@ const JSCCommon = {
 		}
 	},
 	imgToSVG() {
-    const convertImages = (query, callback) => {
+		const convertImages = (query, callback) => {
 			const images = document.querySelectorAll(query);
-	
+
 			images.forEach(image => {
 				fetch(image.src)
 					.then(res => res.text())
 					.then(data => {
 						const parser = new DOMParser();
 						const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
-	
+
 						if (image.id) svg.id = image.id;
 						if (image.className) svg.classList = image.classList;
-	
+
 						image.parentNode.replaceChild(svg, image);
 					})
 					.then(callback)
 					.catch(error => console.error(error))
 			});
 		};
-	
+
 		convertImages('.img-svg-js');
-  },
+	},
+	getRange() {
+		var $range = $(".js-range-slider");
+		var $inputFrom = $(".js-input-from");
+		var $inputTo = $(".js-input-to");
+		var instance;
+		var min = 0;
+		var max = 999999;
+		var from = 0;
+		var to = 0;
+
+		$range.ionRangeSlider({
+			skin: "round",
+			type: "double",
+			min: min,
+			max: max,
+			from: 9999,
+			to: 999999,
+			onStart: updateInputs,
+			onChange: updateInputs,
+			onFinish: updateInputs
+		});
+		instance = $range.data("ionRangeSlider");
+
+		function updateInputs(data) {
+			from = data.from;
+			to = data.to;
+
+			$inputFrom.prop("value", from);
+			$inputTo.prop("value", to);
+		}
+
+		$inputFrom.on("change", function () {
+			var val = $(this).prop("value");
+			console.log(val);
+			// validate
+			if (val < min) {
+				val = min;
+			} else if (val > to) {
+				val = to;
+			}
+			instance.update({
+				from: val
+			});
+			$(this).prop("value", val);
+		});
+
+		$inputTo.on("change", function () {
+			var val = $(this).prop("value");
+			// validate
+			if (val < from) {
+				val = from;
+			} else if (val > max) {
+				val = max;
+			}
+			instance.update({
+				to: val
+			});
+			$(this).prop("value", val);
+		});
+	},
 };
 const $ = jQuery;
 
-function eventHandler() { 
+function eventHandler() {
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
+	JSCCommon.getRange();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -385,18 +446,18 @@ function eventHandler() {
 			// }
 		},
 	}
-	
+
 	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchOverflow: true
 	});
-	const menuSlider = new Swiper('.menu-slider--js', {  
+	const menuSlider = new Swiper('.menu-slider--js', {
 		slidesPerView: 'auto',
 		watchOverflow: true,
 		spaceBetween: 16
 	});
-	
+
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -453,8 +514,8 @@ function eventHandler() {
 				// }
 			},
 		});
-  };
-	
+	};
+
 	const sCategoriesSlider = new Swiper('.sCategories__slider--js', {
 		slidesPerView: 'auto',
 		loopFillGroupWithBlank: true,
@@ -596,6 +657,9 @@ function eventHandler() {
 			},
 		}
 	});
+	// $(".dd-head-js").click(function () {
+	// 	$(this).toggleClass("active").next().slideToggle();
+	// })
 
 	JSCCommon.heightSlide();
 

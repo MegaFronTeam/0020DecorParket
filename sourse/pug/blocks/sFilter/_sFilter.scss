@@ -1,0 +1,407 @@
+// start .sFilter
+@include media-breakpoint-down(lg) {
+	.sFilter__wrap {
+		// display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: translateX(calc(-100% - 40px));
+		@include mt;
+		background-color: #fff;
+		z-index: 1300;
+		// overflow-y: auto;
+		// overflow-x: hidden;
+		&.active {
+			transform: translateX(0);
+		}
+
+		.dd-group {
+			height: calc(100vh - 68px);
+			overflow-y: auto;
+			overflow-x: hidden;
+			// &__content{
+			// 	&:not(.active){
+			// 		display:none;
+			// 	}
+			// }
+			@include media-breakpoint-down(lg) {
+				padding-right: 10px;
+				padding-bottom: 80px;
+				padding-right: 16px;
+				padding-left: 16px;
+			}
+		}
+	}
+}
+.sFilter {
+	--sPT: 0;
+	--sPB: 0;
+	// --sTPB: ;
+	// padding-bottom: 0;
+	// @include media-breakpoint-up(lg) {
+	// 	padding-bottom: rem(83);
+	// 	// flex-grow: 1;
+	// }
+	&__btn {
+		@extend .btn, .btn-primary;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 600;
+		height: 40px;
+		.icon {
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 2px;
+			margin-right: 4px;
+			font-size: rem(24);
+		}
+	}
+	// &__btn-bottom {
+	// 	@extend .btn, .btn-primary;
+	// 	// position: sticky;
+	// 	position: sticky;
+	// 	width: calc(100vh + var(--bs-gutter-x));
+	// 	transform: translateY(100vh);
+	// 	z-index: 10000;
+	// 	bottom: 0;
+	// 	left: calc(-1 * var(--bs-gutter-x));
+	// 	transform: translateY(var(--active,100vh));
+	// 	visibility: var(--active,hidden);
+	// 	&.active {
+	// 		bottom: 64px;
+	// 		// transform: translateY(calc(100vh - 57px));
+	// 		--active: " ";
+	// 	}
+	// }
+
+	&__title {
+		padding-bottom: rem(32);
+		margin-bottom: rem(24);
+		border-bottom: 1px solid rgba($color: #05141f, $alpha: 0.1);
+		h4 {
+			font-weight: 600;
+			margin-bottom: 0;
+			font-size: rem(21);
+		}
+	}
+	&__wrap {
+		// padding-top: rem(19);
+	}
+	.dd-group {
+		&__head {
+			@include mt;
+			display: flex;
+			cursor: pointer;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 0;
+			padding-top: rem(16);
+			padding-bottom: rem(16);
+			padding-left: 0;
+			h5 {
+				// font-size: rem(16);
+				margin-bottom: 0;
+				line-height: calc(28 / 18);
+			}
+			.icon {
+				@include mt;
+				font-size: rem(20);
+				fill: none;
+				stroke: currentColor;
+				stroke-width: 2px;
+			}
+
+			&.form-switch {
+				position: relative;
+				cursor: auto;
+				label {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					width: 100%;
+					cursor: pointer;
+					&:after {
+						content: "";
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						left: 0;
+						top: 0;
+					}
+					.form-check-input {
+						box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.16);
+						margin: 0;
+						// margin-left: 0;
+						// width: rem(44);
+						color: $white;
+						background-color: $gray-300;
+						border-color: $gray-300;
+						height: 1.5em;
+						background-size: calc(1.5em + 2px);
+						background-position: -2px center;
+						&:active,
+						&:focus {
+							color: $white;
+							background-color: $gray-300;
+							border-color: $gray-300;
+							filter: none;
+						}
+						&:checked {
+							background-color: $primary;
+							border-color: $primary;
+							background-position: calc(100% + 2px) center;
+						}
+					}
+				}
+			}
+		}
+		&__content {
+			margin-bottom: rem(24);
+		}
+		&__item {
+			&.active {
+				.dd-group__head {
+					.icon {
+						transform: rotateX(180deg);
+					}
+				}
+			}
+		}
+		.range-slider {
+			padding-top: rem(29);
+			// & > .irs {
+			// 	margin-bottom: rem(8);
+			// }
+		}
+		.custom-input {
+			cursor: pointer;
+			&:not(:last-child) {
+				margin-bottom: rem(16);
+			}
+			&__input {
+				width: rem(20);
+				height: rem(20);
+			}
+		}
+		&__color-wrap {
+			@include roww(10px, m);
+			display: flex;
+			flex-wrap: wrap;
+			label {
+				width: auto;
+			}
+			form {
+			}
+			.form-wrap {
+			}
+			.custom-input {
+				padding-left: 0;
+				--checkColor: $white;
+				margin-bottom: rem(10) !important;
+				&__input {
+					width: rem(35);
+					height: rem(35);
+					border-radius: 50%;
+					border: 1px solid #d0d0d0;
+					margin-left: 0;
+					cursor: pointer;
+					background-color: var(--checkColor);
+					&:checked {
+						background-image: url(../img/svg/check-black.svg);
+						background-size: 50%;
+						// background-color: transparent;
+					}
+				}
+			}
+		}
+	}
+	.irs {
+		&-from,
+		&-to,
+		&-single,
+		&-min,
+		&-max {
+			visibility: hidden !important;
+			display: none;
+			position: absolute !important;
+		}
+		&-line {
+			position: sticky;
+			background-color: $gray-300;
+			// border-radius: 10px;
+		}
+		&-handle {
+			top: rem(-8);
+			border-color: $primary;
+			border-width: rem(5);
+			width: rem(20);
+			height: rem(20);
+		}
+		&-bar {
+			top: 0;
+			background-color: $primary;
+		}
+		&--round {
+			height: rem(14);
+		}
+	}
+	.extra-controls {
+		// display: flex;
+		@extend .row;
+		--bs-gutter-x: #{rem(16)} !important;
+		font-size: rem(16);
+		line-height: 1.5;
+		label {
+			// @include roww(5px, m);
+			@extend .col-6;
+			position: relative;
+			display: flex;
+			align-items: center;
+			// padding-bottom: rem(10);
+			// border-bottom: 1px solid $body-color;
+			// &::before {
+			// 	content: '';
+			// 	display: block;
+			// 	position: absolute;
+			// 	width: calc(100% - var(--bs-gutter-x));
+			// 	height: 1px;
+			// 	left: calc(var(--bs-gutter-x) / 2);
+			// 	background-color:  $body-color;
+			// 	bottom: 0;
+			// }
+			span {
+				@include a-cent1;
+				display: block;
+				left: calc(var(--bs-gutter-x) + #{rem(15)});
+			}
+		}
+		input {
+			@include mt;
+			width: 100%;
+			border: 1px solid $input-border-color;
+			border-radius: $input-border-radius;
+			color: $secondary;
+			padding: rem(9) rem(15) rem(9) rem(38);
+			&:focus {
+				border-color: $input-focus-border-color;
+				color: $input-focus-color;
+				outline: none;
+			}
+		}
+	}
+	&__body {
+		@include media-breakpoint-down(lg) {
+			position: absolute;
+			z-index: 23132;
+			background: white;
+			width: 100vw;
+			left: 0;
+			top: 0;
+			height: 100%;
+			.dd-group {
+				// max-width: 360px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		& > .dd-group {
+			@include media-breakpoint-down(lg) {
+				padding-top: 16px;
+			}
+		}
+	}
+	&__filterHead {
+		display: flex;
+		// max-width: 360px;
+		margin-left: auto;
+		margin-right: auto;
+		padding-top: 22px;
+		padding-bottom: 22px;
+		padding-right: 16px;
+		padding-left: 16px;
+		justify-content: space-between;
+		align-items: center;
+		// margin-bottom: 16px;
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			height: 68px;
+			width: 100vw;
+			background: #f8f8f8;
+			box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		button {
+			position: relative;
+			width: 13px;
+			height: 13px;
+			padding: 0;
+			background-color: transparent;
+			border: none;
+			&:after,
+			&:before {
+				@include mt;
+				content: "";
+				position: absolute;
+				display: block;
+				top: 50%;
+				width: 100%;
+				height: 2px;
+				background-color: #14181f;
+				&:hover {
+					background-color: $secondary;
+				}
+			}
+			&:after {
+				transform: translateY(-50%) rotate(-45deg);
+			}
+			&:before {
+				transform: translateY(-50%) rotate(45deg);
+			}
+		}
+		h5 {
+			font-weight: 600;
+			font-size: 20px;
+			margin-bottom: 0;
+		}
+	}
+	&__btn-showMore {
+		@include media-breakpoint-down(lg) {
+			display: block;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			font-size: 16px;
+			font-weight: 600;
+			z-index: 1000;
+		}
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sFilter

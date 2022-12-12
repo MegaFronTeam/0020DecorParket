@@ -1,0 +1,61 @@
+mixin sFilter(data)
+	// start sFilter
+	+b.sFilter&attributes(attributes) 
+		+e.btn.d-lg-none
+			+icon('filter') 
+			| Фильтры
+		+e.wrap
+			//- +e.title.d-none.d-lg-block
+			//- 	h4 Фильтры
+			+e.body
+				+e.filterHead
+					+e.BUTTON.filterCloseBtn
+					h5 Фильтры
+					a(href="#") Сбросить
+				+ddGroup()
+					+e.wraper
+						+ddGroupItem('Цена, ₽').active
+							.extra-controls
+								label
+									span от
+									input.js-input-from(type='text' value='0')
+								label
+									span до
+									input.js-input-to(type='text' value='0')
+							.range-slider
+								input.js-range-slider(type='text' value='')
+						+e.item
+							+e.head.form-switch
+								label
+									h5 Товары со&nbsp;скидкой
+									input.form-check-input(type='checkbox' role='switch' checked='')
+						+e.item
+							+e.head.form-switch
+								label
+									h5 Только в&nbsp;наличии
+									input.form-check-input(type='checkbox' role='switch' checked='')
+						+ddGroupItem('Бренд') 
+							+in-c("checkbox", 'Название фильтра')
+							+in-c("checkbox", 'Название фильтра')(checked)
+							+in-c("checkbox", 'Название фильтра')
+							+in-c("checkbox", 'Название фильтра')
+						+ddGroupItem('Класс износостойкости')
+							+in-c("checkbox", '31 класс')(checked)
+							+in-c("checkbox", '32 класс')
+							+in-c("checkbox", '33 класс')
+							+in-c("checkbox", '34 класс')
+						+ddGroupItem('Заголовок фильтра')
+							+in-c("checkbox", 'Название фильтра')
+							+in-c("checkbox", 'Название фильтра')(checked)
+							+in-c("checkbox", 'Название фильтра')
+							+in-c("checkbox", 'Название фильтра')
+						+ddGroupItem('Заголовок фильтра') 
+							+in-c("checkbox", 'Название фильтра')
+							+in-c("checkbox", 'Название фильтра')(checked)
+							+in-c("checkbox", 'Название фильтра')
+							+in-c("checkbox", 'Название фильтра')
+				+e.BUTTON.btn-showMore.btn.btn-primary Показать 325
+		//- +e.btn-bottom.d-lg-none
+		//- 	+icon('filter') 
+		//- 	| Фильтры
+	// end sFilter

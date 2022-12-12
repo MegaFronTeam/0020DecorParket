@@ -862,6 +862,14 @@ iframe {
 	}
 }
 
+.dd-group {
+	&__content {
+		&:not(.active) {
+			display: none;
+		}
+	}
+}
+
 .rows-underlined {
 	// подчеркивание строк в .row
 	// К .row добавляем класс .rows-underlined -->
