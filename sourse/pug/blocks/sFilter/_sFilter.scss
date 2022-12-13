@@ -52,6 +52,9 @@
 	// 	padding-bottom: rem(83);
 	// 	// flex-grow: 1;
 	// }
+	@include media-breakpoint-up(xxl) {
+		padding-right: rem(16);
+	}
 	&__btn {
 		position: relative;
 		@extend .btn, .btn-light;
@@ -81,12 +84,12 @@
 			align-items: center;
 			justify-content: center;
 			width: auto;
-			min-width: rem(20);
-			height: rem(20);
-			font-size: rem(12);
+			min-width: 20px;
+			height: 20px;
+			font-size: 12px;
 			background-color: $primary;
 			color: $white;
-			border-radius: rem(20);
+			border-radius: 20px;
 			padding: 2px 3px 0 3px;
 		}
 		.icon {
@@ -273,9 +276,15 @@
 			&:not(:last-child) {
 				margin-bottom: rem(16);
 			}
-			&__input {
-				width: rem(20);
-				height: rem(20);
+			// &__input {
+			// 	width: rem(20);
+			// 	height: rem(20);
+			// }
+			&__text {
+				& + span {
+					color: $secondary;
+					margin-left: rem(8);
+				}
 			}
 		}
 		&__color-wrap {

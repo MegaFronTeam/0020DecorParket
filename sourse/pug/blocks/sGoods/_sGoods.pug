@@ -6,7 +6,7 @@ mixin sGoods(data)
 				+weRecommend
 			+b.sorting
 				+e.row.row
-					.col.col-md-auto.col-lg-4.col-xl-3
+					.col.col-md-auto.col-xxl-3.asideCol
 						+e.filtered-amount
 							span 56
 							| товаров
@@ -29,9 +29,13 @@ mixin sGoods(data)
 										+icon('row')
 									+e.btn.active(href="#")
 										+icon('grid')
-
 			+e.row.row
-				.col-lg-4.col-xl-3
+				.col-12.col-lg-auto.col-xxl-3.asideCol
 					+sFilter()
 				.col
+					block
+					+e.footer
+						+e.btn(href="#").btn.btn-light Загрузить ещё
+						+pagin-sm().d-sm-none
+						+pagin-lg().d-none.d-sm-block
 	// end sGoods

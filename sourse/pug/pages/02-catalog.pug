@@ -32,6 +32,13 @@ block pagecontent
 	main
 		+breadcrumb('Паркет', 'Главная', 'Напольные покрытия', 'Паркетная доска')
 		+sGoods()
+			.row.rows-underlined
+				- for (var i = 0; i < 6; i++)
+					.col-sm-6.col-xl-4
+						+product-card({"class": "btn-danger", "name": "Скидка&nbsp;-30%"},{"class": "btn-info", "name": "Рассрочка 0-0-24"})
+				// .rows-underlined__col - подчеркивание последнего ряда
+				// .rows-underlined__col.rows-underlined__col--blank - без подчеркивания последнего ряда
+				.rows-underlined__col
 		//- +headerBlock().pt-2
 		//- +sCategories()
 		//- +sPopular()

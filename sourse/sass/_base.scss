@@ -924,4 +924,10 @@ iframe {
 	}
 }
 
+.asideCol {
+	@include media-breakpoint-between(lg, xxl) {
+		width: calc(#{rem(274)} + var(--bs-gutter-x));
+	}
+}
+
 

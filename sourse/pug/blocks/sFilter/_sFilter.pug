@@ -2,7 +2,7 @@ mixin sFilter(data)
 	// start sFilter
 	+b.sFilter&attributes(attributes) 
 		+e.btn.d-lg-none
-			span 2234
+			span 2
 			+icon('filters') 
 			| Фильтры
 		+e.wrap
@@ -46,25 +46,25 @@ mixin sFilter(data)
 									h5 Только в&nbsp;наличии
 									input.form-check-input(type='checkbox' role='switch')
 						+ddGroupItem('Бренд') 
-							+in-c("checkbox", 'Название фильтра')
-							+in-c("checkbox", 'Название фильтра')(checked)
-							+in-c("checkbox", 'Название фильтра')
-							+in-c("checkbox", 'Название фильтра')
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')(checked)
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')
 						+ddGroupItem('Класс износостойкости')
-							+in-c("checkbox", '31 класс')(checked)
-							+in-c("checkbox", '32 класс')
-							+in-c("checkbox", '33 класс')
-							+in-c("checkbox", '34 класс')
+							+in-c("checkbox", '31 класс', 'name', '(00)')(checked)
+							+in-c("checkbox", '32 класс', 'name', '(00)')
+							+in-c("checkbox", '33 класс', 'name', '(00)')
+							+in-c("checkbox", '34 класс', 'name', '(00)')
 						+ddGroupItem('Заголовок фильтра')
-							+in-c("checkbox", 'Название фильтра')
-							+in-c("checkbox", 'Название фильтра')(checked)
-							+in-c("checkbox", 'Название фильтра')
-							+in-c("checkbox", 'Название фильтра')
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')(checked)
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')
 						+ddGroupItem('Заголовок фильтра') 
-							+in-c("checkbox", 'Название фильтра')
-							+in-c("checkbox", 'Название фильтра')(checked)
-							+in-c("checkbox", 'Название фильтра')
-							+in-c("checkbox", 'Название фильтра')
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')(checked)
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')
+							+in-c("checkbox", 'Название фильтра', 'name', '(00)')
 				+e.fixedBtns
 					+e.BUTTON.btn-showMore.btn.btn-primary Посмотреть 296 предложений
 		//- +e.btn-bottom.d-lg-none
