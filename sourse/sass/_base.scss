@@ -583,6 +583,9 @@ iframe {
 		padding-left: 24px;
 		padding-right: 24px;
 	}
+	.container {
+		padding: 0;
+	}
 }
 
 .btn-primary,
@@ -920,6 +923,14 @@ iframe {
 		// --sPT: #{rem(52)};
 		@include media-breakpoint-up(md) {
 			--sPT: #{rem(68)};
+		}
+	}
+}
+
+.cart-page {
+	.footer {
+		@include media-breakpoint-down(sm) {
+			margin-top: 0;
 		}
 	}
 }

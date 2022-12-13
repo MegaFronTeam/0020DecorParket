@@ -1,0 +1,37 @@
+mixin sCart(data)
+	// start sCart
+	+b.SECTION.sCart.section#sCart&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Корзина
+					span 3
+			+e.row.row
+				.col
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo laudantium, atque laborum ullam quaerat repellat voluptatum maiores et? Ad tenetur repudiandae tempora reiciendis explicabo! Sint quia dicta in error at?
+				.col-12.order-lg-last
+					block
+				.col
+					mixin summary()
+						+b.summary
+							+e.item
+								.h3 Итого
+								.h3 18&nbsp;447&nbsp;₽
+
+							+e.item--btn
+								+e.btn.btn.btn-primary(href="#") Перейти к&nbsp;оформлению
+								.small.text-secondary.mt-1 Доступные способы и&nbsp;время доставки можно выбрать при оформлении заказа
+							+e.item--cart
+								.h5 Ваша корзина
+								.small.text-secondary 3&nbsp;товара &bull; 24&nbsp;790&nbsp;гр
+							+e.item
+								p Товары
+									span (3)
+								.h6 22&nbsp;987&nbsp;₽
+							+e.item
+								p Скидка
+								.h6.text-danger &minus;&nbsp;4&nbsp;540&nbsp;₽
+							+e.item
+								p Доставка
+								.h6 Бесплатно
+					+summary()
+	// end sCart

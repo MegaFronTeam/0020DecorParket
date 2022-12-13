@@ -2,8 +2,11 @@ mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		.container
-			+section-title('Рекомендуем вам', 'Смотреть все', 'mnu')
-				+weRecommend
+			if block
+				block
+			else
+				+section-title('Рекомендуем вам', 'Смотреть все', 'mnu')
+					+weRecommend
 			.slider-wrapper
 				+e.slider--js.swiper
 					.swiper-wrapper

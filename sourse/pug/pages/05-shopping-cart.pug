@@ -1,0 +1,53 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sPopular/_sPopular.pug
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sArticles/_sArticles.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sCart/_sCart.pug
+include ../blocks/sGoods/_sGoods.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'cart-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= index.head.title
+	title= title
+block pagecontent
+	//- +mob-mnu()
+
+
+	+header()
+		+topLine
+		+top-nav()
+	main
+		+breadcrumb()
+			li: +e.btn.d-flex(href="#")
+				+icon('chevron-left')
+				span Вернуться к покупкам
+		
+		+sCart()
+			+sCatalog()
+				+section-title('Добавьте к заказу')
+		//- +sCategories()
+		//- +sPopular()
+		//- +sCatalog()
+		//- +headerBlock2()
+		//- +sArticles(`Советы эксперта`, 'Смотреть все')
+		//- +sForm()
+		//- +sContact()
+
+	+footer()
+
+
+
+
