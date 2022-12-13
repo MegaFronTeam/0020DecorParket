@@ -2,38 +2,49 @@ mixin sFilter(data)
 	// start sFilter
 	+b.sFilter&attributes(attributes) 
 		+e.btn.d-lg-none
-			+icon('filter') 
+			span 2234
+			+icon('filters') 
 			| Фильтры
 		+e.wrap
-			//- +e.title.d-none.d-lg-block
-			//- 	h4 Фильтры
 			+e.body
 				+e.filterHead
-					+e.BUTTON.filterCloseBtn
 					h5 Фильтры
-					a(href="#") Сбросить
+					+e.BUTTON.filterCloseBtn
+						+icon('tag-close')
+				+e.tags
+					.row
+						mixin filterTag(t)
+							.col-auto
+								+e.tag&attributes(attributes)
+									span!= t
+									+e.BUTTON.tagClose
+										+icon('tag-close')
+						+filterTag(`Очистить фильтры`).--clear-all
+						+filterTag(`31 класс`)
+						+filterTag(`ХДФ`)
+						
 				+ddGroup()
 					+e.wraper
 						+ddGroupItem('Цена, ₽').active
 							.extra-controls
 								label
 									span от
-									input.js-input-from(type='text' value='0')
+									input.js-input-from(type='number' value='0')
 								label
 									span до
-									input.js-input-to(type='text' value='0')
+									input.js-input-to(type='number' value='0')
 							.range-slider
-								input.js-range-slider(type='text' value='')
+								input.js-range-slider(type='number' value='')
 						+e.item
 							+e.head.form-switch
 								label
 									h5 Товары со&nbsp;скидкой
-									input.form-check-input(type='checkbox' role='switch' checked='')
+									input.form-check-input(type='checkbox' role='switch')
 						+e.item
 							+e.head.form-switch
 								label
 									h5 Только в&nbsp;наличии
-									input.form-check-input(type='checkbox' role='switch' checked='')
+									input.form-check-input(type='checkbox' role='switch')
 						+ddGroupItem('Бренд') 
 							+in-c("checkbox", 'Название фильтра')
 							+in-c("checkbox", 'Название фильтра')(checked)
@@ -54,7 +65,8 @@ mixin sFilter(data)
 							+in-c("checkbox", 'Название фильтра')(checked)
 							+in-c("checkbox", 'Название фильтра')
 							+in-c("checkbox", 'Название фильтра')
-				+e.BUTTON.btn-showMore.btn.btn-primary Показать 325
+				+e.fixedBtns
+					+e.BUTTON.btn-showMore.btn.btn-primary Посмотреть 296 предложений
 		//- +e.btn-bottom.d-lg-none
 		//- 	+icon('filter') 
 		//- 	| Фильтры

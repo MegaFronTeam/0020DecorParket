@@ -378,6 +378,7 @@ const JSCCommon = {
 			$(this).prop("value", val);
 		});
 	},
+
 };
 const $ = jQuery;
 
@@ -660,6 +661,32 @@ function eventHandler() {
 	// $(".dd-head-js").click(function () {
 	// 	$(this).toggleClass("active").next().slideToggle();
 	// })
+
+	$('.sFilter__filterCloseBtn').click(function () {
+		$('.sFilter__wrap').removeClass('active');
+		$('.sFilter__btn').removeClass('active');
+		document.body.classList.remove("fixed");
+	});
+
+	$(".sFilter__btn").click(function () {
+		$('.sFilter__wrap').addClass('active');
+		// $(this).toggleClass("active").next().slideToggle();
+		document.body.classList.add("fixed");
+		$(window).resize(function () {
+			if ($(window).width() > 992) {
+				$('.sFilter__wrap').removeClass('active');
+				document.body.classList.remove("fixed");
+			}
+		});
+	});
+
+	$('.sFilter__filterCloseBtn').click(function () {
+		$('.sFilter__wrap').removeClass('active');
+		$('.sGoods__btn-bottom').removeClass('active');
+		document.body.classList.remove("fixed");
+	});
+
+
 
 	JSCCommon.heightSlide();
 

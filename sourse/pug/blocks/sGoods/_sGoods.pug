@@ -6,7 +6,7 @@ mixin sGoods(data)
 				+weRecommend
 			+b.sorting
 				+e.row.row
-					.col.col-md-auto.col-lg-4
+					.col.col-md-auto.col-lg-4.col-xl-3
 						+e.filtered-amount
 							span 56
 							| товаров
@@ -31,7 +31,7 @@ mixin sGoods(data)
 										+icon('grid')
 
 			+e.row.row
-				.col-4 
+				.col-lg-4.col-xl-3
 					+sFilter()
 				.col
 	// end sGoods
