@@ -11,19 +11,19 @@ mixin sFilter(data)
 					h5 Фильтры
 					+e.BUTTON.filterCloseBtn
 						+icon('tag-close')
-				+e.tags
-					.row
-						mixin filterTag(t)
-							.col-auto
-								+e.tag&attributes(attributes)
-									span!= t
-									+e.BUTTON.tagClose
-										+icon('tag-close')
-						+filterTag(`Очистить фильтры`).--clear-all
-						+filterTag(`31 класс`)
-						+filterTag(`ХДФ`)
 						
 				+ddGroup()
+					.sFilter__tags
+						.row
+							mixin filterTag(t)
+								.col-auto
+									.sFilter__tag&attributes(attributes)
+										span!= t
+										button.sFilter__tagClose
+											+icon('tag-close')
+							+filterTag(`Очистить фильтры`).sFilter__tag--clear-all
+							+filterTag(`31 класс`)
+							+filterTag(`ХДФ`)
 					+e.wraper
 						+ddGroupItem('Цена, ₽').active
 							.extra-controls

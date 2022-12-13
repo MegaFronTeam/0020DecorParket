@@ -67,9 +67,10 @@
 	--rowMargin: #{rem(12)};
 	// background-color: $light;
 	padding-bottom: var(--rowMargin);
-	box-shadow: inset 0px -1px 0px #e5e6e4;
+	border-bottom: 1px solid #e5e6e4;
+	// box-shadow: inset 0px -1px 0px #e5e6e4;
 	@include media-breakpoint-up(lg) {
-		box-shadow: none;
+		border: none;
 	}
 	&__row {
 		align-items: center;
