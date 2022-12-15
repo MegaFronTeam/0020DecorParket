@@ -49,23 +49,30 @@
 }
 
 .addBlock {
-	color: var(--color, #{$primary});
-	border: 1px solid;
-	border-radius: 23px;
-	display: flex;
+	color: var(--color, #{$body-color});
+	border: none;
+	border-radius: $border-radius-sm;
+	display: inline-flex;
 	position: relative;
 	overflow: hidden;
+	background-color: $light;
 	input {
 		color: inherit;
 		text-align: center;
 		border: none;
-		height: rem(45);
+		outline: none;
+		height: rem(40);
+		background-color: $light;
+		font-weight: 700;
+		width: rem(40);
 	}
 	&__btn {
 		color: inherit;
-		height: rem(45);
+		width: rem(32);
+		height: rem(40);
 		position: relative;
-		border-radius: 23px;
+		padding: 0;
+		border-radius: $border-radius-sm;
 		background: none !important;
 		border: none !important;
 		box-shadow: none !important;
@@ -73,19 +80,33 @@
 		background: transparent;
 		// padding-left: rem(8);
 		// padding-right: rem(8);
-		width: rem(26);
-		&::before,
-		&::after {
-			content: "";
-			width: 10px;
-			height: 2px;
-			background-color: currentColor;
+		.icon {
 			@include a-cent;
-			position: absolute;
+			font-size: rem(24);
+			&-minus {
+				left: auto;
+				right: 0;
+			}
+			&-plus {
+				right: auto;
+				left: 0;
+			}
 		}
-		&--plus::after {
-			transform: rotate(90deg);
+		&:hover, &:active {
+			color: $primary;
 		}
+		// &::before,
+		// &::after {
+		// 	content: "";
+		// 	width: 1rem;
+		// 	height: 2px;
+		// 	background-color: currentColor;
+		// 	@include a-cent;
+		// 	position: absolute;
+		// }
+		// &--plus::after {
+		// 	transform: rotate(90deg);
+		// }
 	}
 }
 
@@ -376,6 +397,7 @@
 			}
 			@include media-breakpoint-up(xl) {
 				font-size: rem(20);
+				max-width: 100%;
 			}
 		}
 		picture {
@@ -438,8 +460,12 @@
 		}
 	}
 	&__title {
-		display: block;
+		// display: block;
 		margin-bottom: rem(12);
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
 		flex-grow: 1;
 		&:not(:hover) {
 			color: $body-color;
