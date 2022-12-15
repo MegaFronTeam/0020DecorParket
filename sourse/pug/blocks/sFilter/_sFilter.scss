@@ -267,6 +267,11 @@
 					}
 				}
 			}
+			&:last-child {
+				.dd-group__content {
+					margin-bottom: 0;
+				}
+			}
 		}
 		.range-slider {
 			padding-top: rem(29);
