@@ -230,3 +230,13 @@ mixin cartList()
 		+cartListItem
 		+cartListItem
 	// end cartList
+
+mixin choiceOption(title, text, name)
+	// start choiceOption
+	+b.choiceOption
+		+in-c('radio', '', `${name}`)&attributes(attributes)
+			+e.wrap
+				+e.content
+					h5!= title 
+					p!= text
+	// end choiceOption

@@ -10,9 +10,10 @@ include ../blocks/top-nav/_top-nav.pug
 //- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sCategories/_sCategories.pug
-include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sOrder/_sOrder.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sCart/_sCart.pug
-include ../blocks/sGoods/_sGoods.pug
+//- include ../blocks/sGoods/_sGoods.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -33,9 +34,9 @@ block pagecontent
 		+breadcrumb()
 			li: +e.btn.d-flex(href="#")
 				+icon('chevron-left')
-				span Вернуться к&nbsp;покупкам
-		+sCart('Корзина', '3', 'catalog')
-			+cartList()
+				span Вернуться в&nbsp;корзину
+		+sCart('Оформление заказа', '')
+			+sOrder()
 
 	+footer()
 

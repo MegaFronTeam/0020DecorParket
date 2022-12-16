@@ -1,0 +1,46 @@
+mixin sOrder(data)
+	// start sOrder
+	+b.sOrder&attributes(attributes)
+		.container
+			mixin sOrderForm(t)
+				+form-wrap()
+					h3!= t
+					block
+			+sOrderForm('Получатель')
+				.row
+					.col-md-6
+						+input('Фамилия')
+					.col-md-6
+						+input('Имя')
+					.col-md-6
+						+input('Телефон', 'tel')
+					.col-md-6
+						+input('Электронная почта', 'email')
+					.col-auto
+						+e.agree
+							+in-c('checkbox', 'Я хочу получать рекламные сообщения и новости о товарах и услугах')(checked required)
+			+sOrderForm('Способ доставки')
+				.row
+					.col-md-6
+						+choiceOption(`Доставка`, `Наша служба доставки привезёт заказ домой, в&nbsp;офис или на&nbsp;дачу`, 'delivery')(checked)
+					.col-md-6
+						+choiceOption(`Самовывоз`, `Заберите заказ бесплатно из&nbsp;магазина Декор Паркет или пункта самовывоза`, 'delivery')
+					.col-12
+						+e.search
+							+e.input-wrap.form-group
+								label
+									input.form-wrap__input.form-control(name='text' type='text' placeholder='Населенный пункт, улица, дом и кв.')
+									span.form-wrap__input-title Населенный пункт, улица, дом и&nbsp;кв.
+									button
+										+icon("search")
+							+e.nav-btn(href="#")
+								+icon('navigation')
+								span Указать точку на&nbsp;карте
+					.col-12
+						+input('Комментарий к заказу', 'textarea')
+			+sOrderForm('Способ оплаты')
+
+
+
+
+	// end sOrder

@@ -6,6 +6,13 @@
 	@include media-breakpoint-down(sm) {
 		--sPB: 0;
 	}
+	--sTPB: #{rem(16)};
+	@include media-breakpoint-up(md) {
+		--sTPB: #{rem(24)};
+	}
+	@include media-breakpoint-up(xl) {
+		--sTPB: #{rem(32)};
+	}
 	// &__row {
 	// --bs-gutter-x: #{rem()};
 	// --bs-gutter-y: #{rem()};
