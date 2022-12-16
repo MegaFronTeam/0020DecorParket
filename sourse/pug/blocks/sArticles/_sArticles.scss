@@ -29,6 +29,9 @@
 		@include media-breakpoint-down(md) {
 			width: rem(327);
 		}
+		@media (max-width: 374.98px) {
+			width: 100%;
+		}
 	}
 	.swiper-button-hand {
 		top: calc(var(--slideH) / 2);
