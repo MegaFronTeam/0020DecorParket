@@ -194,3 +194,39 @@ mixin product-card(...labels)
 						+e.btn(href="#").active
 							+icon('heart')
 	// end product-card
+
+mixin cartList()
+	// start cartList
+	+b.cartList
+		+e.head
+			+in-c("checkbox", 'Выбрать все')
+			+e.BUTTON.btn--close.text-danger
+				+icon('close')
+				span Удалить выбранные
+		mixin cartListItem
+			+e.item
+				table
+					td
+						input.custom-input__input.form-check-input(name='checkbox' type='checkbox')
+					td
+						+img('img/sCart-1.jpg').res-i
+					td
+						p Ламинат &laquo;Дуб Антик&raquo; 33&nbsp;класс толщина 10&nbsp;мм с&nbsp;фаской 1.975&nbsp;м&sup2;
+						p Арт. 00000000
+						+e.btn-wrap
+							+e.BUTTON.btn--favorites.active
+								+icon('heart')
+								span В&nbsp;избранное
+							+e.BUTTON.btn
+								+icon('close')
+								span Удалить
+					td
+						+e.price-wrap
+							span 8 600 ₽
+							span 4 670 ₽
+					td.text-end
+						+addblock()
+		+cartListItem
+		+cartListItem
+		+cartListItem
+	// end cartList

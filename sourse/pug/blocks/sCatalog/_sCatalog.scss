@@ -29,6 +29,9 @@
 			width: rem(290);
 		}
 	}
+	.slider-wrapper {
+		margin-bottom: 0;
+	}
 
 	@include media-breakpoint-up(xl) {
 	}

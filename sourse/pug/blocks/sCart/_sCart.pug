@@ -1,69 +1,38 @@
-mixin sCart(data)
+mixin sCart(t, s, catalog)
 	// start sCart
 	+b.SECTION.sCart.section#sCart&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Корзина
-					span 3
+				h2!= t
+					if s
+						span!= s
 			+e.row.row
 				.col
-					+b.cartList
-						+e.head
-							+in-c("checkbox", 'Выбрать все')
-							+e.BUTTON.btn--close.text-danger
-								+icon('close')
-								span Удалить выбранные
-						mixin item
-							+e.item
-								table
-									td
-										input.custom-input__input.form-check-input(name='checkbox' type='checkbox')
-									td
-										+img('img/sCart-1.jpg').res-i
-									td
-										p Ламинат &laquo;Дуб Антик&raquo; 33&nbsp;класс толщина 10&nbsp;мм с&nbsp;фаской 1.975&nbsp;м&sup2;
-										p Арт. 00000000
-										+e.btn-wrap
-											+e.BUTTON.btn--favorites.active
-												+icon('heart')
-												span В&nbsp;избранное
-											+e.BUTTON.btn
-												+icon('close')
-												span Удалить
-									td
-										+e.price-wrap
-											span 8 600 ₽
-											span 4 670 ₽
-									td.text-end
-										+addblock()
-						+item
-						+item
-						+item
-						+item
-
-				.col-12.order-xl-last
 					block
-				.col.col-xl-auto
-					.summary-container-js
-						+b.summary--js
-							+e.item
-								.h3 Итого
-								.h3 18&nbsp;447&nbsp;₽
-
-							+e.item--btn
-								+e.btn.btn.btn-primary(href="#") Перейти к&nbsp;оформлению
-								.small.text-secondary.mt-1 Доступные способы и&nbsp;время доставки можно выбрать при оформлении заказа
-							+e.item--cart
-								.h5 Ваша корзина
-								.small.text-secondary 3&nbsp;товара &bull; 24&nbsp;790&nbsp;гр 
-							+e.item
-								p Товары
-									span (3)
-								.h6 22&nbsp;987&nbsp;₽
-							+e.item
-								p Скидка
-								.h6.text-danger &minus;&nbsp;4&nbsp;540&nbsp;₽
-							+e.item
-								p Доставка
-								.h6 Бесплатно
+				if catalog
+					.col-12.order-xl-last
+						+sCatalog()
+							+section-title('Добавьте к заказу')
+				.col-12.col-xl-auto.summary-container-js
+					+b.summary--js
+						+e.item
+							.h3 Итого
+							.h3 18&nbsp;447&nbsp;₽
+						+e.item--btn
+							+e.btn.btn.btn-primary(href="#") Перейти к&nbsp;оформлению
+							.small.text-secondary.mt-2 Доступные способы и&nbsp;время доставки можно выбрать при оформлении заказа
+						+e.item--cart
+							.h5 Ваша корзина
+							.small.text-secondary 3&nbsp;товара &bull; 24&nbsp;790&nbsp;гр 
+						+e.item
+							p Товары
+								span (3)
+							.h6 22&nbsp;987&nbsp;₽
+						+e.item
+							p Скидка
+							.h6.text-danger &minus;&nbsp;4&nbsp;540&nbsp;₽
+						+e.item
+							p Доставка
+							.h6 Бесплатно
+					
 	// end sCart

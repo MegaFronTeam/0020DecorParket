@@ -260,10 +260,12 @@
 				<section class="sCart section" id="sCart">
 					<div class="container">
 						<div class="section-title text-center">
-							<h2>Корзина<span>3</span></h2>
+							<h2>Корзина<span>3</span>
+							</h2>
 						</div>
 						<div class="sCart__row row">
 							<div class="col">
+								<!-- start cartList-->
 								<div class="cartList">
 									<div class="cartList__head">
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Выбрать все</span>
@@ -406,51 +408,8 @@
 											</td>
 										</table>
 									</div>
-									<div class="cartList__item">
-										<table>
-											<td>
-												<input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-											</td>
-											<td><img class="res-i" src="img/sCart-1.jpg" alt="" loading="lazy"/>
-											</td>
-											<td>
-												<p>Ламинат &laquo;Дуб Антик&raquo; 33&nbsp;класс толщина 10&nbsp;мм с&nbsp;фаской 1.975&nbsp;м&sup2;</p>
-												<p>Арт. 00000000</p>
-												<div class="cartList__btn-wrap">
-													<button class="cartList__btn cartList__btn--favorites active">
-														<svg class="icon icon-heart ">
-															<use xlink:href="img/svg/sprite.svg#heart"></use>
-														</svg><span>В&nbsp;избранное</span>
-													</button>
-													<button class="cartList__btn">
-														<svg class="icon icon-close ">
-															<use xlink:href="img/svg/sprite.svg#close"></use>
-														</svg><span>Удалить</span>
-													</button>
-												</div>
-											</td>
-											<td>
-												<div class="cartList__price-wrap"><span>8 600 ₽</span><span>4 670 ₽</span>
-												</div>
-											</td>
-											<td class="text-end">
-												<div class="addBlock">
-													<button class="addBlock__btn" type="button">
-														<svg class="icon icon-minus ">
-															<use xlink:href="img/svg/sprite.svg#minus"></use>
-														</svg>
-													</button>
-													<input type="number" value="1"/>
-													<button class="addBlock__btn" type="button">
-														<svg class="icon icon-plus ">
-															<use xlink:href="img/svg/sprite.svg#plus"></use>
-														</svg>
-													</button>
-												</div>
-											</td>
-										</table>
-									</div>
 								</div>
+								<!-- end cartList-->
 							</div>
 							<div class="col-12 order-xl-last">
 								<!-- start sCatalog-->
@@ -1111,34 +1070,32 @@
 									</div>
 								</div>
 							</div>
-							<div class="col col-xl-auto">
-								<div class="summary-container-js">
-									<div class="summary summary--js">
-										<div class="summary__item">
-											<div class="h3">Итого</div>
-											<div class="h3">18&nbsp;447&nbsp;₽</div>
-										</div>
-										<div class="summary__item summary__item--btn">
-											<a class="summary__btn btn btn-primary" href="#">Перейти к&nbsp;оформлению
-											</a>
-											<div class="small text-secondary mt-1">Доступные способы и&nbsp;время доставки можно выбрать при оформлении заказа</div>
-										</div>
-										<div class="summary__item summary__item--cart">
-											<div class="h5">Ваша корзина</div>
-											<div class="small text-secondary">3&nbsp;товара &bull; 24&nbsp;790&nbsp;гр </div>
-										</div>
-										<div class="summary__item">
-											<p>Товары<span>(3)</span></p>
-											<div class="h6">22&nbsp;987&nbsp;₽</div>
-										</div>
-										<div class="summary__item">
-											<p>Скидка</p>
-											<div class="h6 text-danger">&minus;&nbsp;4&nbsp;540&nbsp;₽</div>
-										</div>
-										<div class="summary__item">
-											<p>Доставка</p>
-											<div class="h6">Бесплатно</div>
-										</div>
+							<div class="col-12 col-xl-auto summary-container-js">
+								<div class="summary summary--js">
+									<div class="summary__item">
+										<div class="h3">Итого</div>
+										<div class="h3">18&nbsp;447&nbsp;₽</div>
+									</div>
+									<div class="summary__item summary__item--btn">
+										<a class="summary__btn btn btn-primary" href="#">Перейти к&nbsp;оформлению
+										</a>
+										<div class="small text-secondary mt-2">Доступные способы и&nbsp;время доставки можно выбрать при оформлении заказа</div>
+									</div>
+									<div class="summary__item summary__item--cart">
+										<div class="h5">Ваша корзина</div>
+										<div class="small text-secondary">3&nbsp;товара &bull; 24&nbsp;790&nbsp;гр </div>
+									</div>
+									<div class="summary__item">
+										<p>Товары<span>(3)</span></p>
+										<div class="h6">22&nbsp;987&nbsp;₽</div>
+									</div>
+									<div class="summary__item">
+										<p>Скидка</p>
+										<div class="h6 text-danger">&minus;&nbsp;4&nbsp;540&nbsp;₽</div>
+									</div>
+									<div class="summary__item">
+										<p>Доставка</p>
+										<div class="h6">Бесплатно</div>
 									</div>
 								</div>
 							</div>
