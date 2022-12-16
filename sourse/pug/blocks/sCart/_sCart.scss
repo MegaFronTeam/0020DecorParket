@@ -7,8 +7,8 @@
 		--sPB: 0;
 	}
 	// &__row {
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
+	// --bs-gutter-x: #{rem()};
+	// --bs-gutter-y: #{rem()};
 	// }
 	.section-title {
 		h2 {
@@ -27,6 +27,14 @@
 	// }
 	// &__item {
 	// }
+	.summary {
+		@include media-breakpoint-up(xl) {
+			max-width: rem(340);
+		}
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(400);
+		}
+	}
 	.sCatalog {
 		padding-top: rem(32);
 		padding-bottom: rem(32);
@@ -52,6 +60,10 @@
 	}
 } // end.sCart
 
+.summary-container-js {
+	height: 100%;
+}
+
 .summary {
 	display: flex;
 	flex-direction: column;
@@ -62,6 +74,9 @@
 		margin: 0;
 		border-radius: $border-radius-lg;
 		padding: rem(40);
+	}
+	@include media-breakpoint-only(xl) {
+		padding: rem(40) rem(28);
 	}
 	&__item {
 		position: relative;

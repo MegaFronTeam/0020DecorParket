@@ -686,6 +686,16 @@ function eventHandler() {
 		document.body.classList.remove("fixed");
 	});
 
+	var StickySummary = new hcSticky('.summary--js', {
+		mobileFirst: true,
+		responsive: {
+			1200: {
+				stickTo: '.summary-container-js',
+				top: 32,
+			}
+		}
+	});
+
 
 
 	JSCCommon.heightSlide();

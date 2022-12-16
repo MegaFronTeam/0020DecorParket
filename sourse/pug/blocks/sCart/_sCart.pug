@@ -43,26 +43,27 @@ mixin sCart(data)
 
 				.col-12.order-xl-last
 					block
-				.col.col-xl-4
-					+b.summary
-						+e.item
-							.h3 Итого
-							.h3 18&nbsp;447&nbsp;₽
+				.col.col-xl-auto
+					.summary-container-js
+						+b.summary--js
+							+e.item
+								.h3 Итого
+								.h3 18&nbsp;447&nbsp;₽
 
-						+e.item--btn
-							+e.btn.btn.btn-primary(href="#") Перейти к&nbsp;оформлению
-							.small.text-secondary.mt-1 Доступные способы и&nbsp;время доставки можно выбрать при оформлении заказа
-						+e.item--cart
-							.h5 Ваша корзина
-							.small.text-secondary 3&nbsp;товара &bull; 24&nbsp;790&nbsp;гр 
-						+e.item
-							p Товары
-								span (3)
-							.h6 22&nbsp;987&nbsp;₽
-						+e.item
-							p Скидка
-							.h6.text-danger &minus;&nbsp;4&nbsp;540&nbsp;₽
-						+e.item
-							p Доставка
-							.h6 Бесплатно
+							+e.item--btn
+								+e.btn.btn.btn-primary(href="#") Перейти к&nbsp;оформлению
+								.small.text-secondary.mt-1 Доступные способы и&nbsp;время доставки можно выбрать при оформлении заказа
+							+e.item--cart
+								.h5 Ваша корзина
+								.small.text-secondary 3&nbsp;товара &bull; 24&nbsp;790&nbsp;гр 
+							+e.item
+								p Товары
+									span (3)
+								.h6 22&nbsp;987&nbsp;₽
+							+e.item
+								p Скидка
+								.h6.text-danger &minus;&nbsp;4&nbsp;540&nbsp;₽
+							+e.item
+								p Доставка
+								.h6 Бесплатно
 	// end sCart
