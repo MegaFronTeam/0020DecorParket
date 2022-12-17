@@ -873,3 +873,17 @@
 		}
 	}
 }
+
+.page-head {
+	&--info {
+		.page-head__aside {
+			@include media-breakpoint-down(lg) {
+				@include roww(16px, m);
+				display: flex;
+				position: relative;
+				padding-bottom: rem(8);
+				margin-top: rem(-8);
+			}
+		}
+	}
+}

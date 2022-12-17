@@ -28,6 +28,9 @@
 		@include media-breakpoint-down(md) {
 			width: rem(290);
 		}
+		@media (max-width: 337.98px) {
+			width: 100%;
+		}
 	}
 	.slider-wrapper {
 		margin-bottom: 0;

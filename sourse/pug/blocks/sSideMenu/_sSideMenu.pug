@@ -1,0 +1,24 @@
+mixin sideInfo()
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")&attributes(attributes) 
+		each link in sideInfo
+			li.menu-item(itemprop="item" )
+				a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+					+icon('chevron-right')
+
+mixin sideServices()
+	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")&attributes(attributes) 
+		each link in sideServices
+			li.menu-item(itemprop="item" )
+				a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+					+icon('chevron-right')
+
+mixin sSideMenu(t)
+	// start sSideMenu
+	+b.sSideMenu
+		if t
+			+e.title
+				h5!= t
+				+icon('chevron-right')
+		block
+
+	// end sSideMenu

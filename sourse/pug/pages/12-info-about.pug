@@ -10,13 +10,13 @@ include ../blocks/top-nav/_top-nav.pug
 //- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sCategories/_sCategories.pug
-include ../blocks/sCatalog/_sCatalog.pug
-include ../blocks/sCart/_sCart.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sSideMenu/_sSideMenu.pug
 include ../blocks/sGoods/_sGoods.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'cart-page' 
+	- let  mainPage= 'main-page' 
 	- let  bg= 'main.jpg'
 
 block title
@@ -30,9 +30,16 @@ block pagecontent
 		+topLine
 		+top-nav()
 	main
-		+breadcrumb(`Вернуться к&nbsp;покупкам`).d-flex
-		+sCart('Корзина', '3', 'catalog')
-			+cartList()
+		+breadcrumb('Вернуться назад', 'Главная', 'О магазине', 'Хлебные крошки')
+		+page-head-info(`О&nbsp;магазине`)
+		//- +headerBlock().pt-2
+		//- +sCategories()
+		//- +sPopular()
+		//- +sCatalog()
+		//- +headerBlock2()
+		//- +sArticles(`Советы эксперта`, 'Смотреть все')
+		//- +sForm()
+		//- +sContact()
 
 	+footer()
 

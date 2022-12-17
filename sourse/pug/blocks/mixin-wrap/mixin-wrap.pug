@@ -54,13 +54,32 @@ mixin searchBlock()
 					//- +icon("search")
 					= item
 
-mixin page-head(t,...items)
-	+b.page-head
-		- let l = items.length
-		.container
-			+breadcrumb('Главная',...items)
+//- mixin page-head(t,...items)
+//- 	+b.page-head
+//- 		- let l = items.length
+//- 		.container
+//- 			+breadcrumb('Главная',...items)
 
-			h1= t
+//- 			h1= t
+
+mixin page-head-info(t)
+	+b.page-head--info.section
+		.container
+			.section-title
+				h1!= t
+			+e.row.row
+				.col-12.col-lg-auto.col-xxl-3.asideCol
+					+e.aside
+						+sSideMenu(`Информация`)
+							+sideInfo()
+						+sSideMenu(`Услуги`)
+							+sideServices()
+				.col
+					p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, architecto? Esse cumque quaerat tempore magni molestias laudantium quasi deserunt amet, iste nisi pariatur omnis dolorem tempora assumenda, praesentium, nam mollitia.
+					p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, architecto? Esse cumque quaerat tempore magni molestias laudantium quasi deserunt amet, iste nisi pariatur omnis dolorem tempora assumenda, praesentium, nam mollitia.
+					p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, architecto? Esse cumque quaerat tempore magni molestias laudantium quasi deserunt amet, iste nisi pariatur omnis dolorem tempora assumenda, praesentium, nam mollitia.
+					//- block
+
 
 mixin section-title(h, l, mnu, amount)
 	+b.section-title--link
