@@ -108,6 +108,20 @@
 			height: auto;
 			min-height: rem(114);
 		}
+		&__note {
+			p {
+				font-size: rem(14);
+				line-height: calc(20 / 14);
+				color: $secondary;
+				margin-bottom: rem(8);
+				@include media-breakpoint-up(sm) {
+					margin-bottom: rem(16);
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
 	}
 
 	@include media-breakpoint-up(xl) {

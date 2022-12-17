@@ -234,9 +234,13 @@ mixin cartList()
 mixin choiceOption(title, text, name)
 	// start choiceOption
 	+b.choiceOption
-		+in-c('radio', '', `${name}`)&attributes(attributes)
-			+e.wrap
+		label
+			input.btn-check(name=`${name}` type='radio')&attributes(attributes)
+			+e.btn
+				+e.check
+					+icon('check')
 				+e.content
 					h5!= title 
 					p!= text
+			
 	// end choiceOption
