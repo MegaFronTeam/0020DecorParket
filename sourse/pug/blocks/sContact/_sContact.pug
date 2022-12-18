@@ -21,8 +21,10 @@ mixin sContact()
 				+e.item
 					h3 Адрес
 					p г.&nbsp;Москва, Каширское шоссе, д.&nbsp;19, корпус 1, Строительный рынок &laquo;Каширский двор&nbsp;1&raquo;, павильон 2Д119
-					+e.map
-						p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, voluptatum voluptatibus. Dignissimos assumenda rem quis quos nobis nam velit inventore sapiente aliquid, atque cum eaque necessitatibus ipsa error ut nostrum?
+					+e.map-wrap
+						script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+						+e.map
+							#map
 				+e.item
 					h3 Задать вопрос
 					+form-wrap
