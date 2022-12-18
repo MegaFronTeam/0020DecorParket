@@ -30,6 +30,7 @@
 		}
 		h3 {
 			margin-bottom: rem(16);
+			line-height: calc(32 / 22);
 			@include media-breakpoint-down(sm) {
 				font-size: rem(18);
 			}
@@ -95,7 +96,8 @@
 			border-radius: $border-radius-lg;
 			--ratio: 360/620;
 		}
-		& > *, .ymaps-2-1-79-map {
+		& > *,
+		.ymaps-2-1-79-map {
 			position: absolute;
 			top: 0;
 			left: 0;

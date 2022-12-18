@@ -904,15 +904,15 @@
 	padding: 6%;
 	@include media-breakpoint-up(sm) {
 		padding: rem(24) rem(32);
-
 	}
 	h5 {
 		margin-bottom: rem(16);
+		line-height: calc(28 / 18);
 	}
 	ul {
 		// list-style: none;
 		font-size: rem(14);
-		line-height: calc(24 / 18);
+		line-height: calc(25 / 18);
 		padding-left: 1.4em;
 		&:last-child {
 			margin-bottom: 0;

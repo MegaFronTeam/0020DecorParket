@@ -26,6 +26,7 @@
 	}
 	h3 {
 		margin-bottom: rem(16);
+		line-height: calc(32 / 22);
 		@include media-breakpoint-up(sm) {
 			margin-bottom: rem(20);
 		}
