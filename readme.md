@@ -10,3 +10,4 @@
 9. <https://megafronteam.github.io/0020DecorParket/public/11-promotion.html>
 10. <https://megafronteam.github.io/0020DecorParket/public/12-1-info-about.html>
 11. <https://megafronteam.github.io/0020DecorParket/public/12-2-info-contacts.html>
+12. <https://megafronteam.github.io/0020DecorParket/public/12-3-info-guarantee.html>
