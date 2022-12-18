@@ -881,8 +881,18 @@
 				@include roww(16px, m);
 				display: flex;
 				position: relative;
-				padding-bottom: rem(8);
+				padding-bottom: rem(16);
 				margin-top: rem(-8);
+			}
+		}
+		.sContent {
+			padding-top: 0;
+			padding-bottom: 0;
+			&__wrap {
+				margin-left: 0;
+				@include media-breakpoint-down(lg) {
+					max-width: 100%;
+				}
 			}
 		}
 	}

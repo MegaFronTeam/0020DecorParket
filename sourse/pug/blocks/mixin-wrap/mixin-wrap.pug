@@ -69,16 +69,13 @@ mixin page-head-info(t)
 				h1!= t
 			+e.row.row
 				.col-12.col-lg-auto.col-xxl-3.asideCol
-					+e.aside
+					+e.aside--js
 						+sSideMenu(`Информация`)
 							+sideInfo()
 						+sSideMenu(`Услуги`)
 							+sideServices()
 				.col
-					p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, architecto? Esse cumque quaerat tempore magni molestias laudantium quasi deserunt amet, iste nisi pariatur omnis dolorem tempora assumenda, praesentium, nam mollitia.
-					p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, architecto? Esse cumque quaerat tempore magni molestias laudantium quasi deserunt amet, iste nisi pariatur omnis dolorem tempora assumenda, praesentium, nam mollitia.
-					p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, architecto? Esse cumque quaerat tempore magni molestias laudantium quasi deserunt amet, iste nisi pariatur omnis dolorem tempora assumenda, praesentium, nam mollitia.
-					//- block
+					block
 
 
 mixin section-title(h, l, mnu, amount)

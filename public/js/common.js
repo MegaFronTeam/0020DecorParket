@@ -695,6 +695,15 @@ function eventHandler() {
 			}
 		}
 	});
+	var StickySideMenu = new hcSticky('.page-head__aside--js', {
+		mobileFirst: true,
+		responsive: {
+			992: {
+				stickTo: '.page-head .asideCol',
+				top: 32,
+			}
+		}
+	});
 
 
 
