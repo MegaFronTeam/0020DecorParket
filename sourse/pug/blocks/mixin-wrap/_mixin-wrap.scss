@@ -897,3 +897,44 @@
 		}
 	}
 }
+
+.infoBlock {
+	background-color: $light;
+	border-radius: $border-radius-lg;
+	padding: 6%;
+	@include media-breakpoint-up(sm) {
+		padding: rem(24) rem(32);
+
+	}
+	h5 {
+		margin-bottom: rem(16);
+	}
+	ul {
+		// list-style: none;
+		font-size: rem(14);
+		line-height: calc(24 / 18);
+		padding-left: 1.4em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		::marker {
+			font-size: 0.7em;
+		}
+		@include media-breakpoint-up(sm) {
+			font-size: rem(16);
+			margin-bottom: rem(20);
+		}
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(18);
+			margin-bottom: rem(24);
+		}
+		// li {
+		// 	position: relative;
+		// 	padding-left: 1.5em;
+		// 	&::before {
+		// 		content: "";
+		// 		position: absolute;
+		// 	}
+		// }
+	}
+}
