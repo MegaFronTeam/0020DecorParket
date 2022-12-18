@@ -11,7 +11,7 @@
 		}
 	}
 	@include media-breakpoint-down(lg) {
-		padding: rem(6) 0 rem(4) rem(6);
+		padding: rem(6) 0;
 		border-bottom: 2px solid transparent;
 		cursor: pointer;
 		&:hover {

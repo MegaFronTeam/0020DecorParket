@@ -878,7 +878,7 @@
 	&--info {
 		.page-head__aside {
 			@include media-breakpoint-down(lg) {
-				@include roww(16px, m);
+				@include roww(24px, m);
 				display: flex;
 				position: relative;
 				padding-bottom: rem(16);

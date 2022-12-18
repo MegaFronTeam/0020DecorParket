@@ -1,9 +1,35 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
 			+e.row.row
+				+e.item--tel
+					h3 Телефоны
+					.row
+						.col-sm-6.col-md-4
+							a.link-primary(href="tel:+79150213817") +7 (915) 021-38-17
+							.small Служба поддержки клиентов
+						.col-sm-6.col-md-4
+							a.link-primary(href="tel:+79265995568") +7 (926) 599-55-68
+							.small Оптовый отдел
+						.col-sm-6.col-md-4
+							a.link-primary(href="tel:+79031948817") +7 (903) 194-88-17
+							.small Отдел качества
+				+e.item
+					h3 Время работы клиентского сервиса
+					p Ежедневно с&nbsp;10:00 до&nbsp;22:00
+				+e.item
+					h3 Адрес
+					p г.&nbsp;Москва, Каширское шоссе, д.&nbsp;19, корпус 1, Строительный рынок &laquo;Каширский двор&nbsp;1&raquo;, павильон 2Д119
+					+e.map
+						p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, voluptatum voluptatibus. Dignissimos assumenda rem quis quos nobis nam velit inventore sapiente aliquid, atque cum eaque necessitatibus ipsa error ut nostrum?
+				+e.item
+					h3 Задать вопрос
+					+form-wrap
+						+input('Имя')
+						+input('Электронная почта', 'email')
+						+input('Ваш вопрос', 'textarea')
+						+e.BUTTON.btn.btn.btn-primary Отправить
+						+e.policy Нажимая на&nbsp;кнопку, вы&nbsp;соглашаетесь с&nbsp;#[a(href="#") Условиями обработки персональных данных], определенных в&nbsp;#[a(href="#") Политике конфиденциальности]
+						
 	// end sContact

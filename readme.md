@@ -8,3 +8,5 @@
 7. <https://megafronteam.github.io/0020DecorParket/public/09-blog-article.html>
 8. <https://megafronteam.github.io/0020DecorParket/public/10-all-promotions.html>
 9. <https://megafronteam.github.io/0020DecorParket/public/11-promotion.html>
+10. <https://megafronteam.github.io/0020DecorParket/public/12-1-info-about.html>
+11. <https://megafronteam.github.io/0020DecorParket/public/12-2-info-contacts.html>

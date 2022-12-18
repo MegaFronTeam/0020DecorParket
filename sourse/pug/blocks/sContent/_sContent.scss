@@ -44,7 +44,7 @@
 			font-size: rem(16);
 			margin-bottom: rem(20);
 		}
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xxl) {
 			font-size: rem(18);
 			margin-bottom: rem(24);
 		}
@@ -78,7 +78,7 @@
 			margin-bottom: rem(20);
 			columns: 2;
 		}
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xxl) {
 			font-size: rem(18);
 			margin-bottom: rem(24);
 		}
