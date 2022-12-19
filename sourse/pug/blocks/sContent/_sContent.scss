@@ -34,6 +34,15 @@
 			margin-bottom: rem(24);
 		}
 	}
+	h5 {
+		margin-bottom: rem(16);
+		@include media-breakpoint-up(sm) {
+			margin-bottom: rem(20);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(24);
+		}
+	}
 	p {
 		font-size: rem(14);
 		margin-bottom: rem(16);
@@ -103,6 +112,40 @@
 	a.link-primary {
 		&:not(:hover) {
 			text-decoration: underline;
+		}
+	}
+	&__btn {
+		width: rem(220);
+		max-width: 100%;
+		padding: rem(15) rem(32);
+	}
+	&__table-wrap {
+		overflow-x: auto;
+		@include media-breakpoint-down(sm) {
+			padding: 0 rem(24);
+			margin: 0 rem(-24);
+		}
+	}
+	.table {
+		&.table-striped {
+			font-size: rem(16);
+			line-height: calc(28 / 16);
+			@include media-breakpoint-down(md) {
+				min-width: rem(527);
+				font-size: rem(14);
+				line-height: calc(20 / 14);
+			}
+
+			td {
+				&:last-child {
+					width: 12em;
+				}
+			}
+		}
+		& > :not(caption) > * > * {
+			@include media-breakpoint-down(md) {
+				padding: 0.75rem;
+			}
 		}
 	}
 

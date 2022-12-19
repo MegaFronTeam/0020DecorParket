@@ -681,8 +681,8 @@ $mark-bg:                     $yellow-100 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:        .5rem !default;
-$table-cell-padding-x:        .5rem !default;
+$table-cell-padding-y:        1rem !default;
+$table-cell-padding-x:        1rem !default;
 $table-cell-padding-y-sm:     .25rem !default;
 $table-cell-padding-x-sm:     .25rem !default;
 
@@ -695,8 +695,8 @@ $table-accent-bg:             transparent !default;
 $table-th-font-weight:        null !default;
 
 $table-striped-color:         $table-color !default;
-$table-striped-bg-factor:     .05 !default;
-$table-striped-bg:            rgba($black, $table-striped-bg-factor) !default;
+$table-striped-bg-factor:     1 !default;
+$table-striped-bg:            rgba($light, $table-striped-bg-factor) !default;
 
 $table-active-color:          $table-color !default;
 $table-active-bg-factor:      .1 !default;
@@ -708,7 +708,8 @@ $table-hover-bg:              rgba($black, $table-hover-bg-factor) !default;
 
 $table-border-factor:         .1 !default;
 $table-border-width:          $border-width !default;
-$table-border-color:          var(--#{$prefix}border-color) !default;
+$table-border-color:          #E5E6E4;
+// $table-border-color:          var(--#{$prefix}border-color) !default;
 
 $table-striped-order:         odd !default;
 $table-striped-columns-order: even !default;
