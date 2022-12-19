@@ -14,7 +14,7 @@ mixin sideServices()
 
 mixin sSideMenu(t)
 	// start sSideMenu
-	+b.sSideMenu
+	+b.sSideMenu&attributes(attributes) 
 		if t
 			+e.title
 				h5!= t

@@ -130,6 +130,7 @@
 		&.table-striped {
 			font-size: rem(16);
 			line-height: calc(28 / 16);
+			margin-bottom: rem(8);
 			@include media-breakpoint-down(md) {
 				min-width: rem(527);
 				font-size: rem(14);
