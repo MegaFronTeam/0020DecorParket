@@ -70,10 +70,36 @@ mixin page-head-info(t)
 			+e.row.row
 				.col-12.col-lg-auto.col-xxl-3.asideCol
 					+e.aside--js
-						+sSideMenu(`Информация`)
+						+sSideMenu(`Информация`).sSideMenu--info
 							+sideInfo()
-						+sSideMenu(`Услуги`)
+						+sSideMenu(`Услуги`).sSideMenu--info
 							+sideServices()
+				.col
+					block
+
+
+mixin page-head-account(t)
+	+b.page-head--account.section
+		.container
+			.section-title
+				h1!= t
+				+b.avatarBlock.d-lg-none
+					+e.img-wrap
+						span ma
+						// <img src="img/avatar.jpg" alt="" loading="lazy">
+						//- +img('img/sArticles-10.jpg')
+					h5 Александр Марченко
+			+e.row.row
+				.col-12.col-lg-auto.col-xxl-3.asideCol
+					+e.aside--js
+						+b.avatarBlock.d-none.d-lg-flex
+							+e.img-wrap
+								span ma
+								// <img src="img/avatar.jpg" alt="" loading="lazy">
+								//- +img('img/sArticles-10.jpg')
+							h5 Александр <br> Марченко
+						+sSideMenu().sSideMenu--account
+							+account()
 				.col
 					block
 

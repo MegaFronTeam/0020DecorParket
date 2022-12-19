@@ -1,3 +1,14 @@
+mixin sSideMenu(t)
+	// start sSideMenu
+	+b.sSideMenu&attributes(attributes) 
+		if t
+			+e.title
+				h5!= t
+				+icon('chevron-right')
+		block
+	// end sSideMenu
+
+
 mixin sideInfo()
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")&attributes(attributes) 
 		each link in sideInfo
@@ -12,13 +23,11 @@ mixin sideServices()
 				a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
 					+icon('chevron-right')
 
-mixin sSideMenu(t)
-	// start sSideMenu
-	+b.sSideMenu&attributes(attributes) 
-		if t
-			+e.title
-				h5!= t
-				+icon('chevron-right')
-		block
+mixin account()
+	+b.menu-slider--js.swiper
+		ul.menu.swiper-wrapper(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			each link in account
+				li.menu-item.swiper-slide(itemprop="item" )
+					a(href="#" itemprop="url" class=(link.active  ? "active": null))= link.name
+						+icon('chevron-right')
 
-	// end sSideMenu
