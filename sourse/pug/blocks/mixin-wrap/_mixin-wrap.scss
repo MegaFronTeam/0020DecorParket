@@ -567,6 +567,8 @@
 		@include roww(22px, m);
 		display: flex;
 		margin-bottom: rem(18);
+		position: relative;
+		z-index: 1;
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(16);
 		}
