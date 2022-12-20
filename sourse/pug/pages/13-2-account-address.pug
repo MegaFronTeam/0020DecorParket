@@ -10,7 +10,7 @@ include ../blocks/sContent/_sContent.pug
 //- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sCategories/_sCategories.pug
-include ../blocks/sOrder/_sOrder.pug
+include ../blocks/sAccount/_sAccount.pug
 include ../blocks/sSideMenu/_sSideMenu.pug
 include ../blocks/sGoods/_sGoods.pug
 include ../blocks/footer/_footer.pug
@@ -32,32 +32,8 @@ block pagecontent
 	main
 		+breadcrumb('Вернуться назад', 'Главная', 'О магазине', 'Хлебные крошки')
 		+page-head-account(`Личный кабинет`)
-			+sOrder()
-				+form-wrap()
-					h3 Личные данные
-					.row
-						.col-md-6
-							+input('Фамилия')
-						.col-md-6
-							+input('Имя')
-						.col-md-6
-							+input('Дата рождения', 'number')
-						.col-md-6
-							.form-wrap__input-wrap.form-group
-								label
-									select.form-wrap__input.form-select(name='select')
-										option(value='Мужской') Мужской
-										option(value='Женский') Женский
-									span.form-wrap__input-title Пол
-						.col-md-6
-							+input('Телефон', 'tel')
-						.col-md-6
-							+input('Электронная почта', 'email')
-						.col-12
-							+e.agree
-								+in-c('checkbox', 'Я хочу получать рекламные сообщения и новости о товарах и услугах')(checked required)
-						.col-12.mt-0
-							+e.BUTTON.btn.btn.btn-primary Сохранить
+			+sAccount()
+				+personaData
 	+footer()
 
 

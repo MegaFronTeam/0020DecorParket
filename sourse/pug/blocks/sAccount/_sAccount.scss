@@ -3,26 +3,73 @@
 	--sPT: 0;
 	--sPB: 0;
 	// --sTPB: #{rem()};
-	&__row{
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
-
 	}
-	.section-title{
-		
-	}
-	&__col{
+	// .section-title{
 
-	}
-	&__item{
+	// }
+	// &__col{
 
+	// }
+	// &__item{
+
+	// }
+	h3 {
+		margin-bottom: rem(24);
+	}
+	.form-wrap {
+		@include media-breakpoint-up(lg) {
+			max-width: rem(620);
+		}
+		.row {
+			--bs-gutter-y: var(--bs-gutter-x);
+			@include media-breakpoint-down(md) {
+				--bs-gutter-y: #{rem(24)};
+			}
+			@include media-breakpoint-up(xxl) {
+				--bs-gutter-y: #{rem(32)};
+			}
+		}
+		&__agree {
+			.custom-input {
+				margin-bottom: 0;
+				&__text {
+					display: inline-block;
+					@include media-breakpoint-down(sm) {
+						font-size: rem(14);
+						line-height: calc(20 / 14);
+					}
+				}
+			}
+		}
+		textarea.form-control {
+			height: auto;
+			min-height: rem(114);
+		}
+		&__btn {
+			width: 100%;
+			padding: rem(15) rem(32);
+			margin-top: rem(56);
+			@include media-breakpoint-up(md) {
+				max-width: rem(220);
+			}
+		}
 	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sAccount

@@ -5,10 +5,29 @@ mixin sAccount(data)
 			block
 	// end sAccount
 
-mixin personaData
-	+form-wrap
-		+e.row.row
-		+input('Имя')
-		+input('Электронная почта', 'email')
-		+input('Ваш вопрос', 'textarea')
-		+e.BUTTON.btn.btn.btn-primary Отправить
+mixin personaData()
+	+form-wrap()
+		h3 Личные данные
+		.row
+			.col-md-6
+				+input('Фамилия')
+			.col-md-6
+				+input('Имя')
+			.col-md-6
+				+input('Дата рождения', 'number')
+			.col-md-6
+				.form-wrap__input-wrap.form-group
+					label
+						select.form-wrap__input.form-select(name='select')
+							option(value='Мужской') Мужской
+							option(value='Женский') Женский
+						span.form-wrap__input-title Пол
+			.col-md-6
+				+input('Телефон', 'tel')
+			.col-md-6
+				+input('Электронная почта', 'email')
+			.col-12
+				+e.agree
+					+in-c('checkbox', 'Я хочу получать рекламные сообщения и новости о товарах и услугах')(checked required)
+			.col-12.mt-0
+				+e.BUTTON.btn.btn.btn-primary Сохранить

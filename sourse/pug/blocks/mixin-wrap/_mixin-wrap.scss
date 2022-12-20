@@ -930,12 +930,8 @@
 		}
 		.sOrder {
 			.form-wrap {
-				@include media-breakpoint-up(lg) {
-					max-width: rem(620);
-				}
-				h3 {
-					margin-bottom: rem(24);
-				}
+				
+				
 			}
 		}
 	}

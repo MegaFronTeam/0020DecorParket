@@ -312,68 +312,141 @@
 								<!-- start sOrder-->
 								<div class="sOrder">
 									<div class="container">
-										<div class="form-wrap">
-											<form>
-												<h3>Личные данные</h3>
-												<div class="row">
-													<div class="col-md-6">
-														<div class="form-wrap__input-wrap form-group">
-															<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Фамилия"/><span class="form-wrap__input-title">Фамилия</span>
-															</label>
+											<div class="form-wrap">
+												<form>
+													<h3>Получатель</h3>
+													<div class="row">
+														<div class="col-md-6">
+															<div class="form-wrap__input-wrap form-group">
+																<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Фамилия"/><span class="form-wrap__input-title">Фамилия</span>
+																</label>
+															</div>
+															<!-- +e.input-wrap-->
 														</div>
-														<!-- +e.input-wrap-->
-													</div>
-													<div class="col-md-6">
-														<div class="form-wrap__input-wrap form-group">
-															<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Имя"/><span class="form-wrap__input-title">Имя</span>
-															</label>
+														<div class="col-md-6">
+															<div class="form-wrap__input-wrap form-group">
+																<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Имя"/><span class="form-wrap__input-title">Имя</span>
+																</label>
+															</div>
+															<!-- +e.input-wrap-->
 														</div>
-														<!-- +e.input-wrap-->
-													</div>
-													<div class="col-md-6">
-														<div class="form-wrap__input-wrap form-group">
-															<label><input class="form-wrap__input form-control" name="number" type="number" placeholder="Дата рождения" step="any"/><span class="form-wrap__input-title">Дата рождения</span>
-															</label>
+														<div class="col-md-6">
+															<div class="form-wrap__input-wrap form-group">
+																<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
+																</label>
+															</div>
+															<!-- +e.input-wrap-->
 														</div>
-														<!-- +e.input-wrap-->
-													</div>
-													<div class="col-md-6">
-														<div class="form-wrap__input-wrap form-group">
-															<label>
-																<select class="form-wrap__input form-select" name="select">
-																	<option value="Мужской">Мужской</option>
-																	<option value="Женский">Женский</option>
-																</select><span class="form-wrap__input-title">Пол</span>
-															</label>
+														<div class="col-md-6">
+															<div class="form-wrap__input-wrap form-group">
+																<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="Электронная почта"/><span class="form-wrap__input-title">Электронная почта</span>
+																</label>
+															</div>
+															<!-- +e.input-wrap-->
 														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="form-wrap__input-wrap form-group">
-															<label><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/><span class="form-wrap__input-title">Телефон</span>
-															</label>
-														</div>
-														<!-- +e.input-wrap-->
-													</div>
-													<div class="col-md-6">
-														<div class="form-wrap__input-wrap form-group">
-															<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="Электронная почта"/><span class="form-wrap__input-title">Электронная почта</span>
-															</label>
-														</div>
-														<!-- +e.input-wrap-->
-													</div>
-													<div class="col-12">
-														<div class="form-wrap__agree">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked" required="required"/><span class="custom-input__text form-check-label">Я хочу получать рекламные сообщения и новости о товарах и услугах</span>
-															</label>
+														<div class="col-auto">
+															<div class="form-wrap__agree">
+																<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked" required="required"/><span class="custom-input__text form-check-label">Я хочу получать рекламные сообщения и новости о товарах и услугах</span>
+																</label>
+															</div>
 														</div>
 													</div>
-													<div class="col-12 mt-0">
-														<button class="form-wrap__btn btn btn-primary">Сохранить
-														</button>
+												</form>
+											</div>
+											<div class="form-wrap">
+												<form>
+													<h3>Способ доставки</h3>
+													<div class="row">
+														<div class="col-md-6">
+															<!-- start choiceOption-->
+															<div class="choiceOption">
+																<label>
+																	<input class="btn-check" name="delivery" type="radio" checked="checked"/><span class="choiceOption__btn"><span class="choiceOption__check">
+																	<svg class="icon icon-check ">
+																		<use xlink:href="img/svg/sprite.svg#check"></use>
+																	</svg></span><span class="choiceOption__content"><span class="h5">Доставка</span><span class="choiceOption__text">Наша служба доставки привезёт заказ домой, в&nbsp;офис или на&nbsp;дачу</span></span></span>
+																</label>
+															</div>
+															<!-- end choiceOption-->
+														</div>
+														<div class="col-md-6">
+															<!-- start choiceOption-->
+															<div class="choiceOption">
+																<label>
+																	<input class="btn-check" name="delivery" type="radio"/><span class="choiceOption__btn"><span class="choiceOption__check">
+																	<svg class="icon icon-check ">
+																		<use xlink:href="img/svg/sprite.svg#check"></use>
+																	</svg></span><span class="choiceOption__content"><span class="h5">Самовывоз</span><span class="choiceOption__text">Заберите заказ бесплатно из&nbsp;магазина Декор Паркет или пункта самовывоза</span></span></span>
+																</label>
+															</div>
+															<!-- end choiceOption-->
+														</div>
+														<div class="col-12">
+															<div class="form-wrap__search">
+																<div class="form-wrap__input-wrap form-group">
+																	<label>
+																		<input class="form-wrap__input form-control" name="text" type="text" placeholder="Населенный пункт, улица, дом и кв."/><span class="form-wrap__input-title">Населенный пункт, улица, дом и&nbsp;кв.</span>
+																		<button>
+																			<svg class="icon icon-search ">
+																				<use xlink:href="img/svg/sprite.svg#search"></use>
+																			</svg>
+																		</button>
+																	</label>
+																</div>
+																<a class="form-wrap__nav-btn" href="#">
+																	<svg class="icon icon-navigation ">
+																		<use xlink:href="img/svg/sprite.svg#navigation"></use>
+																	</svg><span>Указать точку на&nbsp;карте</span>
+																</a>
+															</div>
+														</div>
+														<div class="col-12">
+															<div class="form-wrap__input-wrap form-group">
+																<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="Комментарий к заказу"></textarea><span class="form-wrap__input-title">Комментарий к заказу</span>
+																</label>
+															</div>
+															<!-- +e.input-wrap-->
+														</div>
 													</div>
-												</div>
-											</form>
-										</div>
+												</form>
+											</div>
+											<div class="form-wrap">
+												<form>
+													<h3>Способ оплаты</h3>
+													<div class="row">
+														<div class="col-md-6">
+															<!-- start choiceOption-->
+															<div class="choiceOption">
+																<label>
+																	<input class="btn-check" name="payment" type="radio" checked="checked"/><span class="choiceOption__btn"><span class="choiceOption__check">
+																	<svg class="icon icon-check ">
+																		<use xlink:href="img/svg/sprite.svg#check"></use>
+																	</svg></span><span class="choiceOption__content"><span class="h5">Онлайн на&nbsp;сайте</span><span class="choiceOption__text">МИР, Visa, MasterCard, Maestro, GooglePay, ApplePay</span></span></span>
+																</label>
+															</div>
+															<!-- end choiceOption-->
+														</div>
+														<div class="col-md-6">
+															<!-- start choiceOption-->
+															<div class="choiceOption">
+																<label>
+																	<input class="btn-check" name="payment" type="radio"/><span class="choiceOption__btn"><span class="choiceOption__check">
+																	<svg class="icon icon-check ">
+																		<use xlink:href="img/svg/sprite.svg#check"></use>
+																	</svg></span><span class="choiceOption__content"><span class="h5">Банковской картой</span><span class="choiceOption__text">Курьеру&nbsp;/ При самовывозе (только&nbsp;для&nbsp;Москвы&nbsp;и&nbsp;МО)</span></span></span>
+																</label>
+															</div>
+															<!-- end choiceOption-->
+														</div>
+														<div class="col-12">
+															<div class="form-wrap__note">
+																<p>Для оплаты (ввода реквизитов Вашей карты) Вы&nbsp;будете перенаправлены на&nbsp;платёжный шлюз ПАО СБЕРБАНК. Соединение с&nbsp;платёжным шлюзом и&nbsp;передача информации осуществляется в&nbsp;защищённом режиме с&nbsp;использованием протокола шифрования SSL. В&nbsp;случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By&nbsp;Visa, MasterCard SecureCode, MIR Accept, J-Secure для проведения платежа также может потребоваться ввод специального пароля.</p>
+																<p>Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК. Введённая информация не&nbsp;будет предоставлена третьим лицам за&nbsp;исключением случаев, предусмотренных законодательством РФ. Проведение платежей по&nbsp;банковским картам осуществляется в&nbsp;строгом соответствии с&nbsp;требованиями платёжных систем МИР, Visa Int., MasterCard Europe Sprl, JCB.</p>
+															</div>
+														</div>
+													</div>
+												</form>
+											</div>
 									</div>
 								</div>
 								<!-- end sOrder-->
