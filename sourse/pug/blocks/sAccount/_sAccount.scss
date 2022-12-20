@@ -18,6 +18,15 @@
 	// }
 	h3 {
 		margin-bottom: rem(24);
+		line-height: calc(32 / 22);
+	}
+	&__btn {
+		width: 100%;
+		padding: rem(15) rem(32);
+		margin-top: rem(56);
+		@include media-breakpoint-up(md) {
+			max-width: rem(220);
+		}
 	}
 	.form-wrap {
 		@include media-breakpoint-up(lg) {
@@ -73,3 +82,75 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sAccount
+
+.addressBlock {
+	&__item {
+		font-size: rem(14);
+		padding: rem(11) 0;
+		border-bottom: 1px solid #e5e6e4;
+		@include media-breakpoint-up(sm) {
+			padding: rem(15) 0;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: rem(16);
+			padding: rem(23) rem(18);
+		}
+
+		.icon {
+			font-size: rem(24);
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 2px;
+		}
+		.row {
+			--bs-gutter-x: #{rem(8)};
+			@include media-breakpoint-up(md) {
+				--bs-gutter-x: #{rem(16)};
+			}
+		}
+		p {
+			font-size: inherit;
+			font-weight: 700;
+			line-height: rem(24);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__btn {
+		@include mt;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		color: $secondary;
+		&:hover {
+			color: $body-color;
+			.icon {
+				color: $danger;
+			}
+		}
+		// @include media-breakpoint-down(sm) {
+		// 	font-size: rem(14);
+		// 	line-height: calc(20 / 14);
+		// }
+		span {
+			font-size: inherit;
+			display: block;
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+		}
+		.icon {
+			fill: currentColor;
+			stroke: none;
+			font-size: rem(24);
+			margin-left: rem(4);
+			@include media-breakpoint-down(sm) {
+				margin: 0;
+			}
+		}
+	}
+}

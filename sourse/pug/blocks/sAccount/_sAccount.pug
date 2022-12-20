@@ -1,13 +1,13 @@
-mixin sAccount(data)
+mixin sAccount(t)
 	// start sAccount
 	+b.SECTION.sAccount.section#sAccount&attributes(attributes)
 		.container
+			h3!= t
 			block
 	// end sAccount
 
 mixin personaData()
 	+form-wrap()
-		h3 Личные данные
 		.row
 			.col-md-6
 				+input('Фамилия')
@@ -31,3 +31,29 @@ mixin personaData()
 					+in-c('checkbox', 'Я хочу получать рекламные сообщения и новости о товарах и услугах')(checked required)
 			.col-12.mt-0
 				+e.BUTTON.btn.btn.btn-primary Сохранить
+
+mixin addressBlock()
+	+b.addressBlock
+		- for (var x = 1; x < 3; x++)
+			+e.item
+				.row
+					.col-auto
+						+icon('map-pin')
+					.col
+						p Москва, улица Название улицы, д.&nbsp;56&nbsp;корпус&nbsp;5, кв.&nbsp;48
+					.col-auto
+						+e.BUTTON.btn
+							span Удалить
+							+icon('close')
+		+e.item
+			.row
+				.col-auto
+					+icon('map-pin')
+				.col
+					p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga, quaerat. Explicabo mollitia odio veniam perspiciatis?
+				.col-auto
+					+e.BUTTON.btn
+						span Удалить
+						+icon('close')
+	+e.btn.btn.btn-primary(href="#") Добавить адрес
+
