@@ -13,3 +13,4 @@
 12. <https://megafronteam.github.io/0020DecorParket/public/12-3-info-guarantee.html>
 13. <https://megafronteam.github.io/0020DecorParket/public/12-4-info-service.html>
 14. <https://megafronteam.github.io/0020DecorParket/public/13-1-account-personal-data.html>
+15. <https://megafronteam.github.io/0020DecorParket/public/13-2-account-address.html>

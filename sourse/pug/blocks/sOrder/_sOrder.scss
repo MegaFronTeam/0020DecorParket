@@ -56,35 +56,37 @@
 			}
 		}
 		&__search {
-			label {
+			.form-wrap__input-wrap {
 				position: relative;
+			}
+			button {
+				@include mt;
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: rem(56);
+				padding: 0;
+				border: none;
+				outline: none;
+				background-color: $input-bg;
+				border-radius: $input-border-radius;
+				height: calc(100% - ($input-border-width * 2));
+				right: $input-border-width;
+				top: $input-border-width;
+				color: $primary;
+				&:hover,
+				&:active,
+				&:focus {
+					color: $secondary;
+				}
+				.icon {
+					font-size: rem(24);
+				}
+			}
+			label {
 				.form-wrap__input {
 					padding-right: rem(56);
-				}
-				button {
-					@include mt;
-					position: absolute;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					width: rem(56);
-					padding: 0;
-					border: none;
-					outline: none;
-					background-color: $input-bg;
-					border-radius: $input-border-radius;
-					height: calc(100% - ($input-border-width * 2));
-					right: $input-border-width;
-					top: $input-border-width;
-					color: $primary;
-					&:hover,
-					&:active,
-					&:focus {
-						color: $secondary;
-					}
-					.icon {
-						font-size: rem(24);
-					}
 				}
 			}
 		}
@@ -130,7 +132,6 @@
 				max-width: rem(220);
 			}
 		}
-		
 	}
 
 	@include media-breakpoint-up(xl) {
