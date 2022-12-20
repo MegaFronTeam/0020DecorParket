@@ -29,7 +29,8 @@
 			padding: rem(40);
 		}
 
-		h2 {
+		h1 {
+			font-size: $h2-font-size;
 			letter-spacing: -0.5px;
 			margin-bottom: rem(16);
 			@include media-breakpoint-down(md) {

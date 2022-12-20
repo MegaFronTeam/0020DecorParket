@@ -80,10 +80,12 @@
 		}
 		&__btn {
 			@extend .btn, .btn-primary;
-			width: rem(220);
-			max-width: 100%;
+			width: 100%;
 			padding: rem(15) rem(32);
 			margin-top: rem(8);
+			@include media-breakpoint-up(md) {
+				max-width: rem(220);
+			}
 		}
 	}
 

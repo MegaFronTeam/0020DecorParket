@@ -122,6 +122,15 @@
 				}
 			}
 		}
+		&__btn {
+			width: 100%;
+			padding: rem(15) rem(32);
+			margin-top: rem(56);
+			@include media-breakpoint-up(md) {
+				max-width: rem(220);
+			}
+		}
+		
 	}
 
 	@include media-breakpoint-up(xl) {

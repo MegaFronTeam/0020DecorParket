@@ -1,0 +1,14 @@
+mixin sAccount(data)
+	// start sAccount
+	+b.SECTION.sAccount.section#sAccount&attributes(attributes)
+		.container
+			block
+	// end sAccount
+
+mixin personaData
+	+form-wrap
+		+e.row.row
+		+input('Имя')
+		+input('Электронная почта', 'email')
+		+input('Ваш вопрос', 'textarea')
+		+e.BUTTON.btn.btn.btn-primary Отправить

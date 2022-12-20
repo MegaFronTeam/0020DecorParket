@@ -794,10 +794,12 @@
 }
 
 .choiceOption {
+	position: relative;
 	height: 100%;
 	label {
 		height: 100%;
 	}
+
 	&__check {
 		@include mt;
 		@include a-cent(y);
@@ -820,7 +822,10 @@
 	}
 	&__content {
 		flex-grow: 1;
-		h5 {
+		span {
+			display: block;
+		}
+		.h5 {
 			font-size: rem(16);
 			margin-bottom: rem(4);
 			line-height: calc(24 / 18);
@@ -828,13 +833,13 @@
 				font-size: rem(18);
 			}
 		}
-		p {
-			margin-bottom: rem(4);
-			font-size: rem(14);
-			line-height: calc(20 / 14);
-			&:last-child {
-				margin-bottom: 0;
-			}
+	}
+	&__text {
+		margin-bottom: rem(4);
+		font-size: rem(14);
+		line-height: calc(20 / 14);
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 	&__btn {
@@ -920,6 +925,16 @@
 					@include media-breakpoint-down(md) {
 						display: none;
 					}
+				}
+			}
+		}
+		.sOrder {
+			.form-wrap {
+				@include media-breakpoint-up(lg) {
+					max-width: rem(620);
+				}
+				h3 {
+					margin-bottom: rem(24);
 				}
 			}
 		}

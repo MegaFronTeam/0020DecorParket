@@ -2,8 +2,8 @@ mixin sCart(t, s, catalog)
 	// start sCart
 	+b.SECTION.sCart.section#sCart&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2!= t
+			+b.section-title
+				h1!= t
 					if s
 						span!= s
 			+e.row.row

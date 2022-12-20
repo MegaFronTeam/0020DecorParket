@@ -37,13 +37,13 @@ mixin sFilter(data)
 								input.js-range-slider(type='number' value='')
 						+e.item
 							+e.head.form-switch
+								.h5 Товары со&nbsp;скидкой
 								label
-									h5 Товары со&nbsp;скидкой
 									input.form-check-input(type='checkbox' role='switch')
 						+e.item
 							+e.head.form-switch
+								.h5 Только в&nbsp;наличии
 								label
-									h5 Только в&nbsp;наличии
 									input.form-check-input(type='checkbox' role='switch')
 						+ddGroupItem('Бренд') 
 							+in-c("checkbox", 'Название фильтра', 'name', '(00)')

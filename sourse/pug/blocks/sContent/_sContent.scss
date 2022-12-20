@@ -115,10 +115,13 @@
 		}
 	}
 	&__btn {
-		width: rem(220);
-		max-width: 100%;
+		width: 100%;
 		padding: rem(15) rem(32);
+		@include media-breakpoint-up(md) {
+			max-width: rem(220);
+		}
 	}
+	
 	&__table-wrap {
 		overflow-x: auto;
 		@include media-breakpoint-down(sm) {
@@ -138,6 +141,10 @@
 			}
 
 			td {
+				&:nth-child(2) {
+					white-space: nowrap;
+					font-weight: 700;
+				}
 				&:last-child {
 					width: 12em;
 				}

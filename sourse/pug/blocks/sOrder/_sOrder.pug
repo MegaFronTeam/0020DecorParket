@@ -1,53 +1,57 @@
+mixin sOrderForm(t)
+	+form-wrap()
+		h3!= t
+		block
+		
 mixin sOrder(data)
 	// start sOrder
 	+b.sOrder&attributes(attributes)
 		.container
-			mixin sOrderForm(t)
-				+form-wrap()
-					h3!= t
-					block
-			+sOrderForm('Получатель')
-				.row
-					.col-md-6
-						+input('Фамилия')
-					.col-md-6
-						+input('Имя')
-					.col-md-6
-						+input('Телефон', 'tel')
-					.col-md-6
-						+input('Электронная почта', 'email')
-					.col-auto
-						+e.agree
-							+in-c('checkbox', 'Я хочу получать рекламные сообщения и новости о товарах и услугах')(checked required)
-			+sOrderForm('Способ доставки')
-				.row
-					.col-md-6
-						+choiceOption(`Доставка`, `Наша служба доставки привезёт заказ домой, в&nbsp;офис или на&nbsp;дачу`, 'delivery')(checked)
-					.col-md-6
-						+choiceOption(`Самовывоз`, `Заберите заказ бесплатно из&nbsp;магазина Декор Паркет или пункта самовывоза`, 'delivery')
-					.col-12
-						+e.search
-							+e.input-wrap.form-group
-								label
-									input.form-wrap__input.form-control(name='text' type='text' placeholder='Населенный пункт, улица, дом и кв.')
-									span.form-wrap__input-title Населенный пункт, улица, дом и&nbsp;кв.
-									button
-										+icon("search")
-							+e.nav-btn(href="#")
-								+icon('navigation')
-								span Указать точку на&nbsp;карте
-					.col-12
-						+input('Комментарий к заказу', 'textarea')
-			+sOrderForm('Способ оплаты')
-				.row
-					.col-md-6
-						+choiceOption(`Онлайн на&nbsp;сайте`, `МИР, Visa, MasterCard, Maestro, GooglePay, ApplePay`, 'payment')(checked)
-					.col-md-6
-						+choiceOption(`Банковской картой`, `Курьеру&nbsp;/ При самовывозе (только&nbsp;для&nbsp;Москвы&nbsp;и&nbsp;МО)`, 'payment')
-					.col-12
-						+e.note
-							p Для оплаты (ввода реквизитов Вашей карты) Вы&nbsp;будете перенаправлены на&nbsp;платёжный шлюз ПАО СБЕРБАНК. Соединение с&nbsp;платёжным шлюзом и&nbsp;передача информации осуществляется в&nbsp;защищённом режиме с&nbsp;использованием протокола шифрования SSL. В&nbsp;случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By&nbsp;Visa, MasterCard SecureCode, MIR Accept, J-Secure для проведения платежа также может потребоваться ввод специального пароля.
-							p Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК. Введённая информация не&nbsp;будет предоставлена третьим лицам за&nbsp;исключением случаев, предусмотренных законодательством РФ. Проведение платежей по&nbsp;банковским картам осуществляется в&nbsp;строгом соответствии с&nbsp;требованиями платёжных систем МИР, Visa Int., MasterCard Europe Sprl, JCB.
+			if block
+				block
+			else
+				+sOrderForm('Получатель')
+					.row
+						.col-md-6
+							+input('Фамилия')
+						.col-md-6
+							+input('Имя')
+						.col-md-6
+							+input('Телефон', 'tel')
+						.col-md-6
+							+input('Электронная почта', 'email')
+						.col-auto
+							+e.agree
+								+in-c('checkbox', 'Я хочу получать рекламные сообщения и новости о товарах и услугах')(checked required)
+				+sOrderForm('Способ доставки')
+					.row
+						.col-md-6
+							+choiceOption(`Доставка`, `Наша служба доставки привезёт заказ домой, в&nbsp;офис или на&nbsp;дачу`, 'delivery')(checked)
+						.col-md-6
+							+choiceOption(`Самовывоз`, `Заберите заказ бесплатно из&nbsp;магазина Декор Паркет или пункта самовывоза`, 'delivery')
+						.col-12
+							+e.search
+								+e.input-wrap.form-group
+									label
+										input.form-wrap__input.form-control(name='text' type='text' placeholder='Населенный пункт, улица, дом и кв.')
+										span.form-wrap__input-title Населенный пункт, улица, дом и&nbsp;кв.
+										button
+											+icon("search")
+								+e.nav-btn(href="#")
+									+icon('navigation')
+									span Указать точку на&nbsp;карте
+						.col-12
+							+input('Комментарий к заказу', 'textarea')
+				+sOrderForm('Способ оплаты')
+					.row
+						.col-md-6
+							+choiceOption(`Онлайн на&nbsp;сайте`, `МИР, Visa, MasterCard, Maestro, GooglePay, ApplePay`, 'payment')(checked)
+						.col-md-6
+							+choiceOption(`Банковской картой`, `Курьеру&nbsp;/ При самовывозе (только&nbsp;для&nbsp;Москвы&nbsp;и&nbsp;МО)`, 'payment')
+						.col-12
+							+e.note
+								p Для оплаты (ввода реквизитов Вашей карты) Вы&nbsp;будете перенаправлены на&nbsp;платёжный шлюз ПАО СБЕРБАНК. Соединение с&nbsp;платёжным шлюзом и&nbsp;передача информации осуществляется в&nbsp;защищённом режиме с&nbsp;использованием протокола шифрования SSL. В&nbsp;случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей Verified By&nbsp;Visa, MasterCard SecureCode, MIR Accept, J-Secure для проведения платежа также может потребоваться ввод специального пароля.
+								p Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации обеспечивается ПАО СБЕРБАНК. Введённая информация не&nbsp;будет предоставлена третьим лицам за&nbsp;исключением случаев, предусмотренных законодательством РФ. Проведение платежей по&nbsp;банковским картам осуществляется в&nbsp;строгом соответствии с&nbsp;требованиями платёжных систем МИР, Visa Int., MasterCard Europe Sprl, JCB.
 
 
 

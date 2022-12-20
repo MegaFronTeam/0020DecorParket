@@ -3,7 +3,7 @@ mixin sArticles(h, more)
 	+b.SECTION.sArticles.section#sArticles&attributes(attributes)
 		.container
 			if more
-				+section-title(`${h}`, `${more}`)
+				+section-title(``, `${h}`, `${more}`)
 			else
 				+b.section-title
 					h2!= h
