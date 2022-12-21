@@ -468,7 +468,7 @@
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 2;
 		overflow: hidden;
-		flex-grow: 1;
+		// flex-grow: 1;
 		&:not(:hover) {
 			color: $body-color;
 		}
@@ -488,6 +488,16 @@
 			color: $secondary;
 		}
 	}
+	.product-card__price-row {
+		&.row {
+			align-items: flex-start;
+		}
+		.row {
+			@include media-breakpoint-down(sm) {
+				--bs-gutter-y: 0 !important;
+			}
+		}
+	}
 	&__price {
 		font-weight: 700;
 		font-size: rem(22);
@@ -503,10 +513,17 @@
 			text-align: right;
 		}
 	}
+	// &__btns {
+	// 	background-color: $white;
+	// 	border-radius: $border-radius-sm;
+	// }
 	&__btn-wrap {
 		@include roww(4px, m);
 		display: flex;
 		justify-content: flex-end;
+		// background-color: $white;
+		background-color: $white;
+		border-radius: rem(40);
 	}
 	&__btn {
 		@extend .btn;
@@ -535,6 +552,9 @@
 			font-size: rem(24);
 		}
 	}
+	&__btn--dots {
+		display: none;
+	}
 	&__label-wrap {
 		&--top {
 			position: absolute;
@@ -555,6 +575,81 @@
 		color: $white;
 		--bs-btn-line-height: calc(20 / 14);
 		// width: auto;
+	}
+}
+
+.col-6 {
+	& > .product-card {
+		@include media-breakpoint-down(sm) {
+			.product-card__row {
+				--bs-gutter-y: var(--bs-gutter-x);
+			}
+			.product-card__caption {
+				.row {
+					--bs-gutter-y: var(--bs-gutter-x);
+				}
+			}
+			.product-card__vendorCode {
+				display: none;
+			}
+			.product-card__title {
+				font-size: rem(14);
+				line-height: calc(20 / 14);
+				margin-bottom: rem(8);
+			}
+			.product-card__price {
+				font-size: rem(18);
+				line-height: calc(24 / 18);
+				&--discount {
+					font-size: rem(12);
+					line-height: calc(16 / 12);
+				}
+				&--meter {
+					font-size: rem(12);
+					line-height: calc(24 / 12);
+				}
+			}
+			.product-card__rating {
+				span {
+					font-size: rem(12);
+					line-height: calc(20 / 12);
+				}
+			}
+			.product-card__btn-basket {
+				font-size: rem(14);
+			}
+			.product-card__label-wrap {
+				display: none;
+			}
+			.product-card__btns {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				&:hover {
+					.product-card__btn-wrap {
+						@include mt;
+						flex-direction: column;
+						transform: scaleY(1);
+						pointer-events: all;
+					}
+				}
+			}
+			.product-card__btn-wrap {
+				position: absolute;
+				bottom: calc(-1 * var(--bs-gutter-x) / 2);
+				// bottom: calc(100% + var(--bs-gutter-x) / 2);
+				transform: scaleY(0);
+				pointer-events: none;
+				transform-origin: bottom;
+				& > * {
+					margin: calc(var(--bs-gutter-x) / 2);
+					box-shadow: 0px 1px 3px rgba($primary, 0.7) !important;
+				}
+			}
+			.product-card__btn--dots {
+				display: flex;
+			}
+		}
 	}
 }
 

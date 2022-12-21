@@ -223,21 +223,29 @@ mixin product-card(...labels)
 								+star-block()
 							.col-auto
 								span 12&nbsp;отзывов
-				.col-auto
-					+e.price 3&nbsp;980&nbsp;₽
-				.col-auto
-					+e.price--discount 00&nbsp;000&nbsp;₽
+				.col-12
+					+e.price-row.row
+						.col
+							.row
+								.col-auto
+									+e.price 3&nbsp;980&nbsp;₽
+								.col-auto
+									+e.price--discount 00&nbsp;000&nbsp;₽
+						.col-auto
+							+e.price--meter 1&nbsp;350&nbsp;₽/м&sup2;
+						
+				//- .col-12.my-0
 				.col
-					+e.price--meter 1&nbsp;350&nbsp;₽/м&sup2;
-				.col-12.my-0
-				.col-auto
 					+e.btn-basket.btn.btn-primary(href="#") В&nbsp;корзину
-				.col
-					+e.btn-wrap
-						+e.btn(href="#")
-							+icon('compare')
-						+e.btn(href="#").active
-							+icon('heart')
+				.col-auto
+					+e.btns
+						+e.btn--dots
+							+icon('dots')
+						+e.btn-wrap
+							+e.btn(href="#")
+								+icon('compare')
+							+e.btn(href="#").active
+								+icon('heart')
 	// end product-card
 
 mixin cartList()
