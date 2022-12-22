@@ -211,7 +211,7 @@ mixin product-card(...labels)
 		+e.caption
 			+e.vendorCode Арт.&nbsp;00000000
 			+e.title(href="#") Ламинат &laquo;Дуб Антик&raquo; 33&nbsp;класс толщина 10&nbsp;мм с&nbsp;фаской 1.975&nbsp;м&sup2;
-			+e.label-wrap
+			+e.label-wrap--top
 				.row
 					each label in labels
 						.col-auto: +e.label(class= `${label.class}`)!= label.name
@@ -247,6 +247,63 @@ mixin product-card(...labels)
 							+e.btn(href="#").active
 								+icon('heart')
 	// end product-card
+
+mixin product-horisontal(...labels)
+	// start product-card--horisontal
+	+b.product-card--horisontal
+		.row
+			.col-4
+				+e.vendorCode Арт.&nbsp;00000000
+			.col-4
+				+e.rating
+					.row
+						.col-auto
+							+star-block()
+						.col-auto
+							span 12&nbsp;отзывов
+			.col-4
+				+e.btn-wrap
+					+e.btn(href="#")
+						+icon('compare')
+					+e.btn(href="#")
+						+icon('heart')
+					// класс .active
+		.row
+			.col-4
+				.slider-wrapper
+					+e.slider--js.swiper
+						.swiper-wrapper
+							- for (var i = 1; i < 5; i++)
+								+e.slide.swiper-slide
+									+e.img-wrap
+										+img(`img/sCatalog-${i}.jpg`, 'bg')
+					.swiper-pagination
+			.col-4
+				+e.title(href="#") Ламинат &laquo;Дуб Антик&raquo; 33&nbsp;класс толщина 10&nbsp;мм с&nbsp;фаской 1.975&nbsp;м&sup2;
+				+e.label-wrap
+					.row
+						each label in labels
+							.col-auto: +e.label(class= `${label.class}`)!= label.name
+			.col-4
+				+e.price-row.row
+					.col-12
+						p Ваша цена на&nbsp;сегодня
+					.col
+						.row
+							.col-auto
+								+e.price 3&nbsp;980&nbsp;₽
+							.col-auto
+								+e.price--discount 00&nbsp;000&nbsp;₽
+					.col-auto
+						+e.price--meter 1&nbsp;350&nbsp;₽/м&sup2;
+				+e.btn-basket.btn.btn-primary(href="#") Добавить в&nbsp;корзину
+				ul
+					li
+						span Гарантия
+						span.dotted
+						span 12&nbsp;месяцев
+
+	// end product-card--horisontal
 
 mixin cartList()
 	// start cartList
