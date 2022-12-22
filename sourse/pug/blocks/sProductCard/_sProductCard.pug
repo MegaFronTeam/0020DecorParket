@@ -50,8 +50,41 @@ mixin sProductCard(data)
 										+e.slide.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
-													+img('img/sProdCard-img-1.jpg')
+													+img('img/sProdCard-img-1.jpg', 'bg')
 							+arrow()
 							.swiper-pagination.d-lg-none
 				.col-lg-5
+					+e.price-wrap
+						+e.label-wrap.row
+							.col-auto: +e.label.btn-primary Бестселлер
+							.col-auto: +e.label.btn-danger Скидка -30%
+						+e.headline
+							h2 3 980 ₽
+							span 00 000 ₽
+							p 1 350 ₽/м²
+						+e.bonus +420 бонусных рублей
+						+e.btn-row.row
+							.col-sm
+								+e.btn.btn.btn-primary(href="#") Добавить в корзину
+							.col-sm
+								+e.btn.btn.btn-outline-primary(href="#") Купить в 1 клик
+					+e.sizes
+						h6 Ширина (см):
+						.row
+							mixin item(t)
+								.col-auto
+									+in-c('radio', t, 'size')
+							+item('15,8')
+							+item('28')
+							+item('32')
+							+item('72')
+					+e.order
+						h5 Заказжите услуги
+						mixin item(i, title, price)
+							+e.item
+								+img(`img/svg/sProductCard-icon-${i}.svg`)
+								h6!= title
+								+e.price!= price
+						+item(1, 'Замер помещения для укладки напольных покрытий ' ,'от 990 ₽')
+						+item(2, 'Укладка ламината ' ,'от 290 ₽')
 	// end sProductCard
