@@ -351,7 +351,7 @@ const JSCCommon = {
 
 		$inputFrom.on("change", function () {
 			var val = $(this).prop("value");
-			console.log(val);
+			// console.log(val);
 			// validate
 			if (val < min) {
 				val = min;
