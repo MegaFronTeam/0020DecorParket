@@ -79,6 +79,7 @@
 		font-size: rem(14);
 		color: #8F918C;
 		line-height: 1.43em;
+		max-width: rem(840);
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
