@@ -576,6 +576,121 @@
 	}
 }
 
+.product-card--horisontal {
+	& > .row {
+		@include media-breakpoint-down(md) {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+	}
+	.product-card__top-row {
+		align-items: center;
+		margin-bottom: rem(8);
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 0;
+			--bs-gutter-x: #{rem(8)};
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+	}
+	.product-card__price-row {
+		--bs-gutter-x: #{rem(8)};
+		--bs-gutter-y: calc(var(--bs-gutter-x) / 2);
+		.row {
+			--bs-gutter-x: #{rem(8)};
+		}
+		margin-bottom: rem(8);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(16);
+		}
+	}
+	.product-card__btn-wrap {
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: #{rem(4)};
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+	}
+	.product-card__btn {
+		@include media-breakpoint-down(sm) {
+			width: rem(32);
+			height: rem(32);
+		}
+	}
+	.product-card__vendorCode {
+		margin-bottom: 0;
+		@include media-breakpoint-down(sm) {
+			font-size: rem(12);
+		}
+	}
+	.product-card__label-wrap {
+		.row {
+			--bs-gutter-x: #{rem(8)};
+			--bs-gutter-y: var(--bs-gutter-x);
+			@include media-breakpoint-down(md) {
+				margin-top: 0;
+				justify-content: flex-end;
+			}
+		}
+	}
+	.product-card__rating {
+		@include media-breakpoint-down(md) {
+			justify-content: flex-end;
+		}
+		span {
+			@include media-breakpoint-down(sm) {
+				font-size: rem(12);
+			}
+		}
+		.row {
+			--bs-gutter-x: #{rem(8)};
+			--bs-gutter-y: var(--bs-gutter-x);
+			align-items: center;
+		}
+		.star-block {
+			@include media-breakpoint-down(sm) {
+				--bs-gutter-x: 0;
+			}
+		}
+	}
+	.product-card__btn-basket {
+		width: 100%;
+	}
+	.product-card__title {
+		@include media-breakpoint-down(sm) {
+			font-size: rem(14);
+		}
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(8);
+		}
+	}
+	.product-card__title--lg {
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+	ul {
+		margin-top: rem(16);
+		margin-bottom: rem(8);
+		&:last-child {
+			margin-bottom: 0;
+		}
+		& + ul {
+			@include media-breakpoint-down(md) {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+		li {
+			display: flex;
+			justify-content: space-between;
+			font-size: rem(14);
+			line-height: calc(20 / 14);
+			margin-bottom: rem(8);
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
 .col-6 {
 	& > .product-card {
 		@include media-breakpoint-down(sm) {
