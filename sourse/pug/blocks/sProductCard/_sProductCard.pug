@@ -1,0 +1,53 @@
+mixin sProductCard(data)
+	// start sProductCard
+	+b.SECTION.sProductCard.section#sProductCard&attributes(attributes)
+		.container
+			+b.section-title
+				h1 Ламинат Artens &laquo;Сосна Верона&raquo; 33&nbsp;класс толщина 10&nbsp;мм с&nbsp;фаской 2.131&nbsp;м&sup2;
+				+e.row.row
+					.col-7.col-sm-auto
+						+e.star-wrap
+							+star-block()
+							span 12 отзывов
+					.col-5.col-sm.order-sm-last
+						p Арт. 00000000
+					.col-auto
+						+e.btn(href="#")
+							+icon('message')
+							| Задать вопрос
+					.col-auto.d-none.d-lg-block
+						+e.btn(href="#")
+							+icon('like')
+							| В избранное
+					.col-auto.d-none.d-lg-block
+						+e.btn(href="#")
+							+icon('compare')
+							| Добавить к сравнению
+					.col-auto
+						+e.btn(href="#")
+							+icon('share')
+							| Поделиться
+			+e.row.row
+				.col-lg-7
+					+e.full-slider-wrap
+						+e.thumb-arrow-wrap.d-none.d-lg-flex
+							+e.thumb-slider--thumb-js.swiper
+								.swiper-wrapper
+									-for(let i = 0; i < 7; i++)
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-thumb-img-1.jpg')
+							+arrow('chevron-down-dd', 'chevron-down-dd')
+						+e.swiper-wrap
+							+e.slider--js.swiper
+								.swiper-wrapper
+									-for(let i = 0; i < 7; i++)
+										+e.slide.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-1.jpg')
+							+arrow()
+							.swiper-pagination.d-lg-none
+				.col-lg-5
+	// end sProductCard

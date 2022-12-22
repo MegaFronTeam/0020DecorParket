@@ -11,11 +11,11 @@ include components/btn.pug
 
 include components/ddgroup.pug
 
-mixin arrow()
+mixin arrow(iconReft='arrow-left', iconRight='arrow-right')
 	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('arrow-left')
+		+icon(iconReft)
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('arrow-right')
+		+icon(iconRight)
 //- /arrow for swiper-slider
 
 mixin ie11()

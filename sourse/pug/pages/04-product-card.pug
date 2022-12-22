@@ -1,0 +1,47 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sPopular/_sPopular.pug
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sArticles/_sArticles.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/footer/_footer.pug
+include ../blocks/sProductCard/_sProductCard.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Паркетная доска'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+
+
+	+header()
+		+topLine
+		+top-nav()
+	main
+		+breadcrumb('Назад', 'Главная', 'Напольные покрытия', 'Паркетная доска')
+		+sProductCard
+		//- +headerBlock().pt-2
+		//- +sCategories()
+		//- +sPopular()
+		//- +sCatalog()
+		//- +headerBlock2()
+		//- +sArticles(`Советы эксперта`, 'Смотреть все')
+		//- +sForm()
+		//- +sContact()
+
+	+footer()
+
+
+
+
