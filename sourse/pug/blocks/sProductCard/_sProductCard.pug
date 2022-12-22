@@ -33,11 +33,15 @@ mixin sProductCard(data)
 						+e.thumb-arrow-wrap.d-none.d-lg-flex
 							+e.thumb-slider--thumb-js.swiper
 								.swiper-wrapper
-									-for(let i = 0; i < 7; i++)
+									-for(let i = 1; i <= 6; i++)
 										+e.slide-thumb.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
-													+img('img/sProdCard-thumb-img-1.jpg')
+													+img(`img/sProdCard-thumb-img-${i}.jpg`)
+									+e.slide-thumb.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img(`img/sProdCard-thumb-img-1.jpg`)
 							+arrow('chevron-down-dd', 'chevron-down-dd')
 						+e.swiper-wrap
 							+e.slider--js.swiper
