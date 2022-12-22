@@ -5,7 +5,7 @@
 	--sTPB: #{rem(16)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(32)};
-		--sPB: #{rem(56)};
+		--sPB: #{rem(28)};
 		--sTPB: #{rem(28)};
 	}
 	&__row{
@@ -164,6 +164,7 @@
 	&__slide {
 		.sProductCard__img-wrap {
 			@include block(375, 323);
+			cursor: pointer;
 			@include media-breakpoint-up(md) {
 				--ratio: 534/620;
 			}

@@ -12,7 +12,9 @@ include ../blocks/top-nav/_top-nav.pug
 //- include ../blocks/sCategories/_sCategories.pug
 //- include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/footer/_footer.pug
+include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sProductCard/_sProductCard.pug
+include ../blocks/sProdCardTabs/_sProdCardTabs.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -31,6 +33,9 @@ block pagecontent
 	main
 		+breadcrumb('Назад', 'Главная', 'Напольные покрытия', 'Паркетная доска')
 		+sProductCard
+		+sProdCardTabs
+		+sCatalog()
+			+section-title('Похожие товары')
 		//- +headerBlock().pt-2
 		//- +sCategories()
 		//- +sPopular()

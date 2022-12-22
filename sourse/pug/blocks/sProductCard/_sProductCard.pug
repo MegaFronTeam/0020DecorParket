@@ -48,7 +48,7 @@ mixin sProductCard(data)
 								.swiper-wrapper
 									-for(let i = 0; i < 7; i++)
 										+e.slide.swiper-slide
-											+e.img-wrap
+											+e.img-wrap(data-fancybox='gallery' data-src="img/sProdCard-img-1.jpg")
 												.img-wrap-center
 													+img('img/sProdCard-img-1.jpg', 'bg')
 							+arrow()

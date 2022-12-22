@@ -1,0 +1,43 @@
+mixin sProdCardTabs(data)
+	// start sProdCardTabs
+	+b.SECTION.sProdCardTabs.section#sProdCardTabs&attributes(attributes)
+		.container
+			.tabs
+				+e.fixed-wrap.swiper.tabs-swiper
+					+e.fixed-head--js 123123
+					.tabs__caption.swiper-wrapper
+						.tabs__btn.active.swiper-slide Описание
+						.tabs__btn.swiper-slide Характеристики
+						.tabs__btn.swiper-slide Сопутсвующие товары
+						.tabs__btn.swiper-slide Отзывы и вопросы
+				.tabs__content.active 
+					.h2 Описание 
+					p Ламинат Artens &laquo;Сосна Верона&raquo;&nbsp;&mdash; это напольное покрытие высокого качества, отвечающее требованиям безопасности, надежности и&nbsp;долговечности. Изготавливается на&nbsp;высокоточном современном оборудовании. Благодаря особой технологии прессования слоев ламинат устойчив к&nbsp;механическим повреждениям, ударным нагрузкам. В&nbsp;домашних условиях выдерживает очень интенсивную нагрузку при эксплуатации: подойдет для большой семьи. Покрытие хорошо переносит воздействие ультрафиолета, химических веществ, перепады температур.
+				.tabs__content
+					.h2 Характеристики
+					.h5 Основные
+					mixin item(key, value)
+						li 
+							span.key!= key
+							span.dots
+							span.value!= value
+					ul
+						+item('Фаска', '4 стороны')
+						+item('Материал основы', 'ХДФ')
+						+item('Класс изностойкости', 'Класс 33')
+						+item('Вид пола', 'Замковый')
+						+item('Тип замка покрытия', '1clic2go pure')
+						+item('Кол-во кв.метров в коробке', '1,727 м2')
+						+item('Количество в упаковке, шт', '7 шт')
+						+item('Имитация поверхности', 'Под дерево')
+					.h5 Размеры
+					ul
+						+item('Длина, мм', '1285')
+						+item('Ширина, мм', '280')
+						+item('Толщина, мм', '10')
+					+e.caption Информация о&nbsp;технических характеристиках, комплекте поставки, стране изготовления, внешнем виде и&nbsp;цвете товара носит справочный характер и&nbsp;основывается на&nbsp;последних доступных к&nbsp;моменту публикации сведениях
+				.tabs__content
+					+sCatalog()
+						+section-title('Сопутсвующие товары')
+				.tabs__content 4
+	// end sProdCardTabs
