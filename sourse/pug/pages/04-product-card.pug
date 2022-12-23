@@ -33,9 +33,10 @@ block pagecontent
 	main
 		+breadcrumb('Назад', 'Главная', 'Напольные покрытия', 'Паркетная доска')
 		+sProductCard
-		+sProdCardTabs
-		+sCatalog()
-			+section-title('Похожие товары')
+		.fixed-tabs-js
+			+sProdCardTabs
+			+sCatalog()
+				+section-title('Похожие товары')
 		//- +headerBlock().pt-2
 		//- +sCategories()
 		//- +sPopular()
