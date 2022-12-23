@@ -154,3 +154,51 @@
 		}
 	}
 }
+
+.lcTable {
+	h6, .h6 {
+		margin-bottom: 0;
+	}
+	.icon {
+		font-size: rem(24);
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 2px;
+	}
+	table {
+		width: 100%;
+		tr {
+			&.head.active {
+				background: $gray-100;
+			}
+		}
+		th {
+			padding: rem(24) 0;
+			border-bottom: 1px solid #E5E6E4;
+			&:first-child {
+				padding-left: rem(16);
+				// max-width: rem(36);
+			}
+			// &:nth-child(2) {
+			// 	max-width: rem(118);
+			// }
+			// &:nth-child(3) {
+			// 	max-width: rem(117);
+			// }
+			// &:nth-child(4) {
+			// 	max-width: rem(116);
+			// }
+		}
+	}
+	&__status {
+		&.grey {
+			color: $gray-600;
+		}
+		&.green {
+			color: $green;
+		}
+		&.red {
+			color: $red;
+		}
+	}
+}

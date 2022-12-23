@@ -16,4 +16,5 @@
 15. <https://megafronteam.github.io/0020DecorParket/public/12-4-info-service.html>
 16. <https://megafronteam.github.io/0020DecorParket/public/13-1-account-personal-data.html>
 17. <https://megafronteam.github.io/0020DecorParket/public/13-2-account-address.html>
+17. <https://megafronteam.github.io/0020DecorParket/public/13-3-account-purchases.html>
 18. <https://megafronteam.github.io/0020DecorParket/public/13-4-account-favorites.html>

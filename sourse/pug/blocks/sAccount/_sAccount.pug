@@ -57,3 +57,29 @@ mixin addressBlock()
 						+icon('close')
 	+e.btn.btn.btn-primary(href="#") Добавить адрес
 
+mixin table()
+	+b.lcTable
+		mixin headTr(date, title, price, status)
+			tr
+				th
+					+icon('chevron-down-dd')
+				th
+					+e.date.h6!= date
+				th
+					h6!= title
+				th
+					+e.price!= price
+				th
+					+e.status(class=(status=="В обработке" ? 'grey' : status=="Доставлен" ? 'green' : status=="Отменен" ? 'red' : ''))!= status
+		table
+			+headTr('16.12.2022 23:19', 'Заказ #16102022-142304', '6 750 ₽', 'В обработке')
+		table
+			+headTr('16.12.2022 23:19', 'Заказ #16102022-142304', '14 500 ₽', 'В обработке')
+		table
+			+headTr('16.12.2022 23:19', 'Заказ #16102022-142304', '28 980 ₽', 'Доставлен')
+		table
+			+headTr('16.12.2022 23:19', 'Заказ #16102022-142304', '36 240 ₽', 'Доставлен')
+		table
+			+headTr('16.12.2022 23:19', 'Заказ #16102022-142304', '14 500 ₽', 'Доставлен')
+		table
+			+headTr('16.12.2022 23:19', 'Заказ #16102022-142304', '28 980 ₽', 'Отменен')
