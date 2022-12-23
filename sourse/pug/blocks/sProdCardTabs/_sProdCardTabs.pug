@@ -4,12 +4,32 @@ mixin sProdCardTabs(data)
 		.container
 			.tabs
 				+e.fixed-wrap.swiper.tabs-swiper
-					+e.fixed-head--js 123123
+					+e.fixed-head.d-none.d-lg-block
+						.row
+							.col-auto
+								+img('img/review-img-1.jpg')
+							.col-auto
+								p Ламинат Artens «Сосна Верона» 33 класс толщина 10 мм с фаской 2.131 м²
+								+e.num
+									+star-block
+									span 12 отзывов
+							+e.price-col.col
+								+e.price
+									.h3 3 980 ₽ 
+									.h6 1 350 ₽/м²
+									span 4 670 ₽
+							.col.d-xxl-flex
+								+e.head-btn.btn.btn-primary(href='#') В корзину
+								+e.head-btn.btn.btn-outline-primary(href='#') Купить в 1 клик
+							.col-auto
+								+e.link(href='#'): +icon('compare')
+								+e.link(href='#'): +icon('like')
 					.tabs__caption.swiper-wrapper
 						.tabs__btn.active.swiper-slide Описание
 						.tabs__btn.swiper-slide Характеристики
 						.tabs__btn.swiper-slide Сопутсвующие товары
 						.tabs__btn.swiper-slide Отзывы и вопросы
+					+e.fixed-btn.btn.btn-primary(href='#') В корзину
 				.tabs__content.active 
 					.h2 Описание 
 					p Ламинат Artens &laquo;Сосна Верона&raquo;&nbsp;&mdash; это напольное покрытие высокого качества, отвечающее требованиям безопасности, надежности и&nbsp;долговечности. Изготавливается на&nbsp;высокоточном современном оборудовании. Благодаря особой технологии прессования слоев ламинат устойчив к&nbsp;механическим повреждениям, ударным нагрузкам. В&nbsp;домашних условиях выдерживает очень интенсивную нагрузку при эксплуатации: подойдет для большой семьи. Покрытие хорошо переносит воздействие ультрафиолета, химических веществ, перепады температур.
@@ -39,5 +59,89 @@ mixin sProdCardTabs(data)
 				.tabs__content
 					+sCatalog()
 						+section-title('Сопутсвующие товары')
-				.tabs__content 4
+				.tabs__content
+					+e.inner-tabs--js
+						.tabs__caption-inner
+							.tabs__btn-inner.active Отзывы 
+								sup 8
+							.tabs__btn-inner Вопросы 
+								sup 0
+						.tabs__content-inner.active
+							+e.inner-row.row
+								.col-lg-4.order-lg-last
+									+e.review-wrap
+										+e.num
+											h2 4,8
+											+star-block
+										+e.base На основе 228 оценок
+										h6 75% покупателей рекомендуют этот товар
+										+e.review-item
+											+e.review-row.row
+												.col Цена
+												.col-auto.fw-bold 4,2
+												.col-12
+													+e.line(style="--lineWidth: 80%")
+											+e.review-row.row
+												.col Качество
+												.col-auto.fw-bold 3,8
+												.col-12
+													+e.line(style="--lineWidth: 60%")
+										h6 Отзывы с оценкой
+										mixin star(num, prcent)
+											+e.star 
+												span!= num
+												+icon('star')
+												+e.line(style=`--lineWidth: ${prcent}`)
+										+e.star-wrap
+											+star('5', '80%')
+											+star('4', '60%')
+											+star('3', '15%')
+											+star('2', '10%')
+											+star('1', '30%')
+										//- +star('', '')
+										+e.btn.btn.btn-primary(href='#') Написать отзыв
+								.col-lg-8
+									+e.head
+										+e.name
+											+e.abbreviation ОЧ
+											h6 Ольга Чернышова
+										+e.num
+											span 13 января 2022
+											+star-block
+									+e.iamge-row.row
+										mixin image(image)
+											+e.image-col.col-auto
+												+e.img-wrap(data-fancybox='gallery2' data-src="img/sProdCard-img-1.jpg")
+													.img-wrap-center
+														+img(`img/${image}`, 'bg')
+										+image('review-img-1.jpg')
+										+image('review-img-2.jpg')
+										+image('review-img-3.jpg')
+									mixin textBlock(title, text)
+										+e.content
+											h6!=title
+											p!= text
+									+textBlock('Достоинства', 'Пришёл без сколов, царапин, упаковка целая, доставили быстро, цвет как на&nbsp;картинке!')
+									+textBlock('Недостатки', 'Их нет!')
+									+textBlock('Комментарий', 'Идеально подошел для отделки пола в&nbsp;нашей новой квартире. Цвет и&nbsp;фактура соответствует картинке. Смотрится отлично, подойдет практически под любой интерьер и&nbsp;визуально расширит комнату. Ламинат хорошо спрессован, замки жесткие. Легко укладывается, без каких-либо зазоров. Легко моется. Качеством остались довольны.')
+									+e.get-help
+										h6 Вам помог отзыв?
+										.row
+											.col-auto 
+												+in-c('radio', '', 'rate')
+													+icon('like2')
+													span 24
+											.col-auto 
+												+in-c('radio', '', 'rate')
+													+icon('dislike')
+													span 4
+									+e.answer
+										+icon('reply')
+										.row
+											.col-auto
+												+img('img/avatar.png')
+											.col
+												h6 Декор Паркет Москва
+										p Добрый день, Ольга!<br>Благодарим за&nbsp;обратную связь и&nbsp;подробный комментарий. Мы&nbsp;рады, что вы&nbsp;остались довольны товаром, купленным в&nbsp;Декор Паркет. Уверены, ваш отзыв будет полезен клиентам, которые еще не&nbsp;определились с&nbsp;выбором.<br>Будем рады видеть вас снова :)
+						.tabs__content-inner 2
 	// end sProdCardTabs

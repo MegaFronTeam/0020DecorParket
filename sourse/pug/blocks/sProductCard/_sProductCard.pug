@@ -44,6 +44,9 @@ mixin sProductCard(data)
 												+img(`img/sProdCard-thumb-img-1.jpg`)
 							+arrow('chevron-down-dd', 'chevron-down-dd')
 						+e.swiper-wrap
+							+e.links.d-lg-none
+								+e.link(href='#'): +icon('compare')
+								+e.link(href='#'): +icon('like')
 							+e.slider--js.swiper
 								.swiper-wrapper
 									-for(let i = 0; i < 7; i++)

@@ -370,6 +370,29 @@
 			font-size: rem(12);
 		}
 	}
+	&__links {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		z-index: 12;
+		display: flex;
+		@include roww('4px', 'm');
+	}
+	&__link {
+		flex: 0 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: rem(8);
+		border-radius: 50%;
+		background-color: rgba($color: #fff, $alpha: .9);
+		&:not(:hover) {
+			color: #8F918C;
+		}
+		.icon {
+			font-size: rem(24);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

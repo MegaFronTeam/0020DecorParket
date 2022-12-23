@@ -736,10 +736,24 @@ function eventHandler() {
 			swiper: sProductCardThumbSwiper,
 		},
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.sProductCard__swiper-wrap .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
 		},
+	});
+
+	var StickyMenu = new hcSticky('.sProdCardTabs__fixed-wrap', {
+		mobileFirst: true,
+		stickTo: '.sProdCardTabs',
+		top: 0,
+	});
+
+	$('.sProdCardTabs__inner-tabs--js').on('click', '.tabs__btn-inner:not(.active)', function (e) {
+		$(this)
+			.addClass('active').siblings().removeClass('active')
+			.closest('.tabs').find('.tabs__content-inner').hide().removeClass('active')
+			.eq($(this).index()).fadeIn().addClass('active');
+
 	});
 };
 if (document.readyState !== 'loading') {
