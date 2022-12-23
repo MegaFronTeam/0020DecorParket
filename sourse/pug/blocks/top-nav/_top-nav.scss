@@ -164,7 +164,7 @@
 @include media-breakpoint-down(lg) {
 	.fixed {
 		.top-btns-wrap {
-			z-index: -2;
+			z-index: 12;
 		}
 	}
 }
