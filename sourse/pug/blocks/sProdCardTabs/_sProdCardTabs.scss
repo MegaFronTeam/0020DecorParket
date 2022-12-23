@@ -11,7 +11,7 @@
 		overflow: visible;
 		@include media-breakpoint-up(lg) {
 			overflow-y: hidden;
-
+			overflow: hidden;
 		}
 		&.sticky {
 			// @include mt;
@@ -23,8 +23,8 @@
 			@include media-breakpoint-up(lg) { 
 				padding-top: rem(106);
 			}
-			@include media-breakpoint-up(xl) {
-				padding-top: rem(88);
+			@include media-breakpoint-up(xxl) {
+				padding-top: rem(75.200);
 			}
 			.tabs {
 				&__caption {
@@ -52,6 +52,16 @@
 		width: calc(100% - 160px);
 		transform: translateY(-100%) translateX(-50%);
 		padding: rem(9) 0;
+		&::before {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 200vw;
+			height: 1px;
+			left: -50vw;
+			bottom: 0;
+			background-color: #E5E6E4;
+		}
 		.row {
 			--bs-gutter-x: #{rem(16)};
 
