@@ -62,8 +62,8 @@ body {
 		height: 100%;
 		@include mt;
 		// background-color: $body-color;
-		background-color: rgba($body-color, 0.8);
-		backdrop-filter: blur(5px);
+		// background-color: rgba($body-color, 0.8);
+		// backdrop-filter: blur(5px);
 		opacity: 0;
 		z-index: -1;
 		// left: 200px;
@@ -77,23 +77,38 @@ body {
 		overflow: hidden;
 	}
 
+	&.fixed-catalog,
+	&.fixed3,
+	&.fixed2,
 	&.fixed {
 		overflow: hidden;
-		position: absolute;
+		// position: absolute;
+		position: relative;
+		// position: fixed;
 		width: 100%;
 		left: 0;
 		top: 0;
 		z-index: 999;
-
-		touch-action: none;
-		-webkit-overflow-scrolling: none;
-		overflow: hidden;
-		/* Other browsers */
-		overscroll-behavior: none;
+		height: 100%;
 
 		&::before {
 			z-index: 999;
 			opacity: 0.76;
+		}
+	}
+	&.fixed2 {
+		&:before {
+			z-index: 1300;
+		}
+	}
+	&.fixed3 {
+		.header {
+			width: 100% !important;
+		}
+		&:before {
+			z-index: 1199;
+			backdrop-filter: blur(6px);
+			background: rgba(0, 0, 0, 0.8);
 		}
 	}
 }
