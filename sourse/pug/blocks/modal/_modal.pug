@@ -32,4 +32,18 @@ mixin modal()
 							.swiper-pagination.d-lg-none
 	// #modal-call
 	
+	div(id="modal-call"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				+e.title.form-data.h2 Titile modal form
+				p.after-headline Description
+
+				+input("Label")
+				+input("Label")
+				+input("Label")
+				+input("Label")
+				+policy2()
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  )  Button name
+				+e.rules Нажимая на кнопку, вы соглашаетесь с #[a(href="#") Условиями обработки персональных данных ], определенных в 
+					a(href="#") Политике конфиденциальности
 	// end modals
