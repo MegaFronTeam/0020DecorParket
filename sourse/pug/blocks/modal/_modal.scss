@@ -5,7 +5,19 @@
 .fancybox__content {
 	padding: 0;
 	max-width: 100%;
+	width: 100%;
 }
+.fancybox__slide {
+	background-color: #fff;
+}
+
+.fancybox__content>.carousel__button.is-close {
+	--fancybox-color: #{$gray-900};
+	svg {
+		filter: none;
+	}
+}
+
 .modal-win {
 	// display: block;
 	background-color: #fff;

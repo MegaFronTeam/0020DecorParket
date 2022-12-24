@@ -2,16 +2,34 @@
 mixin modal() 
 	//  start modals
 	//- a(href="modal-call").link-modal-js modal-call 
-	div(id="modal-call"  style="display: none" )
-		+b.modal-win
-			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
+	div(id="modal-slider"  style="display: none" )
+		+b.sProductCard--modal
+			+e.row.row
+				.col-12
+					+e.full-slider-wrap
+						+e.thumb-arrow-wrap.d-none.d-lg-flex
+							+e.thumb-slider--thumb-js-2.swiper
+								.swiper-wrapper
+									-for(let i = 1; i <= 6; i++)
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img(`img/sProdCard-thumb-img-${i}.jpg`)
+									+e.slide-thumb.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img(`img/sProdCard-thumb-img-1.jpg`)
+							+arrow('chevron-down-dd', 'chevron-down-dd')
+						+e.swiper-wrap
+							+e.slider--js-2.swiper
+								.swiper-wrapper
+									-for(let i = 0; i < 7; i++)
+										+e.slide.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-1.jpg', 'bg')
+							+arrow()
+							.swiper-pagination.d-lg-none
 	// #modal-call
 	
 	// end modals

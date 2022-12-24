@@ -8,6 +8,15 @@
 		--sPB: #{rem(28)};
 		--sTPB: #{rem(28)};
 	}
+	&--modal {
+		.sProductCard__full-slider-wrap {
+			margin: 0;
+		}
+		.sProductCard__img-wrap {
+			max-width: rem(877);
+			margin: 0 auto;
+		}
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		@include media-breakpoint-up(sm) {

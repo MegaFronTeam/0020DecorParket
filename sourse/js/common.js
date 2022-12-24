@@ -721,6 +721,7 @@ function eventHandler() {
 		// spaceBetween: 16,
 		slidesPerView: 'auto',
 		direction: 'vertical',
+		// observer: true,
 		navigation: {
 			nextEl: '.sProductCard__thumb-arrow-wrap .swiper-button-next',
 			prevEl: '.sProductCard__thumb-arrow-wrap .swiper-button-prev',
@@ -728,6 +729,7 @@ function eventHandler() {
 	});
 	const sProductCardSwiper2 = new Swiper('.sProductCard__slider--js', {
 		slidesPerView: 1,
+		// observer: true,
 		navigation: {
 			nextEl: '.sProductCard__swiper-wrap .swiper-button-next',
 			prevEl: '.sProductCard__swiper-wrap .swiper-button-prev',
@@ -741,6 +743,37 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+
+	const sProductCardThumbSwiper2 = new Swiper('.sProductCard__thumb-slider--thumb-js-2', {
+		// slidesPerView: 6,
+		// spaceBetween: 16,
+		slidesPerView: 'auto',
+		direction: 'vertical',
+		// observer: true,
+		navigation: {
+			nextEl: '.sProductCard__thumb-arrow-wrap .swiper-button-next',
+			prevEl: '.sProductCard__thumb-arrow-wrap .swiper-button-prev',
+		},
+	});
+	const sProductCardSwiper22 = new Swiper('.sProductCard__slider--js-2', {
+		slidesPerView: 1,
+		// observer: true,
+		navigation: {
+			nextEl: '.sProductCard__swiper-wrap .swiper-button-next',
+			prevEl: '.sProductCard__swiper-wrap .swiper-button-prev',
+		},
+		thumbs: {
+			swiper: sProductCardThumbSwiper2,
+		},
+		pagination: {
+			el: '.sProductCard__swiper-wrap .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
+	sProductCardSwiper22.controller.control = [sProductCardSwiper2];
+	sProductCardSwiper2.controller.control = sProductCardSwiper22;
 
 	var StickyMenu = new hcSticky('.sProdCardTabs__fixed-wrap', {
 		mobileFirst: true,
