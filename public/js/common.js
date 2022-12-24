@@ -849,6 +849,14 @@ function eventHandler() {
 			};
 	}, { passive: true });
 
+	let accountTables = document.querySelectorAll('.lcTable table');
+	if(accountTables) {
+		for (let accountTable of accountTables) {
+			accountTable.querySelector('thead').addEventListener('click', function() {
+				accountTable.classList.toggle('active');
+			})
+		}
+	}
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

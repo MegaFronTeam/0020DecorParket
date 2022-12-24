@@ -181,6 +181,12 @@
 					transform: rotate(180deg);
 				}
 			}
+			tbody {
+				display: table-row-group;
+			}
+		}
+		tbody {
+			display: none;
 		}
 		th {
 			padding: rem(24) 0;
