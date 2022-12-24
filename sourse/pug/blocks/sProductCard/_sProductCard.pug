@@ -49,11 +49,19 @@ mixin sProductCard(data)
 								+e.link(href='#'): +icon('like')
 							+e.slider--js.swiper
 								.swiper-wrapper
-									-for(let i = 0; i < 7; i++)
+									-for(let i = 0; i < 3; i++)
 										+e.slide.swiper-slide
 											+e.img-wrap(data-fancybox='modal' data-src="modal-slider")
 												.img-wrap-center
 													+img('img/sProdCard-img-1.jpg', 'bg')
+										+e.slide.swiper-slide
+											+e.img-wrap(data-fancybox='modal' data-src="modal-slider")
+												.img-wrap-center
+													+img('img/sProdCard-img-2.jpg', 'bg')
+									+e.slide.swiper-slide
+										+e.img-wrap(data-fancybox='modal' data-src="modal-slider")
+											.img-wrap-center
+												+img('img/sProdCard-img-1.jpg', 'bg')
 							+arrow()
 							.swiper-pagination.d-lg-none
 				.col-lg-5

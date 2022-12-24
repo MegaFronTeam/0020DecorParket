@@ -23,11 +23,20 @@ mixin modal()
 						+e.swiper-wrap
 							+e.slider--js-2.swiper
 								.swiper-wrapper
-									-for(let i = 0; i < 7; i++)
+									-for(let i = 0; i < 3; i++)
 										+e.slide.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
 													+img('img/sProdCard-img-1.jpg', 'bg')
+										+e.slide.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-2.jpg', 'bg')
+									+e.slide.swiper-slide
+										+e.img-wrap
+											.img-wrap-center
+												+img('img/sProdCard-img-1.jpg', 'bg')
+
 							+arrow()
 							.swiper-pagination.d-lg-none
 	// #modal-call
