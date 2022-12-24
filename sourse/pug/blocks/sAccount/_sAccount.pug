@@ -71,14 +71,34 @@ mixin table()
 					+e.price!= price
 				th
 					+e.status(class=(status=="В обработке" ? 'grey' : status=="Доставлен" ? 'green' : status=="Отменен" ? 'red' : ''))!= status
+		mixin bodyTr(num, img, title, text, price, quantity, fullPrice)
+			tr
+				td: +e.num!= num
+				td(colspan="2")
+					+e.wrap
+						+img(`img/${img}`)
+						+e.content
+							a.h6(href="#")!= title
+							p!= text
+				td
+					+e.price.row
+						.col
+							.h6!= price
+						.col-auto
+							p!= quantity
+						.col-12
+							+e.fullPrice!= fullPrice
+				td: +e.btn.btn.btn-primary(href="#") Написать отзыв
 		table
 			+headTr('16.12.2022 23:19', 'Заказ #16102022-142304', '6 750 ₽', 'В обработке')
 		table
 			+headTr('16.12.2022 23:19', 'Заказ #16102022-142304', '14 500 ₽', 'В обработке')
 		table
 			+headTr('16.12.2022 23:19', 'Заказ #16102022-142304', '28 980 ₽', 'Доставлен')
-		table
+		table.active
 			+headTr('16.12.2022 23:19', 'Заказ #16102022-142304', '36 240 ₽', 'Доставлен')
+			+bodyTr('1', 'review-img-1.jpg', 'Ламинат «Дуб Антик» 33 класс толщина 10 мм с фаской 1.975 м²', 'Арт. 00000000', '3 980 ₽', '2 шт', '4 670 ₽')
+			+bodyTr('2', 'review-img-4.jpg', 'Ламинат «Дуб Антик» 33 класс толщина 10 мм с фаской 1.975 м²', 'Арт. 00000000', '980 ₽ ', '1 шт', '2 670 ₽')
 		table
 			+headTr('16.12.2022 23:19', 'Заказ #16102022-142304', '14 500 ₽', 'Доставлен')
 		table

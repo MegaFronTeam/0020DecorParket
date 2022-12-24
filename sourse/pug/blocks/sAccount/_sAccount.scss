@@ -156,8 +156,14 @@
 }
 
 .lcTable {
+	overflow-x: auto;
+	overflow-y: hidden;
 	h6, .h6 {
 		margin-bottom: 0;
+		font-size: rem(14);
+		@include media-breakpoint-up(md) {
+			font-size: rem(16);
+		}
 	}
 	.icon {
 		font-size: rem(24);
@@ -167,30 +173,53 @@
 	}
 	table {
 		width: 100%;
-		tr {
-			&.head.active {
+		min-width: rem(680);
+		&.active {
+			tr th {
 				background: $gray-100;
+				.icon {
+					transform: rotate(180deg);
+				}
 			}
 		}
 		th {
 			padding: rem(24) 0;
 			border-bottom: 1px solid #E5E6E4;
-			&:first-child {
+			cursor: pointer;
+			&:nth-child(1) {
 				padding-left: rem(16);
-				// max-width: rem(36);
+				width: 7.4%;
 			}
-			// &:nth-child(2) {
-			// 	max-width: rem(118);
-			// }
-			// &:nth-child(3) {
-			// 	max-width: rem(117);
-			// }
-			// &:nth-child(4) {
-			// 	max-width: rem(116);
-			// }
+			&:nth-child(2) {
+				width: 19.2%;
+			}
+			&:nth-child(3) {
+				width: 34%;
+			}
+			&:nth-child(4) {
+				width: 23%;
+			}
+			&:nth-child(5) {
+				width: 16.4%;
+			}
+		}
+		td {
+			vertical-align: top;
+			padding: rem(16) 0;
+			border-bottom: 1px solid #E5E6E4;
+		}
+	}
+	&__price {
+		font-size: rem(14);
+		@include media-breakpoint-up(md) {
+			font-size: rem(16);
 		}
 	}
 	&__status {
+		font-size: rem(14);
+		@include media-breakpoint-up(md) {
+			font-size: rem(16);
+		}
 		&.grey {
 			color: $gray-600;
 		}
@@ -199,6 +228,74 @@
 		}
 		&.red {
 			color: $red;
+		}
+	}
+	&__num {
+		font-size: rem(12);
+		color: #8F918C;
+		padding: 0 17px 0 0;
+		text-align: center;
+	}
+	&__wrap {
+		display: flex;
+		img {
+			flex: 0 0 auto;
+			width: 100%;
+			max-width: rem(80);
+			object-fit: cover;
+			border-radius: 4px;
+			margin-right: rem(16);
+		}
+	}
+	&__content {
+		.h6 {
+			font-weight: 400;
+			max-width: rem(379);
+			margin-bottom: rem(12);
+			&:not(:hover) {
+				color: $gray-900;
+			}
+		}
+		p {
+			font-size: rem(14);
+			color: $gray-600;
+			margin-bottom: 0;
+		}
+	}
+	&__price {
+		max-width: rem(126);
+		
+		--bs-gutter-x: 0;
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: 0;
+		}
+		@include media-breakpoint-up(lg) {
+			max-width: rem(160);
+		}
+		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: 0;
+		}
+		@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: 0;
+		}
+		p {
+			margin-bottom: 0;
+			line-height: 1.25em;
+			margin-top: rem(4);
+		}
+	}
+	&__fullPrice {
+		font-size: rem(14);
+		color: $gray-600;
+		text-decoration: line-through;
+		line-height: 1.25em;
+	}
+	&__btn {
+		--bs-btn-padding-x: #{rem(7.400)};
+		--bs-btn-font-size: #{rem(13)};
+		@include media-breakpoint-up(md) {
+			// --bs-btn-padding-x: #{rem(17)};
+			--bs-btn-font-size: #{rem(16)};
 		}
 	}
 }
