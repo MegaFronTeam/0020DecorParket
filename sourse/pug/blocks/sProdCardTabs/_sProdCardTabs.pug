@@ -3,8 +3,8 @@ mixin sProdCardTabs(data)
 	+b.SECTION.sProdCardTabs.section#sProdCardTabs&attributes(attributes)
 		.container
 			.tabs
-				+e.fixed-wrap.swiper.tabs-swiper
-					+e.fixed-head.d-none.d-lg-block
+				+e.fixed-wrap
+					+e.fixed-head
 						.row
 							.col-auto
 								+img('img/review-img-1.jpg')
@@ -24,11 +24,12 @@ mixin sProdCardTabs(data)
 							.col-auto
 								+e.link(href='#'): +icon('compare')
 								+e.link(href='#'): +icon('like')
-					.tabs__caption.swiper-wrapper
-						.tabs__btn.active.swiper-slide Описание
-						.tabs__btn.swiper-slide Характеристики
-						.tabs__btn.swiper-slide Сопутсвующие товары
-						.tabs__btn.swiper-slide Отзывы и вопросы
+					.swiper.tabs-swiper
+						.tabs__caption.swiper-wrapper
+							.tabs__btn.active.swiper-slide Описание
+							.tabs__btn.swiper-slide Характеристики
+							.tabs__btn.swiper-slide Сопутсвующие товары
+							.tabs__btn.swiper-slide Отзывы и вопросы
 					+e.fixed-btn.btn.btn-primary(href='#') В корзину
 				.tabs__content.active 
 					.h2 Описание 
