@@ -809,16 +809,20 @@ iframe {
 	&__close {
 		cursor: pointer;
 		@include a-cent1(y);
+		@include mt;
 		right: rem(40);
 		padding-right: rem(8);
 		color: #9ba1a5;
 		z-index: 5;
 		// display: none;
+		&:hover {
+			color: $red;
+		}
 		.icon {
 			font-size: 24px;
 			// stroke: currentColor;
-			// fill: none;
-			stroke-width: 2px;
+			fill: currentColor;
+			// stroke-width: 2px;
 		}
 	}
 	&.show-result {
@@ -962,5 +966,3 @@ iframe {
 		width: calc(#{rem(274)} + var(--bs-gutter-x));
 	}
 }
-
-
