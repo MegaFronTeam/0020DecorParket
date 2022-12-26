@@ -156,8 +156,8 @@
 }
 
 .lcTable {
-	overflow-x: auto;
-	overflow-y: hidden;
+	// overflow-x: auto;
+	// overflow-y: hidden;
 	h6, .h6 {
 		margin-bottom: 0;
 		font-size: rem(14);
@@ -173,7 +173,10 @@
 	}
 	table {
 		width: 100%;
-		min-width: rem(680);
+		// min-width: rem(680);
+		@include media-breakpoint-down(md) {
+			display: block;
+		}
 		&.active {
 			tr th {
 				background: $gray-100;
@@ -181,38 +184,124 @@
 					transform: rotate(180deg);
 				}
 			}
+			thead {
+				@include media-breakpoint-down(md) {
+					background-color:$gray-100;
+				}
+			}
 			tbody {
 				display: table-row-group;
+				@include media-breakpoint-down(md) {
+					display: block;
+				}
+			}
+		}
+		thead {
+			@include media-breakpoint-down(md) {
+				display: block;
+			}
+			tr {
+				@include media-breakpoint-down(md) {
+					display: flex;
+					flex-wrap: wrap;
+					border-bottom: 1px solid #E5E6E4;
+					align-items: center;
+				}
 			}
 		}
 		tbody {
 			display: none;
+			tr {
+				@include media-breakpoint-down(md) {
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
+					td {
+						&:nth-child(2) {
+							flex-grow: 1;
+						}
+						&:nth-child(3) {
+							width: 100%;
+						}
+						&:nth-child(4) {
+							width: 100%;
+						}
+					}
+				}
+			}
 		}
 		th {
-			padding: rem(24) 0;
-			border-bottom: 1px solid #E5E6E4;
+			padding: rem(12) 0;
 			cursor: pointer;
+			@include media-breakpoint-up(md) {
+				border-bottom: 1px solid #E5E6E4;
+				padding: rem(24) 0;
+			}
 			&:nth-child(1) {
-				padding-left: rem(16);
-				width: 7.4%;
+				order: 1;
+				width: auto;
+				padding-right: rem(12);
+				@include media-breakpoint-up(md) {
+					padding-left: rem(16);
+					width: 7.4%;
+					order: unset;
+					padding-right: 0;
+				}
 			}
 			&:nth-child(2) {
-				width: 19.2%;
+				width: 33%;
+				order: 3;
+				text-align: center;
+				@include media-breakpoint-up(md) {
+					order: unset;
+					width: 19.2%;
+					text-align: left;
+				}
 			}
 			&:nth-child(3) {
-				width: 34%;
+				order: 2;
+				width: calc(100% - 36px);
+				@include media-breakpoint-up(md) {
+					width: 34%;
+					order: unset;
+				}
 			}
 			&:nth-child(4) {
-				width: 23%;
+				order: 4;
+				width: 33%;
+				text-align: center;
+				@include media-breakpoint-up(md) {
+					width: 23%;
+					order: unset;
+					text-align: left;
+				}
+				@include media-breakpoint-up(lg) {
+					width: 18%;
+					order: unset;
+				}
+				@include media-breakpoint-up(xl) {
+					width: 23%;
+					order: unset;
+				}
 			}
-			// &:nth-child(5) {
-			// 	width: 16.4%;
-			// }
+			&:nth-child(5) {
+				order: 4;
+				width: 33%;
+				text-align: center;
+				@include media-breakpoint-up(md) {
+					text-align: left;
+					order: unset;
+					width: auto;
+				}
+			}
 		}
 		td {
 			vertical-align: top;
-			padding: rem(16) 0;
-			border-bottom: 1px solid #E5E6E4;
+			padding: rem(8) 0;
+			@include media-breakpoint-up(md) {
+				padding: rem(16) 0;
+				border-bottom: 1px solid #E5E6E4;
+			}
 		}
 	}
 	&__price {
@@ -244,6 +333,9 @@
 	}
 	&__wrap {
 		display: flex;
+		@include media-breakpoint-down(md) {
+			align-items: flex-start;
+		}
 		img {
 			flex: 0 0 auto;
 			width: 100%;
@@ -254,6 +346,7 @@
 		}
 	}
 	&__content {
+		flex-grow: 1;
 		.h6 {
 			font-weight: 400;
 			max-width: rem(379);
@@ -269,11 +362,11 @@
 		}
 	}
 	&__price {
-		max-width: rem(126);
 		
 		--bs-gutter-x: 0;
 		@include media-breakpoint-up(md) {
 			--bs-gutter-x: 0;
+			max-width: rem(126);
 		}
 		@include media-breakpoint-up(lg) {
 			max-width: rem(160);
@@ -287,7 +380,9 @@
 		p {
 			margin-bottom: 0;
 			line-height: 1.25em;
-			margin-top: rem(4);
+			@include media-breakpoint-up(md) {
+				margin-top: rem(4);
+			}
 		}
 	}
 	&__fullPrice {
@@ -302,6 +397,9 @@
 		@include media-breakpoint-up(md) {
 			// --bs-btn-padding-x: #{rem(17)};
 			--bs-btn-font-size: #{rem(16)};
+		}
+		@include media-breakpoint-down(md) {
+			width: 100%;
 		}
 	}
 }

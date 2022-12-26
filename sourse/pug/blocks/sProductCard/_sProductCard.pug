@@ -92,10 +92,11 @@ mixin sProductCard(data)
 					+e.order
 						h5 Заказжите услуги
 						mixin item(i, title, price)
-							+e.item
-								+img(`img/svg/sProductCard-icon-${i}.svg`)
-								h6!= title
-								+e.price!= price
+							+in-c('checkbox')
+								+e.item
+									+img(`img/svg/sProductCard-icon-${i}.svg`)
+									h6!= title
+									+e.price!= price
 						+item(1, 'Замер помещения для укладки напольных покрытий ' ,'от 990 ₽')
 						+item(2, 'Укладка ламината ' ,'от 290 ₽')
 	// end sProductCard
