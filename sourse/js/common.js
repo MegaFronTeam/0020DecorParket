@@ -696,7 +696,8 @@ function eventHandler() {
 		responsive: {
 			1200: {
 				stickTo: '.summary-container-js',
-				top: 32,
+				// top: 32,
+				top: 150,
 			}
 		}
 	});
@@ -705,7 +706,8 @@ function eventHandler() {
 		responsive: {
 			992: {
 				stickTo: '.page-head .asideCol',
-				top: 32,
+				// top: 32,
+				top: 150,
 			}
 		}
 	});
