@@ -297,7 +297,7 @@
 		}
 		td {
 			vertical-align: top;
-			padding: rem(8) 0;
+			padding: rem(8) rem(5);
 			@include media-breakpoint-up(md) {
 				padding: rem(16) 0;
 				border-bottom: 1px solid #E5E6E4;
