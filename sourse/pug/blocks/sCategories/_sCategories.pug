@@ -7,12 +7,12 @@ mixin sCategories(data)
 					.swiper-wrapper
 						mixin slide(h, i, ...items)
 							+e.slide.swiper-slide
-								+e.item(href="#")
+								+e.item
 									+e.content
-										h3!= h
+										a(href="#").h3!= h
 										ul
 											each item in items
-												li!= item
+												li: a(href="#")!= item
 									+img(`img/sCategories-${i}.png`)
 						+slide(`Напольные покрытия`, `1`, `Ламинат`, `Виниловый ламинат`, `Паркетная доска`, `Еще&nbsp;+6`)
 						+slide(`Отделка стен`, `2`, `Обои`, `Плинтус потолочный`, `Стеновые панели`)
