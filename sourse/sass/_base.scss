@@ -698,14 +698,17 @@ iframe {
 	}
 	button {
 		position: absolute;
+		@include mt;
 		// padding-right: 15px;
 		// padding-left: 15px;
 		display: flex;
 		width: 48px;
+		color: $primary;
 		@include media-breakpoint-up(lg) {
 			height: 48px;
 			&:hover {
-				background: #f8f8f8;
+				color: $secondary;
+				// background: #f8f8f8;
 			}
 		}
 		height: 66px;
@@ -722,7 +725,7 @@ iframe {
 		border: none;
 		box-shadow: none;
 		.icon {
-			font-size: 18px;
+			font-size: rem(24);
 		}
 	}
 	&__result {
@@ -807,14 +810,14 @@ iframe {
 		cursor: pointer;
 		@include a-cent1(y);
 		right: rem(40);
-		padding-right: 12px;
+		padding-right: rem(8);
 		color: #9ba1a5;
 		z-index: 5;
 		// display: none;
 		.icon {
 			font-size: 24px;
-			stroke: currentColor;
-			fill: none;
+			// stroke: currentColor;
+			// fill: none;
 			stroke-width: 2px;
 		}
 	}

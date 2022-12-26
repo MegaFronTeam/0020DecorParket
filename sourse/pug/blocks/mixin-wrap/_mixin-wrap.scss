@@ -621,6 +621,7 @@
 		}
 	}
 	.product-card__label-wrap {
+		pointer-events: none;
 		.row {
 			--bs-gutter-x: #{rem(8)};
 			--bs-gutter-y: var(--bs-gutter-x);

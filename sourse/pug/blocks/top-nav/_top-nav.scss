@@ -15,7 +15,11 @@
 	.top-nav__row {
 		--bs-gutter-x: 16px;
 	}
-
+	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0);
+	transition: box-shadow 0.2s linear;
+	&.fixed {
+		box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+	}
 	.row {
 		align-items: center;
 		position: relative;
@@ -151,7 +155,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		box-shadow: inset 0px 1px 0px #E5E6E4;
+		box-shadow: inset 0px 1px 0px #e5e6e4;
 	}
 	@include media-breakpoint-up(lg) {
 		.container {
@@ -319,9 +323,10 @@
 			@include a-cent;
 			// position: relative;
 			display: block;
-			&::before, &:after {
+			&::before,
+			&:after {
 				@include mt;
-				content: '';
+				content: "";
 				position: absolute;
 				display: block;
 				width: 100%;
