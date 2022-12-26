@@ -17,9 +17,12 @@
 		}
 	}
 	--sPT: #{rem(47)};
-	--sPB: #{rem(75)};
+	--sPB: #{rem(75 + 64)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(56)};
+		--sPB: #{rem(81 + 64)};
+	}
+	@include media-breakpoint-up(lg) {
 		--sPB: #{rem(81)};
 	}
 	&__container {

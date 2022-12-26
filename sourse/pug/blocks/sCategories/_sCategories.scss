@@ -46,19 +46,23 @@
 		overflow: hidden;
 		// line-height: 1.45;
 		&:hover {
-			h3 {
-				color: $primary;
-			}
+			// h3 {
+			// 	color: $primary;
+			// }
 			img {
 				transform: scale(1.05);
 			}
 		}
-		h3 {
+		a {
+			display: block;
+		}
+		.h3 {
 			@include mt(0.2s);
 			margin-bottom: rem(12);
-			color: $body-color;
 			line-height: calc(32 / 22);
-
+			&:not(:hover) {
+				color: $body-color;
+			}
 			@include media-breakpoint-up(xxl) {
 				margin-bottom: rem(16);
 			}
