@@ -778,7 +778,12 @@ function eventHandler() {
 	var StickyMenu = new hcSticky('.sProdCardTabs__fixed-wrap', {
 		mobileFirst: true,
 		stickTo: '.fixed-tabs-js',
-		top: 0,
+		top: 105,
+		responsive: {
+			992: {
+				top: 120,
+			},
+		}
 	});
 
 	$('.sProdCardTabs__inner-tabs--js').on('click', '.tabs__btn-inner:not(.active)', function (e) {
@@ -890,6 +895,10 @@ function eventHandler() {
 			})
 		}
 	}
+
+	$('.header--js').hcSticky({
+    // stickTo: $('#content')
+  });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

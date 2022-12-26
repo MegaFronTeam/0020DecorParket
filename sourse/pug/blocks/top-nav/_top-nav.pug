@@ -34,7 +34,9 @@ mixin top-nav()
 					+logo()
 				.col-auto.d-none.d-lg-block
 					+b.catalog-toggle.catalog-toggle-js
-						+icon("menu-toggle")
+						//- +icon("menu-toggle")
+						+e.toggle-icon
+							span
 						+e.title Каталог
 
 				.col-lg.order-lg-0.order-last
