@@ -7,7 +7,7 @@ mixin modal()
 			+e.row.row
 				.col-12
 					+e.full-slider-wrap
-						+e.thumb-arrow-wrap.d-none.d-lg-flex
+						+e.thumb-arrow-wrap--modal.d-none.d-lg-flex
 							+e.thumb-slider--thumb-js-2.swiper
 								.swiper-wrapper
 									-for(let i = 1; i <= 6; i++)
@@ -20,7 +20,7 @@ mixin modal()
 											.img-wrap-center
 												+img(`img/sProdCard-thumb-img-1.jpg`)
 							+arrow('chevron-down-dd', 'chevron-down-dd')
-						+e.swiper-wrap
+						+e.swiper-wrap--modal
 							+e.slider--js-2.swiper
 								.swiper-wrapper
 									-for(let i = 0; i < 3; i++)

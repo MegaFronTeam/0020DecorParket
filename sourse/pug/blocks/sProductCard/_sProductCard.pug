@@ -30,7 +30,7 @@ mixin sProductCard(data)
 			+e.row.row
 				.col-lg-7
 					+e.full-slider-wrap
-						+e.thumb-arrow-wrap.d-none.d-lg-flex
+						+e.thumb-arrow-wrap--base.d-none.d-lg-flex
 							+e.thumb-slider--thumb-js.swiper
 								.swiper-wrapper
 									-for(let i = 1; i <= 6; i++)
@@ -43,7 +43,7 @@ mixin sProductCard(data)
 											.img-wrap-center
 												+img(`img/sProdCard-thumb-img-1.jpg`)
 							+arrow('chevron-down-dd', 'chevron-down-dd')
-						+e.swiper-wrap
+						+e.swiper-wrap--base
 							+e.links.d-lg-none
 								+e.link(href='#'): +icon('compare')
 								+e.link(href='#'): +icon('like')

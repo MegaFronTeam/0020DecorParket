@@ -725,16 +725,16 @@ function eventHandler() {
 		direction: 'vertical',
 		// observer: true,
 		navigation: {
-			nextEl: '.sProductCard__thumb-arrow-wrap .swiper-button-next',
-			prevEl: '.sProductCard__thumb-arrow-wrap .swiper-button-prev',
+			nextEl: '.sProductCard__thumb-arrow-wrap--base .swiper-button-next',
+			prevEl: '.sProductCard__thumb-arrow-wrap--base .swiper-button-prev',
 		},
 	});
 	const sProductCardSwiper2 = new Swiper('.sProductCard__slider--js', {
 		slidesPerView: 1,
 		// observer: true,
 		navigation: {
-			nextEl: '.sProductCard__swiper-wrap .swiper-button-next',
-			prevEl: '.sProductCard__swiper-wrap .swiper-button-prev',
+			nextEl: '.sProductCard__swiper-wrap--base .swiper-button-next',
+			prevEl: '.sProductCard__swiper-wrap--base .swiper-button-prev',
 		},
 		thumbs: {
 			swiper: sProductCardThumbSwiper,
@@ -753,16 +753,17 @@ function eventHandler() {
 		direction: 'vertical',
 		// observer: true,
 		navigation: {
-			nextEl: '.sProductCard__thumb-arrow-wrap .swiper-button-next',
-			prevEl: '.sProductCard__thumb-arrow-wrap .swiper-button-prev',
+			nextEl: '.sProductCard__thumb-arrow-wrap--modal .swiper-button-next',
+			prevEl: '.sProductCard__thumb-arrow-wrap--modal .swiper-button-prev',
 		},
 	});
 	const sProductCardSwiper22 = new Swiper('.sProductCard__slider--js-2', {
 		slidesPerView: 1,
-		// observer: true,
+		observer: true,
+		observeParents: true, 
 		navigation: {
-			nextEl: '.sProductCard__swiper-wrap .swiper-button-next',
-			prevEl: '.sProductCard__swiper-wrap .swiper-button-prev',
+			nextEl: '.sProductCard__swiper-wrap--modal .swiper-button-next',
+			prevEl: '.sProductCard__swiper-wrap--modal .swiper-button-prev',
 		},
 		thumbs: {
 			swiper: sProductCardThumbSwiper2,
